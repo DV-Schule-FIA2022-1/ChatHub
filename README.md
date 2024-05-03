@@ -12,6 +12,6 @@ Um mit dem Projekt zu beginnen, befolgen Sie diese Schritte:
 
 ## Funktionen
 
-- **Funktion 1**: Beschreibung von Funktion 1.
+- **Alowla Omar --> KI Chatbot **: Die Verbesserung eines simplen Chatbots in Bezug auf Text und Übersetzung.
 - **Funktion 2**: Beschreibung von Funktion 2.
 - **Funktion 3**: Beschreibung von Funktion 3.
