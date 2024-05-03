@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test2.client.ClientController">
+   <children>
+      <Label alignment="CENTER" layoutX="109.0" layoutY="26.0" prefHeight="23.0" prefWidth="158.0" text="Name" />
+      <Label alignment="CENTER" layoutX="309.0" layoutY="23.0" prefHeight="30.0" prefWidth="158.0" text="Server Port" />
+      <TextField fx:id="name" layoutX="113.0" layoutY="66.0" />
+      <TextField fx:id="serverport" layoutX="320.0" layoutY="66.0" />
+      <Button layoutX="492.0" layoutY="66.0" mnemonicParsing="false" onAction="#createUser" prefHeight="25.0" prefWidth="94.0" text="Create User" />
+      <Label alignment="CENTER" layoutX="226.0" layoutY="110.0" prefHeight="17.0" prefWidth="149.0" text="Text senden" />
+      <TextField fx:id="eingabe" layoutX="113.0" layoutY="139.0" prefHeight="25.0" prefWidth="363.0" />
+      <Button onAction="#sendMessage" layoutX="492.0" layoutY="139.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="Senden" />
+      <Label alignment="CENTER" layoutX="118.0" layoutY="200.0" prefHeight="17.0" prefWidth="363.0" text="Empfangen" />
+      <TextField fx:id="empfangen" layoutX="109.0" layoutY="232.0" prefHeight="93.0" prefWidth="363.0" />
+   </children>
+</Pane>
