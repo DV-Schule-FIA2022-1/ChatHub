@@ -1,2 +1,5 @@
-package chat.ChatBot;public interface Processor {
+package chat.ChatBot;
+
+public interface Processor {
+    String process(String inputMsg);
 }
