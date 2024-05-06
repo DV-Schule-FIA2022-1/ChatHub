@@ -1,7 +1,7 @@
 package chat.server;
 
 import javafx.application.Platform;
-import chat.nachricht.Nachricht;
+import chat.message.Message;
 
 import java.io.*;
 import java.net.Socket;
@@ -12,7 +12,7 @@ public class ClientProxy extends Thread
     private ObjectInputStream in;
     private ObjectOutputStream out;
     ServerController serverController;
-    Nachricht nachricht;
+    Message nachricht;
 
     public ClientProxy(Server server, ServerController serverController, Socket client) throws IOException, ClassNotFoundException
     {
@@ -29,7 +29,7 @@ public class ClientProxy extends Thread
     {
         try
         {
-            while ((nachricht = (Nachricht)in.readObject())!= null)
+            while ((nachricht = (Message)in.readObject())!= null)
             {
                 System.out.println("Empfangen vom Client: " + nachricht);
                 server.verteileNachricht(nachricht);
@@ -42,7 +42,7 @@ public class ClientProxy extends Thread
         }
     }
 
-    public void schreiben(Nachricht nachricht) throws IOException
+    public void schreiben(Message nachricht) throws IOException
     {
         out.writeObject(nachricht);
         out.flush();

@@ -1,6 +1,6 @@
 package chat.client;
 
-import chat.nachricht.Nachricht;
+import chat.message.Message;
 
 import java.io.*;
 import java.net.Socket;
@@ -12,7 +12,7 @@ public class Client extends Thread
     private ObjectOutputStream out;
     private ClientController clientController;
     private String name;
-    private Nachricht nachricht;
+    private Message nachricht;
 
     public Client(int port, ClientController clientController, String name) throws IOException
     {
@@ -32,7 +32,7 @@ public class Client extends Thread
     {
         try
         {
-            while ((nachricht = (Nachricht)in.readObject())!= null)
+            while ((nachricht = (Message)in.readObject())!= null)
             {
                 clientController.getEmpfangen().clear();
                 System.out.println("Empfangen vom Server: " + nachricht);
@@ -46,7 +46,7 @@ public class Client extends Thread
     }
 
 
-    public void schreiben(Nachricht nachricht) throws IOException
+    public void schreiben(Message nachricht) throws IOException
     {
         this.nachricht = nachricht;
         out.writeObject(nachricht);
