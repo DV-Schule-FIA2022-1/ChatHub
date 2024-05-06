@@ -1,6 +1,6 @@
 package chat.server;
 
-import chat.nachricht.Nachricht;
+import chat.message.Message;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -12,7 +12,7 @@ public class Server extends Thread
     private ServerSocket socket;
     private int port;
     private ServerController serverController;
-    private Nachricht nachricht;
+    private Message nachricht;
 
     public Server(ServerController serverController, int port) throws IOException
     {
@@ -41,7 +41,7 @@ public class Server extends Thread
         }
     }
 
-    public void verteileNachricht(Nachricht nachricht) throws IOException
+    public void verteileNachricht(Message nachricht) throws IOException
     {
         for (ClientProxy c : clientList)
         {
