@@ -10,7 +10,7 @@ public class SimpleFileEditor extends Application
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/WorkTogether.fxml"));
         Parent root = loader.load();
-//        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/EdenCodingIcon.png")));
+//        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("@img/EdenCodingIcon.png")));
         primaryStage.setTitle("Work Thogether");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
