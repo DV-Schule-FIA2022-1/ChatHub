@@ -5,47 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/AuthenticationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/Chatroom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/MainLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/PermissionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/RoleManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/Session.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/Settings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/SettingsManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/UserManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Users/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/client/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/nachricht/Nachricht.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/ClientProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUIServer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUIServer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NewClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NewClient.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat1/MainClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat1/MainServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/Client1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/ClientProxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/GUIClientController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/GUIServerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/MainClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/MainServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/Server1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test2/client/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test2/client/ClientController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test2/client/MainClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test2/nachricht/Nachricht.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test2/server/ClientProxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test2/server/MainServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test2/server/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test2/server/ServerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Workspace" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -79,26 +39,29 @@
     </option>
   </component>
   <component name="ProjectId" id="2g5lGfHuMl3lM1eOlaU5IoVPCUG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "H:/Javaprojekte/ChatHub",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/Javaprojekte/ChatHub&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="Users" />
     </force-push-targets>
   </component>
-  <component name="RunManager" selected="Application.MainClient">
+  <component name="RunManager">
     <configuration name="MainClient" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="chat.client.MainClient" />
       <module name="Netzwerk" />
