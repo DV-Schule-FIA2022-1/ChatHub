@@ -29,7 +29,7 @@ public class ServerController implements Initializable
         {
             try
             {
-                testserver = new Server(this, Integer.parseInt(portnr.getText()));
+                testserver.getInstance(this, Integer.parseInt(portnr.getText()));
             }
             catch (IOException e)
             {

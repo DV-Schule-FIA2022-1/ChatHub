@@ -8,19 +8,30 @@ import java.util.ArrayList;
 
 public class Server extends Thread
 {
+    private Server instance = null;
     private ArrayList<ClientProxy> clientList;
     private ServerSocket socket;
     private int port;
     private ServerController serverController;
     private Message nachricht;
 
-    public Server(ServerController serverController, int port) throws IOException
+    private Server(ServerController serverController, int port) throws IOException
     {
         System.out.println("Server gestartet!");
         clientList = new ArrayList<>();
         this.port = port;
         this.serverController = serverController;
         this.start();
+    }
+
+    public synchronized Server getInstance(ServerController serverController, int port) throws IOException
+    {
+        if(instance == null)
+        {
+            instance = new Server(serverController, port);
+        }
+
+        return instance;
     }
 
     @Override
