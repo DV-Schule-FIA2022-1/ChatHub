@@ -44,6 +44,7 @@ public class ClientProxy extends Thread
 
     public void schreiben(Nachricht nachricht) throws IOException
     {
+
         out.writeObject(nachricht);
         out.flush();
     }
