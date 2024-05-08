@@ -5,11 +5,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import lombok.Getter;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable
 {
+    private AuthenticationManager authenticationManager;
+    @Getter
+    @FXML private TextField emailLoginField;
     @FXML private TextField passwordLoginField;
     @FXML private TextField firstNameTextfield;
     @FXML private TextField lastNameTextfield;
@@ -60,5 +65,28 @@ public class LoginController implements Initializable
         btnRegistration.setVisible(false);
         btnLogin.setVisible(false);
         registrationLabel.setVisible(false);
+    }
+
+    public void confirmEmailaddress()
+    {
+        if(authenticationManager.checkEmail() == true)
+        {
+            passwordLoginLabel.setVisible(true);
+            passwordLoginField.setVisible(true);
+
+            confirmPassword();
+        }
+        else
+        {
+            //Zeige Registerungsbereich an
+        }
+    }
+
+    public void confirmPassword()
+    {
+        if(authenticationManager.checkPassword() == true)
+        {
+            //Zeige User Profile an
+        }
     }
 }

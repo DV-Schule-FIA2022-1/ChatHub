@@ -1,6 +1,7 @@
 package chat.Users;
 
 import lombok.Getter;
+import lombok.Setter;
 
 public class User
 {
@@ -28,6 +29,11 @@ public class User
         this.password = password;
         this.email = email;
         this.address = address;
+    }
+
+    public void setAttempts()
+    {
+        attempts++;
     }
 
     @Override
