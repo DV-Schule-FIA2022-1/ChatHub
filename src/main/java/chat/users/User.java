@@ -1,7 +1,6 @@
-package chat.Users;
+package chat.users;
 
 import lombok.Getter;
-import lombok.Setter;
 
 public class User
 {

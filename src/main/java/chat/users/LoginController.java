@@ -1,5 +1,6 @@
-package chat.Users;
+package chat.users;
 
+import chat.users.AuthenticationController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -12,7 +13,7 @@ import java.util.ResourceBundle;
 
 public class LoginController implements Initializable
 {
-    private AuthenticationManager authenticationManager;
+    private AuthenticationController authenticationManager;
     @Getter
     @FXML private TextField emailLoginField;
     @FXML private TextField passwordLoginField;
@@ -38,6 +39,11 @@ public class LoginController implements Initializable
     @FXML private Label emailLabel;
     @FXML private Button btnLogin;
     @FXML private Button btnRegistration;
+
+    public LoginController()
+    {
+        authenticationManager = new AuthenticationController();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -71,15 +77,22 @@ public class LoginController implements Initializable
     {
         if(authenticationManager.checkEmail() == true)
         {
+            passwordLoginLabel = new Label();
             passwordLoginLabel.setVisible(true);
+            passwordLoginField = new TextField();
             passwordLoginField.setVisible(true);
 
             confirmPassword();
         }
         else
         {
-            //Zeige Registerungsbereich an
+            showRegisterArea();
         }
+    }
+
+    private void showRegisterArea()
+    {
+
     }
 
     public void confirmPassword()

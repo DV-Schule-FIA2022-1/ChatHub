@@ -1,4 +1,4 @@
-package chat.Users;
+package chat.users;
 
 public class Session
 {

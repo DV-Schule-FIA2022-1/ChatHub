@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.controllers.MainViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.users.MainViewController">
     <children>
-        <AnchorPane prefHeight="400.0" prefWidth="258.0" style="-fx-background-color: blue;">
+        <AnchorPane prefHeight="400.0" prefWidth="258.0" style="-fx-background-color: #676765;">
             <children>
-                <AnchorPane prefHeight="400.0" prefWidth="57.0" style="-fx-background-color: Slateblue;">
+                <AnchorPane prefHeight="400.0" prefWidth="57.0" style="-fx-background-color: #1B1212;">
                     <children>
-                        <Label fx:id="homeIcon" alignment="CENTER" layoutX="1.0" layoutY="70.0" prefHeight="50" prefWidth="50" />
+                        <Button fx:id="homeIcon" layoutX="3.0" layoutY="128.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="51.0" />
+                        <Button fx:id="chatIcon" layoutX="3.0" layoutY="72.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="51.0" />
+                        <Button fx:id="groupIcon" layoutX="3.0" layoutY="186.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="51.0" />
+                        <Button fx:id="settingsIcon" layoutX="3.0" layoutY="242.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="51.0" />
                     </children>
                 </AnchorPane>
+                <VBox layoutX="57.0" prefHeight="50.0" prefWidth="201.0" />
             </children>
         </AnchorPane>
         <AnchorPane layoutX="237.0" prefHeight="400.0" prefWidth="363.0" />

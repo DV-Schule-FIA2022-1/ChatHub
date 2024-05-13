@@ -1,13 +1,16 @@
-package chat.Users;
+package chat.users;
 
-public class AuthenticationManager
+import java.util.ArrayList;
+
+public class AuthenticationController
 {
     private LoginController loginController;
-    private User user;
+    private ArrayList<User> users;
+    private int counter = 0;
 
-    public AuthenticationManager()
+    public AuthenticationController()
     {
-
+        users = new ArrayList<>();
     }
 
     public boolean checkEmail()
@@ -23,9 +26,9 @@ public class AuthenticationManager
 
 
         //Wenn Passwort falsch dann erlaube nur max 3 versuche
-        if(user.getAttempts() < 3)
+        if(users.get(counter).getAttempts() < 3)
         {
-            user.setAttempts();
+            users.get(counter).setAttempts();
         }
         //Anmeldeversuch für 5 min blockiert -> return false
         else
