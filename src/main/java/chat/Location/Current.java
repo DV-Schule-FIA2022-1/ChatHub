@@ -6,7 +6,7 @@ public class Current
     private int interval;
     private float temperature_2m;
     private float apparent_temperature;
-    private boolean is_day;
+    private int is_day;
     private int precipitation;
 
     public Current()
@@ -33,7 +33,7 @@ public class Current
         this.apparent_temperature = apparent_temperature;
     }
 
-    public void setIs_day(boolean is_day)
+    public void setIs_day(int is_day)
     {
         this.is_day = is_day;
     }
@@ -63,7 +63,7 @@ public class Current
         return apparent_temperature;
     }
 
-    public boolean isIs_day()
+    public int getIs_day()
     {
         return is_day;
     }
