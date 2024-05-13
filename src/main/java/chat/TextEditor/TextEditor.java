@@ -1,5 +1,6 @@
 package chat.TextEditor;
 
+import com.jfoenix.controls.JFXTextArea;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -31,7 +32,7 @@ public class TextEditor extends Application{
     public void start(Stage primaryStage) {
         BorderPane root = new BorderPane();
         Scene scene = new Scene(root,800,600);
-        TextArea text = new TextArea("");
+        JFXTextArea text = new JFXTextArea("");
 
         MenuBar menuBar = new MenuBar();
         menuBar.prefWidthProperty().bind(primaryStage.widthProperty());
@@ -75,7 +76,7 @@ public class TextEditor extends Application{
     }
 
 
-    public void open(Stage primaryStage,TextArea text) throws IOException {
+    public void open(Stage primaryStage, JFXTextArea text) throws IOException {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("open File");
         fileChooser.setSelectedExtensionFilter(new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt"));
@@ -97,7 +98,7 @@ public class TextEditor extends Application{
 
 
 
-    public void save(Stage primaryStage, TextArea text){
+    public void save(Stage primaryStage, JFXTextArea text){
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save File");
         fileChooser.setSelectedExtensionFilter(new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt"));
@@ -115,7 +116,7 @@ public class TextEditor extends Application{
             }}
     };
 
-    public void suche(TextArea fullText){
+    public void suche(JFXTextArea fullText){
         Stage sucheStage = new Stage();
         BorderPane root = new BorderPane();
         Scene scene = new Scene(root,400,100);
@@ -180,7 +181,7 @@ public class TextEditor extends Application{
         sucheStage.show();
     };
 
-    public void esuche(TextArea fullText){
+    public void esuche(JFXTextArea fullText){
         Stage sucheStage = new Stage();
         BorderPane root = new BorderPane();
         Scene scene = new Scene(root,400,150);
@@ -312,7 +313,7 @@ public class TextEditor extends Application{
         sucheStage.show();
     };
 
-    public void checkindex(CheckBox checkBox,List fList,TextArea fullText,TextField stext){
+    public void checkindex(CheckBox checkBox,List fList,JFXTextArea fullText,TextField stext){
         if(checkBox.isSelected()){
             fList.clear();
             int x = fullText.getText().toLowerCase().indexOf(stext.getText().toLowerCase());
@@ -338,7 +339,7 @@ public class TextEditor extends Application{
     }
 
 
-    public void asuche(CheckBox checkBox,List<Integer> fList,TextArea fullText,TextField stext,Label eLabel){
+    public void asuche(CheckBox checkBox,List<Integer> fList,JFXTextArea fullText,TextField stext,Label eLabel){
         fList.clear();
         i = 0;
         if(checkBox.isSelected()){
