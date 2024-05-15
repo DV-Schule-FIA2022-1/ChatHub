@@ -1,4 +1,4 @@
-package chat.Location;
+package chat.WeaterAPI;
 
 public class Hourly_units
 {

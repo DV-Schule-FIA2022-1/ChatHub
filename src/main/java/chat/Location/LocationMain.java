@@ -1,86 +1,136 @@
 package chat.Location;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 
 
+import chat.IpGeolocationAPIFolder.Geolocation;
+import chat.OpenMeteoApi.GeolocationOpenMeteoApi;
+import chat.WeaterAPI.WeatherClass;
 import com.google.gson.Gson;
 
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-import com.google.gson.reflect.TypeToken;
-
 import  java.lang.System;
-import java.io.PrintStream;
-import java.util.Arrays;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.ArrayList;
 
 
 public class LocationMain
 {
+    //UserKlasse braucht geolocation g (muss noch implemented werden)
+
+
     //wetter api URL (KEIN KEY?!) https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m
     // BESSER https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,apparent_temperature,is_day,precipitation&hourly=temperature_2m
     //geolocation https://ipinfo.io/json (KEIN KEY)
 
+    Gson gson = new Gson();
+    //Gson gson2 = new Gson();
+   // Gson gson3 = new Gson();
+    URL url;
+    String json;
+    GeolocationOpenMeteoApi g;
+    Geolocation g2;
+    String parts[];
 
-    public  LocationMain()
+    //URL url2;
+    //private User user;
+    ArrayList<GeolocationOpenMeteoApi> listCoordinates;
+
+    public  LocationMain(/*User user*/)
     {
+        //this.user = user;
 
-        Gson gson = new Gson();
-        Gson gson2 = new Gson();
+        location();
+
+
+
+    }
+
+    public void location()
+    {
         try
         {
-            URL url = new URL("https://ipinfo.io/json");
+            url = new URL("https://ipinfo.io/json");
+            json = stream(url);
+
+            g = gson.fromJson(json, GeolocationOpenMeteoApi.class);
+
+            parts = g.getLoc().split(",") ;
+            g.setLat(Float.parseFloat(parts[0]));
+            g.setLon(Float.parseFloat(parts[1]));
+
+
+            URL url = new URL("https://api.ipgeolocation.io/ipgeo?apiKey=7d698786739843e39a69b50c9f1afd0f&ip="+ g.getIp()); // ipgeolocation.io
             String json = stream(url);
-            Geolocation g = gson.fromJson(json,Geolocation.class);
-
-            String parts[] = g.getLoc().split(",") ;
-            float lat = Float.parseFloat(parts[0]);
-            float lon = Float.parseFloat(parts[1]);
-
-            URL url2 = new URL("https://api.open-meteo.com/v1/forecast?latitude=" +lat+"&longitude="+lon+"&current=temperature_2m,apparent_temperature,is_day,precipitation&hourly=temperature_2m");
-            String weather = stream(url2);
-            WeatherClass w = gson2.fromJson(weather,WeatherClass.class);
-            System.out.println(w.getElevation());
-
-        } catch (MalformedURLException e)
-        {
-            e.printStackTrace();
-            throw new RuntimeException(e);
+            //System.out.println(json);
+            g2= gson.fromJson(json, Geolocation.class);
+            weather(g2);
+            //user.setGeolocation(g2);
         } catch (IOException e)
         {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
-    public String stream(java.net.URL url) throws java.io.IOException
-
+    public void weather(Geolocation g2)
     {
-
-        try(java.io.InputStream input = url.openStream())
-
+        try
         {
-
-            java.io.InputStreamReader isr = new java.io.InputStreamReader(input);
-
-            java.io.BufferedReader reader = new java.io.BufferedReader(isr);
-
-            StringBuilder json = new StringBuilder();
-
-            int c;
-
-            while((c = reader.read()) != -1)
-
-            {
-
-                json.append((char)c);
-
-            }
-
-            return json.toString();
-
+            url = new URL("https://api.open-meteo.com/v1/forecast?latitude=" +g2.getLatitude()+"&longitude="+g2.getLongitude()+"&current=temperature_2m,apparent_temperature,is_day,precipitation&hourly=temperature_2m");
+            String weather = stream(url);
+            WeatherClass w = gson.fromJson(weather,WeatherClass.class);
+            System.out.println(w.getElevation());
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-
     }
 
+    public void distanceBetween() //liste mit userCoordinaten übergeben
+    {
+        try
+        {
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create("https://india-pincode-with-latitude-and-longitude.p.rapidapi.com/api/v1/distance"))
+                    .header("content-type", "application/x-www-form-urlencoded")
+                    .header("X-RapidAPI-Key", "c40b571c54msh3852022a451aafdp1e569djsn05830a4a9bf4")
+                    .header("X-RapidAPI-Host", "india-pincode-with-latitude-and-longitude.p.rapidapi.com")
+                    .method("POST", HttpRequest.BodyPublishers.ofString("lat1=50&lng1=10&lat2=50.005&lng2=10.001&unit=km"))
+                    .build();
+            HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+            System.out.println(response.body());
+            System.out.println(request);
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        } catch (InterruptedException e)
+        {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Geolocation getG2()
+    {
+        return g2;
+    }
+
+    public String stream(java.net.URL url) throws java.io.IOException
+    {
+        try(java.io.InputStream input = url.openStream())
+        {
+            java.io.InputStreamReader isr = new java.io.InputStreamReader(input);
+            java.io.BufferedReader reader = new java.io.BufferedReader(isr);
+            StringBuilder json = new StringBuilder();
+            int c;
+            while((c = reader.read()) != -1)
+            {
+                json.append((char)c);
+            }
+            return json.toString();
+        }
+    }
 }

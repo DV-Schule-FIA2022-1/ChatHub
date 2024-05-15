@@ -1,6 +1,6 @@
-package chat.Location;
+package chat.OpenMeteoApi;
 
-public class Geolocation
+public class GeolocationOpenMeteoApi
 {
 
     private String ip;
@@ -12,11 +12,36 @@ public class Geolocation
     private int postal;
     private String timezone;
     private String readme;
-    public Geolocation()
+
+    private float lat;
+    private float lon;
+
+    public float getLat()
+    {
+        return lat;
+    }
+
+
+
+    public GeolocationOpenMeteoApi()
     {
 
     }
 
+
+
+    public void setLat(float lat)
+    {
+        this.lat = lat;
+    }
+    public float getLon()
+    {
+        return lon;
+    }
+    public void setLon(float lon)
+    {
+        this.lon = lon;
+    }
     public void setIp(String ip)
     {
         this.ip = ip;
