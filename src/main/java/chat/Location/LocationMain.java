@@ -5,6 +5,7 @@ import java.net.URI;
 import java.net.URL;
 
 
+import chat.IndiaDistanceApi.Userdistance;
 import chat.IpGeolocationAPIFolder.Geolocation;
 import chat.OpenMeteoApi.GeolocationOpenMeteoApi;
 import chat.WeaterAPI.WeatherClass;
@@ -16,6 +17,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
 
+import java.lang.String;
 
 public class LocationMain
 {
@@ -43,12 +45,40 @@ public class LocationMain
     {
         //this.user = user;
 
-        location();
+        //location();
+
+        try
+        {
 
 
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create("https://india-pincode-with-latitude-and-longitude.p.rapidapi.com/api/v1/distance"))
+                    .header("content-type", "application/x-www-form-urlencoded")
+                    .header("X-RapidAPI-Key", "c40b571c54msh3852022a451aafdp1e569djsn05830a4a9bf4")
+                    .header("X-RapidAPI-Host", "india-pincode-with-latitude-and-longitude.p.rapidapi.com")
+                    .method("POST", HttpRequest.BodyPublishers.ofString("lat1=50&lng1=10&lat2=50.005&lng2=10.001&unit=km"))
+                    .build();
 
+
+            String queryString = request.getQueryString();
+            String requestURL = url.toString();
+            url = new URL("https://india-pincode-with-latitude-and-longitude.p.rapidapi.com/api/v1/distance");
+
+            HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+
+            System.out.println(response.body());
+            //  Userdistance u = new Userdistance();
+
+
+        }catch (IOException e)
+        {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        } catch (InterruptedException e)
+        {
+            throw new RuntimeException(e);
+        }
     }
-
     public void location()
     {
         try
@@ -90,20 +120,40 @@ public class LocationMain
         }
     }
 
-    public void distanceBetween() //liste mit userCoordinaten übergeben
+    public void distanceBetween() //liste mit user übergeben
     {
+        ArrayList test = new ArrayList();//Liste mit Usern
+        ArrayList<Userdistance> distance = new ArrayList<>();
+
+        //lat1,long1 lat2 long2 durch parameter ersetzen
         try
         {
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create("https://india-pincode-with-latitude-and-longitude.p.rapidapi.com/api/v1/distance"))
-                    .header("content-type", "application/x-www-form-urlencoded")
-                    .header("X-RapidAPI-Key", "c40b571c54msh3852022a451aafdp1e569djsn05830a4a9bf4")
-                    .header("X-RapidAPI-Host", "india-pincode-with-latitude-and-longitude.p.rapidapi.com")
-                    .method("POST", HttpRequest.BodyPublishers.ofString("lat1=50&lng1=10&lat2=50.005&lng2=10.001&unit=km"))
-                    .build();
-            HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-            System.out.println(response.body());
-            System.out.println(request);
+            for(int a=0;a<test.size();a++)
+            {
+                for(int b=0; b<test.size();b++)
+                {
+                    if(b!=a)
+                    {
+                        HttpRequest request = HttpRequest.newBuilder()
+                                .uri(URI.create("https://india-pincode-with-latitude-and-longitude.p.rapidapi.com/api/v1/distance"))
+                                .header("content-type", "application/x-www-form-urlencoded")
+                                .header("X-RapidAPI-Key", "c40b571c54msh3852022a451aafdp1e569djsn05830a4a9bf4")
+                                .header("X-RapidAPI-Host", "india-pincode-with-latitude-and-longitude.p.rapidapi.com")
+                                .method("POST", HttpRequest.BodyPublishers.ofString("lat1=50&lng1=10&lat2=50.005&lng2=10.001&unit=km"))
+                                .build();
+                        S
+                        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
+
+
+                     //   Userdistance u = new Userdistance()
+
+                        System.out.println(response.body());
+
+                    }
+
+                }
+            }
+
         } catch (IOException e)
         {
             e.printStackTrace();
