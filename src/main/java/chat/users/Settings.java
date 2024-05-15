@@ -1,4 +1,6 @@
 package chat.users;
 
-public class Settings {
+public class Settings
+{
+
 }

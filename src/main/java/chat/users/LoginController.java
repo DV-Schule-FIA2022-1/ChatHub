@@ -1,11 +1,13 @@
 package chat.users;
 
 import chat.users.AuthenticationController;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import lombok.Getter;
 
 import java.net.URL;
@@ -39,6 +41,8 @@ public class LoginController implements Initializable
     @FXML private Label emailLabel;
     @FXML private Button btnLogin;
     @FXML private Button btnRegistration;
+    @FXML private Label ageLabel;
+    @FXML private TextField ageField;
 
     public LoginController()
     {
@@ -71,28 +75,71 @@ public class LoginController implements Initializable
         btnRegistration.setVisible(false);
         btnLogin.setVisible(false);
         registrationLabel.setVisible(false);
+        ageField.setVisible(false);
+        ageLabel.setVisible(false);
+    }
+
+    @FXML
+    public void enterPressed(KeyEvent event)
+    {
+        if(event.getCode() == event.getCode().ENTER)
+        {
+            confirmEmailaddress();
+        }
     }
 
     public void confirmEmailaddress()
     {
-        if(authenticationManager.checkEmail() == true)
+        if(emailTextfield.getText().toString().contains("@"))
         {
-            passwordLoginLabel = new Label();
-            passwordLoginLabel.setVisible(true);
-            passwordLoginField = new TextField();
-            passwordLoginField.setVisible(true);
+            if(authenticationManager.checkEmail() == true)
+            {
+                passwordLoginLabel.setVisible(true);
+                passwordLoginField.setVisible(true);
+                btnLogin.setVisible(true);
 
-            confirmPassword();
+                //confirmPassword();
+            }
+            else
+            {
+                showRegisterArea();
+            }
         }
         else
         {
-            showRegisterArea();
+
         }
     }
 
     private void showRegisterArea()
     {
+        firstNameTextfield.setVisible(true);
+        lastNameTextfield.setVisible(true);
+        passwordTextfield.setVisible(true);
+        passwordAgainTextfield.setVisible(true);
+        streetTextfield.setVisible(true);
+        cityTextfield.setVisible(true);
+        zipCodeTextfield.setVisible(true);
+        countryTextfield.setVisible(true);
+        emailTextfield.setVisible(true);
+        firstNameLabel.setVisible(true);
+        lastNameLabel.setVisible(true);
+        passwordLabel.setVisible(true);
+        passwordAgainLabel.setVisible(true);
+        streetLabel.setVisible(true);
+        cityLabel.setVisible(true);
+        countryLabel.setVisible(true);
+        zipCodeLabel.setVisible(true);
+        emailLabel.setVisible(true);
+        btnRegistration.setVisible(true);
+        registrationLabel.setVisible(true);
+        ageLabel.setVisible(true);
+        ageField.setVisible(true);
+    }
 
+    public void registerUser()
+    {
+        emailLabel.setVisible(true);
     }
 
     public void confirmPassword()

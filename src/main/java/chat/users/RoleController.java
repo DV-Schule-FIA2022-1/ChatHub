@@ -1,4 +1,6 @@
 package chat.users;
 
-public class RoleController {
+public class RoleController
+{
+
 }

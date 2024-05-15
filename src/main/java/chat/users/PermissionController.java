@@ -1,4 +1,6 @@
 package chat.users;
 
-public class PermissionController {
+public class PermissionController
+{
+
 }

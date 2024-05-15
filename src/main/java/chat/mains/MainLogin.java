@@ -26,21 +26,8 @@ public class MainLogin extends Application
     public void start(Stage primaryStage) throws Exception
     {
         this.primaryStage = primaryStage;
-        showMainView();
         loginController = new LoginController();
-        scene.setOnKeyPressed(new EventHandler<KeyEvent>()
-        {
-            @Override
-            public void handle(KeyEvent event)
-            {
-                switch (event.getCode())
-                {
-                    case ENTER:
-                        loginController.confirmEmailaddress();
-                        break;
-                }
-            }
-        });
+        showMainView();
     }
 
     public void showMainView() throws IOException

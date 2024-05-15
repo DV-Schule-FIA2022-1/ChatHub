@@ -4,17 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Add Singleton Pattern for Server">
-      <change afterPath="$PROJECT_DIR$/.idea/ChatHub.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Icons/homeIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/Users/MainWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/controllers/MainViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Start with Config + Update MainWindow + Add Key Event to LoginScreen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Users/AuthenticationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Users/AuthenticationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Users/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Users/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Chathub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Chathub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/PermissionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/SettingsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +62,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "H:/Java/Schulprojekt",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="Push.Settings">
@@ -73,9 +78,16 @@
       <recent name="D:\ChatHub\src\main\Icons" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainWindow">
+  <component name="RunManager" selected="Application.Chathub">
+    <configuration name="Chathub" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Chathub" />
+      <module name="Netzwerk" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainClient" type="Application" factoryName="Application" singleton="false">
-      <option name="MAIN_CLASS_NAME" value="chat.client.MainClient" />
+      <option name="MAIN_CLASS_NAME" value="chat.mains.MainClient" />
       <module name="Netzwerk" />
       <option name="VM_PARAMETERS" value="--module-path &quot;H:\Java\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
@@ -84,7 +96,7 @@
     </configuration>
     <configuration name="MainLogin" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-20" />
-      <option name="MAIN_CLASS_NAME" value="chat.Users.MainLogin" />
+      <option name="MAIN_CLASS_NAME" value="chat.mains.MainLogin" />
       <module name="Netzwerk" />
       <option name="VM_PARAMETERS" value="--module-path &quot;H:\Java\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
@@ -92,7 +104,7 @@
       </method>
     </configuration>
     <configuration name="MainServer" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="chat.server.MainServer" />
+      <option name="MAIN_CLASS_NAME" value="chat.mains.MainServer" />
       <module name="Netzwerk" />
       <option name="VM_PARAMETERS" value="--module-path &quot;H:\Java\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
@@ -100,7 +112,7 @@
       </method>
     </configuration>
     <configuration name="MainWindow" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="chat.Users.MainWindow" />
+      <option name="MAIN_CLASS_NAME" value="chat.mains.MainWindow" />
       <module name="Netzwerk" />
       <option name="VM_PARAMETERS" value="--module-path &quot;H:\Java\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
@@ -112,6 +124,7 @@
       <item itemvalue="Application.MainServer" />
       <item itemvalue="Application.MainWindow" />
       <item itemvalue="Application.MainLogin" />
+      <item itemvalue="Application.Chathub" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -147,7 +160,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715151712392</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Start with verification from User + Start with the Main Menu">
+      <option name="closed" value="true" />
+      <created>1715155650310</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715155650310</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Start with Config + Update MainWindow + Add Key Event to LoginScreen">
+      <option name="closed" value="true" />
+      <created>1715606100013</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715606100013</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +194,8 @@
     <MESSAGE value="Add Lombok + User Class" />
     <MESSAGE value="test" />
     <MESSAGE value="Add Singleton Pattern for Server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Singleton Pattern for Server" />
+    <MESSAGE value="Start with verification from User + Start with the Main Menu" />
+    <MESSAGE value="Start with Config + Update MainWindow + Add Key Event to LoginScreen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start with Config + Update MainWindow + Add Key Event to LoginScreen" />
   </component>
 </project>

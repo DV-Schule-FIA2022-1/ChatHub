@@ -1,4 +1,6 @@
 package chat.users;
 
-public class UserController {
+public class UserController
+{
+
 }
