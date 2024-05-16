@@ -26,8 +26,9 @@ public class User
     private int age;
     @Getter
     private Address address;
+    private static MessageDigest md;
 
-    public User(String firstName, String lastName, String password, String email, Integer age, Address address) throws NoSuchAlgorithmException
+    public User(String firstName, String lastName, String password, String email, Integer age, Address address)
     {
         localID = UserID++;
         this.firstName = firstName;
@@ -44,9 +45,16 @@ public class User
         this.lastName = lastName;
     }
 
-    public static byte[] getSHA(String input) throws NoSuchAlgorithmException
+    public static byte[] getSHA(String input)
     {
-        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        try
+        {
+           md = MessageDigest.getInstance("SHA-256");
+        }
+        catch (NoSuchAlgorithmException e)
+        {
+            e.printStackTrace();
+        }
 
         return md.digest(input.getBytes(StandardCharsets.UTF_8));
     }

@@ -4,6 +4,7 @@ import chat.users.AuthenticationController;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -90,7 +91,7 @@ public class LoginController implements Initializable
 
     public void confirmEmailaddress()
     {
-        if(emailTextfield.getText().toString().contains("@"))
+        if(emailLoginField.getText().contains("@"))
         {
             if(authenticationManager.checkEmail() == true)
             {
@@ -107,7 +108,7 @@ public class LoginController implements Initializable
         }
         else
         {
-
+            LoginController.infoBox("Email must be included @", "Error Message");
         }
     }
 
@@ -148,5 +149,19 @@ public class LoginController implements Initializable
         {
             //Zeige User Profile an
         }
+    }
+
+    public static void infoBox(String infoMessage, String titleBar)
+    {
+        infoBox(infoMessage, titleBar, null);
+    }
+
+    public static void infoBox(String infoMessage, String titleBar, String headerMessage)
+    {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titleBar);
+        alert.setHeaderText(headerMessage);
+        alert.setContentText(infoMessage);
+        alert.showAndWait();
     }
 }
