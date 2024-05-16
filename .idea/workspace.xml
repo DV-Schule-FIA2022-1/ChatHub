@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="test">
+    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="add: AES/RSA-KeyGenerator, AES/RSA-Encryption. &#10;changed: message class">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/AESEncryption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/AESKeyGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/RSAEncryption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/RSAKeyGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/TestDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/TestDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/TestDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/TestDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/message/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/message/Message.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +30,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="KolesnikowNikita &lt;kolesnikownikita@dv-schulen.de&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="Workspace" />
@@ -46,22 +60,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;H:/Javaprojekte/ChatHub&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "H:/Javaprojekte/ChatHub",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="Users" />
     </force-push-targets>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainClient">
     <configuration name="MainClient" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="chat.client.MainClient" />
       <module name="Netzwerk" />
@@ -118,15 +133,53 @@
       <option name="project" value="LOCAL" />
       <updated>1714996938359</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add Testdriver with rsa key generator">
+      <option name="closed" value="true" />
+      <created>1715155640921</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715155640921</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="f036b984-9d5e-4092-b711-f94575d416fd" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
             <State />
+          </value>
+        </entry>
+        <entry key="f036b984-9d5e-4092-b711-f94575d416fd">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:H:/javaProjectChat/ChatHub/src/main/java/chat/encryption" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
           </value>
         </entry>
       </map>
@@ -135,6 +188,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Lombok + User Class" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="add Testdriver with rsa key generator" />
+    <MESSAGE value="add: AES/RSA-KeyGenerator, AES/RSA-Encryption. &#10;changed: message class" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: AES/RSA-KeyGenerator, AES/RSA-Encryption. &#10;changed: message class" />
   </component>
 </project>
