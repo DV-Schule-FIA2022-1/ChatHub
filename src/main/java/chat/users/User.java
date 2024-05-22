@@ -1,16 +1,18 @@
 package chat.users;
 
+import lombok.Data;
 import lombok.Getter;
 
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.sql.Date;
 
 public class User
 {
     @Getter
-    private static int UserID;
+    private static int userID;
     private int localID;
     @Getter
     private int attempts;
@@ -25,17 +27,19 @@ public class User
     @Getter
     private int age;
     @Getter
+    private Date birthdate;
+    @Getter
     private Address address;
     private static MessageDigest md;
 
-    public User(String firstName, String lastName, String password, String email, Integer age, Address address)
+    public User(String firstName, String lastName, String password, String email, Date birthdate, Address address)
     {
-        localID = UserID++;
+        localID = userID++;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = toHexString(getSHA(password));
         this.email = email;
-        this.age = age;
+        this.birthdate = birthdate;
         this.address = address;
     }
 

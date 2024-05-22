@@ -10,5 +10,8 @@
         <module name="Netzwerk" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ChatHub" target="20" />
+    </bytecodeTargetLevel>
   </component>
 </project>

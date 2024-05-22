@@ -12,6 +12,7 @@ import javafx.scene.input.KeyEvent;
 import lombok.Getter;
 
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable
@@ -42,8 +43,8 @@ public class LoginController implements Initializable
     @FXML private Label emailLabel;
     @FXML private Button btnLogin;
     @FXML private Button btnRegistration;
-    @FXML private Label ageLabel;
-    @FXML private TextField ageField;
+    @FXML private Label birthdateLabel;
+    @FXML private TextField birthdateTextfield;
 
     public LoginController()
     {
@@ -76,8 +77,8 @@ public class LoginController implements Initializable
         btnRegistration.setVisible(false);
         btnLogin.setVisible(false);
         registrationLabel.setVisible(false);
-        ageField.setVisible(false);
-        ageLabel.setVisible(false);
+        birthdateLabel.setVisible(false);
+        birthdateTextfield.setVisible(false);
     }
 
     @FXML
@@ -134,13 +135,19 @@ public class LoginController implements Initializable
         emailLabel.setVisible(true);
         btnRegistration.setVisible(true);
         registrationLabel.setVisible(true);
-        ageLabel.setVisible(true);
-        ageField.setVisible(true);
+        birthdateLabel.setVisible(true);
+        birthdateTextfield.setVisible(true);
     }
 
-    public void registerUser()
+    public void createUser()
     {
-        emailLabel.setVisible(true);
+        Address newAdress = new Address(streetTextfield.getText(), cityTextfield.getText(), zipCodeTextfield.getText(), countryTextfield.getText());
+        User newUser = new User(firstNameTextfield.getText(), lastNameTextfield.getText(), passwordTextfield.getText(), emailTextfield.getText(), java.sql.Date.valueOf(birthdateTextfield.getText()), newAdress);
+    }
+
+    public void loginUser()
+    {
+
     }
 
     public void confirmPassword()

@@ -4,6 +4,7 @@ import lombok.Getter;
 
 public class Address
 {
+    private int addressID;
     @Getter
     private String street;
     @Getter

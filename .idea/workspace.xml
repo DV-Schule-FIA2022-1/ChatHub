@@ -4,21 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Start with Config + Update MainWindow + Add Key Event to LoginScreen">
+    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Add Test DB + Preparing SQL">
+      <change afterPath="$PROJECT_DIR$/src/main/Icons/logoutIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TestDB.accdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Chathub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Chathub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/PermissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/SettingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUIClient.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUIServer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NewClient.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,18 +56,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "H:/Java/Schulprojekt",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/Java/Schulprojekt&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="Users" />
@@ -75,10 +75,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Patrick\Desktop\Development\ChatHub\src\main\resources" />
+      <recent name="C:\Users\Patrick\Desktop\Development\ChatHub\src\main\java\chat\database" />
       <recent name="D:\ChatHub\src\main\Icons" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Chathub">
+  <component name="RunManager" selected="Application.MainLogin">
     <configuration name="Chathub" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Chathub" />
       <module name="Netzwerk" />
@@ -95,7 +97,7 @@
       </method>
     </configuration>
     <configuration name="MainLogin" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-20" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-20" />
       <option name="MAIN_CLASS_NAME" value="chat.mains.MainLogin" />
       <module name="Netzwerk" />
       <option name="VM_PARAMETERS" value="--module-path &quot;H:\Java\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
@@ -196,6 +198,11 @@
     <MESSAGE value="Add Singleton Pattern for Server" />
     <MESSAGE value="Start with verification from User + Start with the Main Menu" />
     <MESSAGE value="Start with Config + Update MainWindow + Add Key Event to LoginScreen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start with Config + Update MainWindow + Add Key Event to LoginScreen" />
+    <MESSAGE value="Add Test DB + Preparing SQL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Test DB + Preparing SQL" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
