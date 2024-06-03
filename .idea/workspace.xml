@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Add Test DB + Preparing SQL">
-      <change afterPath="$PROJECT_DIR$/src/main/Icons/logoutIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/TestDB.accdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Icons/searchingIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chat/users/HashFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Icons/settingsIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Icons/settingsIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Chathub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Chathub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUIClient.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUIServer.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NewClient.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TestDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,12 +73,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ChatHub\src\main\Icons" />
+      <recent name="D:\ChatHub\src\main\resources" />
+      <recent name="D:\ChatHub\src\main\java\chat\database" />
       <recent name="C:\Users\Patrick\Desktop\Development\ChatHub\src\main\resources" />
       <recent name="C:\Users\Patrick\Desktop\Development\ChatHub\src\main\java\chat\database" />
-      <recent name="D:\ChatHub\src\main\Icons" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainLogin">
+  <component name="RunManager" selected="Application.Chathub">
     <configuration name="Chathub" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Chathub" />
       <module name="Netzwerk" />

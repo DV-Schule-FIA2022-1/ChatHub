@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.users.MainViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.users.MainViewController">
     <children>
         <AnchorPane prefHeight="400.0" prefWidth="258.0" style="-fx-background-color: #676765;">
             <children>
@@ -15,7 +19,16 @@
                         <Button fx:id="settingsIcon" layoutX="3.0" layoutY="242.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="51.0" />
                     </children>
                 </AnchorPane>
-                <VBox layoutX="57.0" prefHeight="50.0" prefWidth="201.0" />
+            <HBox alignment="CENTER" layoutX="57.0" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../Icons/searchingIcon.png" />
+                     </image>
+                  </ImageView>
+                  <TextField prefHeight="25.0" prefWidth="158.0" />
+               </children>
+            </HBox>
             </children>
         </AnchorPane>
         <AnchorPane layoutX="237.0" prefHeight="400.0" prefWidth="363.0" />
