@@ -24,15 +24,12 @@ import java.lang.String;
 public class LocationMain
 {
     //UserKlasse braucht geolocation g (muss noch implemented werden)
+//user braucht arrayliste mit klasse mit username und distanz, muss noch sortiert werden und die nähsten 4 werden angezeigt
+    // + Liste mit anderen Usern o.ä.die übergeben werden kann
 
-
-    //wetter api URL (KEIN KEY?!) https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m
-    // BESSER https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,apparent_temperature,is_day,precipitation&hourly=temperature_2m
-    //geolocation https://ipinfo.io/json (KEIN KEY)
 
     Gson gson = new Gson();
-    //Gson gson2 = new Gson();
-   // Gson gson3 = new Gson();
+
     URL url;
     String json;
     GeolocationOpenMeteoApi g;
@@ -42,6 +39,7 @@ public class LocationMain
     //URL url2;
     //private User user;
     ArrayList<GeolocationOpenMeteoApi> listCoordinates;
+
 
     public  LocationMain(/*User user*/)
     {
@@ -57,32 +55,13 @@ public class LocationMain
 
     }
 
-    public void distancebetweenCoords (ArrayList<GeolocationOpenMeteoApi> otherUsers, GeolocationOpenMeteoApi user1)
+    public void distancebetweenCoords (ArrayList<GeolocationOpenMeteoApi> otherUsers, GeolocationOpenMeteoApi user1) //Liste mit user übergeben, originaler User übergebene werte austauschen mit richtiger Klasse!!!!!
     {
+        ArrayList<UsernameDistanceClass> distanceEveryoneElse = new ArrayList<>();
         double el1 = 0;
         double el2 = 0;
         for (GeolocationOpenMeteoApi user2: otherUsers)
         {
-
-           /* final int r = 6371; // Radius of the earth
-
-            double latDistance = Math.toRadians(user2.getLat() - user1.getLat());
-            double lonDistance = Math.toRadians(user2.getLon() - user1.getLon());
-            double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2) + Math.cos(Math.toRadians(user1.getLat())) * Math.cos(Math.toRadians(user2.getLat()) * Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2));
-
-
-            double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-            System.out.println(c);
-           // double distance = R * c * 1000; // convert to meters
-            double distance = r * c;
-            System.out.println("Die Distanz beträgt: " + distance);
-
-
-            distance = Math.pow(distance, 2);
-            double erg = Math.sqrt(distance);
-            erg= Math.round(erg *100.0 ) / 100.0 ;
-            System.out.println("Die Distanz beträgt: " + erg);*/
-
 
             double r2d = 180.0D / 3.141592653589793D;
             double d2r = 3.141592653589793D / 180.0D;
@@ -92,7 +71,11 @@ public class LocationMain
             double y = user2.getLat() * d2r;
             double result = Math.acos( Math.sin(x) * Math.sin(y) + Math.cos(x) * Math.cos(y) * Math.cos(d2r * (user1.getLon() - user2.getLon()))) * d2km;
             result= Math.round(result *100.0 ) / 100.0 ;
-            System.out.println("Die Distanz beträgt: " + result);
+
+            //UsernameDistanceClass new1 = new UsernameDistanceClass(user2.getUsername, result);
+           // distanceEveryoneElse.add(new1);
+
+
         }
 
     }
@@ -139,48 +122,7 @@ public class LocationMain
         }
     }
 
-    public void distanceBetween() //liste mit user übergeben
-    {
-        ArrayList test = new ArrayList();//Liste mit Usern
-        ArrayList<Userdistance> distance = new ArrayList<>();
 
-        //lat1,long1 lat2 long2 durch parameter ersetzen
-        try
-        {
-            for(int a=0;a<test.size();a++)
-            {
-                for(int b=0; b<test.size();b++)
-                {
-                    if(b!=a)
-                    {
-                        HttpRequest request = HttpRequest.newBuilder()
-                                .uri(URI.create("https://india-pincode-with-latitude-and-longitude.p.rapidapi.com/api/v1/distance"))
-                                .header("content-type", "application/x-www-form-urlencoded")
-                                .header("X-RapidAPI-Key", "c40b571c54msh3852022a451aafdp1e569djsn05830a4a9bf4")
-                                .header("X-RapidAPI-Host", "india-pincode-with-latitude-and-longitude.p.rapidapi.com")
-                                .method("POST", HttpRequest.BodyPublishers.ofString("lat1=50&lng1=10&lat2=50.005&lng2=10.001&unit=km"))
-                                .build();
-
-                        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-
-
-                     //   Userdistance u = new Userdistance()
-
-                        System.out.println(response.body());
-
-                    }
-
-                }
-            }
-
-        } catch (IOException e)
-        {
-            e.printStackTrace();
-        } catch (InterruptedException e)
-        {
-            throw new RuntimeException(e);
-        }
-    }
 
     public Geolocation getG2()
     {
