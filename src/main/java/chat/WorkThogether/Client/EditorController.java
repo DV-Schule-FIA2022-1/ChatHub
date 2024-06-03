@@ -1,4 +1,4 @@
-package chat.Test;
+package chat.WorkThogether.Client;
 
 import com.jfoenix.controls.JFXTextArea;
 import javafx.event.ActionEvent;
@@ -19,7 +19,11 @@ import java.io.*;
 import java.nio.file.attribute.FileTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 import java.util.logging.Logger;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 
 import static java.util.logging.Level.SEVERE;
 public class EditorController
@@ -28,7 +32,40 @@ public class EditorController
     private File loadedFileReference;
     private FileTime lastModifiedTime;
     @FXML public JFXTextArea textArea;
+    private  Client client;
     public int i = 0;
+    private Stack undo;
+    private Stack redo;
+    @FXML
+    public void initialize()
+    {
+//        textArea.textProperty().addListener(new ChangeListener
+//                () {
+//            @Override
+//            public void changed(ObservableValue observable, String oldValue, String newValue) {
+//                changeTextUpdate(newValue);
+//            }
+//        });
+//        textArea.setOnInputMethodTextChanged(event -> {
+//            changeTextUpdate(event.getCommitted());
+//        });
+
+        try
+        {
+            client = new Client(1234, this);
+        }
+        catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
+        System.out.println("Controller gestartet");
+    }
+
+    public void changeTextUpdate()
+    {
+        String newText = "new";
+        System.out.println(newText);
+    }
 
     public void saveFile()
     {
@@ -111,7 +148,7 @@ public class EditorController
            }
         );
 
-        Button bnext = new Button("Next");
+        Button bnext = new Button("Nächstes");
         bnext.setOnAction(new EventHandler<ActionEvent>()
               {
                   @Override
@@ -127,7 +164,7 @@ public class EditorController
               }
         );
 
-        Button bPrevious  = new Button("Previous");
+        Button bPrevious  = new Button("Vorher");
         bPrevious.setOnAction(new EventHandler<ActionEvent>()
           {
               @Override
@@ -141,7 +178,6 @@ public class EditorController
                       i --;
                   }
                   textArea.selectRange(fList.get(i), fList.get(i)+ stext.getText().length());
-
               }
           }
         );
@@ -191,8 +227,7 @@ public class EditorController
            }
         );
 
-
-        Button bnext = new Button("Next");
+        Button bnext = new Button("Nächstes");
         bnext.setOnAction(new EventHandler<ActionEvent>()
           {
               @Override

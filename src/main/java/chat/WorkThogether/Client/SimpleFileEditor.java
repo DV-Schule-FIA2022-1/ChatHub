@@ -1,4 +1,4 @@
-package chat.mains;
+package chat.WorkThogether.Client;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,7 +7,8 @@ import javafx.stage.Stage;
 public class SimpleFileEditor extends Application
 {
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) throws Exception
+    {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/WorkTogether.fxml"));
         Parent root = loader.load();
 //        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("@img/EdenCodingIcon.png")));
