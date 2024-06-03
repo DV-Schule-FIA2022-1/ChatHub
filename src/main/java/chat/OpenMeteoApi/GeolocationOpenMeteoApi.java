@@ -28,6 +28,11 @@ public class GeolocationOpenMeteoApi
 
     }
 
+    public GeolocationOpenMeteoApi(float lat, float lon)
+    {
+        this.lat = lat;
+        this.lon = lon;
+    }
 
 
     public void setLat(float lat)
