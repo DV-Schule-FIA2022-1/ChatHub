@@ -7,7 +7,7 @@ public class Main {
         Translator test = new Translator("arabic");
         test.process("whats up i am omar how are you");
         Improver test0 = new Improver();
-        test0.process("hallo Ich Könnte nicht mit dir Reden");
+        test0.process("hallo Ich Könnte nicht mit dir Reden, verzeihe mir bitte");
 
     }
 }
