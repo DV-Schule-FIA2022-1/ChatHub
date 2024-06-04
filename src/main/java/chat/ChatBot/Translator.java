@@ -28,8 +28,7 @@ public  class Translator implements Processor {
         this.Lang = lang;
     }
     public String getLang(){return Lang;};
-    public Translator(String inputMsg,String lang) {
-        InputMsg = inputMsg;
+    public Translator(String lang) {
         Lang = lang;
     }
 
@@ -43,8 +42,8 @@ public  class Translator implements Processor {
             Requester request = new Requester(url, prompt, model);
             Gson gson = new Gson();
             Responser responser = gson.fromJson(request.getResponse(), Responser.class);
-
-            System.out.println(responser.getResponse());
+            setOutpubMsg(responser.getResponse());
+            System.out.println(OutpubMsg);
         } catch (Exception e) {
             e.printStackTrace();
         }
