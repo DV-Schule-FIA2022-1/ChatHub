@@ -1,6 +1,9 @@
 package chat.ChatBot;
 
-public class Translator implements Processor {
+import com.google.gson.Gson;
+import javafx.scene.transform.Translate;
+
+public  class Translator implements Processor {
 
     private String InputMsg;
     private String OutpubMsg;
@@ -20,10 +23,9 @@ public class Translator implements Processor {
     public void setOutpubMsg(String outpubMsg) {
         OutpubMsg = outpubMsg;
     }
-    public Translator(String inputMsg, String outpubMsg) {
+    public Translator(String inputMsg) {
         InputMsg = inputMsg;
     }
-
 
     @Override
     public String process(String inputMsg) {
