@@ -7,6 +7,7 @@ public  class Translator implements Processor {
 
     private String InputMsg;
     private String OutpubMsg;
+    private String Lang;
 
     public String getInputMsg() {
         return InputMsg;
@@ -23,12 +24,32 @@ public  class Translator implements Processor {
     public void setOutpubMsg(String outpubMsg) {
         OutpubMsg = outpubMsg;
     }
-    public Translator(String inputMsg) {
+    public void setLang(String lang) {
+        this.Lang = lang;
+    }
+    public String getLang(){return Lang;};
+    public Translator(String inputMsg,String lang) {
         InputMsg = inputMsg;
+        Lang = lang;
     }
 
     @Override
     public String process(String inputMsg) {
+        try {
+            String url = "https://aiapi.alowlaomar.de/api/generate";
+            String prompt = "Translate the following text in " + getLang() + ": " + inputMsg + ". Please return only the translated text. ";
+            String model = "llama3";
+
+            Requester request = new Requester(url, prompt, model);
+            Gson gson = new Gson();
+            Responser responser = gson.fromJson(request.getResponse(), Responser.class);
+
+            System.out.println(responser.getResponse());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return OutpubMsg;
     }
+
+
 }
