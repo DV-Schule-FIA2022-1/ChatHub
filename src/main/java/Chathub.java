@@ -18,5 +18,8 @@ public class Chathub
         UserController test = new UserController();
         User usertest = new User("Test", "Test2", "1234", "werwe@test.de", Date.valueOf(date), new Address("teststraße", "Würzburg", "97082", "Germany"));
         test.addUser(usertest);
+        test.readUser();
+
+        System.out.println(test.getUserlist());
     }
 }

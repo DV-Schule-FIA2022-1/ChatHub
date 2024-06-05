@@ -8,15 +8,18 @@ import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import lombok.Getter;
 
 import java.io.IOException;
 import java.net.URL;
 
 public class MainLogin extends Application
 {
+    @Getter
     private static Stage primaryStage;
     private Pane mainLayout;
     private static Scene scene;
+    @Getter
     private LoginController loginController;
     public static void main(String[] args)
     {

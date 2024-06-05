@@ -32,7 +32,7 @@ public class User
     {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.password = HashFunction.toHexString(HashFunction.getSHA(password));
+        this.password = password;
         this.email = email;
         this.birthdate = birthdate;
         this.address = address;

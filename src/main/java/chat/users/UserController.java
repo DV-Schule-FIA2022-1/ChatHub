@@ -1,14 +1,17 @@
 package chat.users;
 
+import lombok.Getter;
+
 import java.sql.*;
 import java.util.ArrayList;
 
 public class UserController
 {
-    int row;
-    int insertId;
-    ArrayList<User> userlist;
-    String databaseURL = "jdbc:ucanaccess://src/main/java/chat/database/TestDB.accdb";
+    private int row;
+    private int insertId;
+    @Getter
+    private ArrayList<User> userlist;
+    private String databaseURL = "jdbc:ucanaccess://src/main/java/chat/database/TestDB.accdb";
     public UserController()
     {
 
@@ -47,7 +50,7 @@ public class UserController
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, user.getFirstName());
             preparedStatement.setString(2, user.getLastName());
-            preparedStatement.setString(3, user.getPassword());
+            preparedStatement.setString(3, HashFunction.toHexString(HashFunction.getSHA(user.getPassword())));
             preparedStatement.setString(4, user.getEmail());
             preparedStatement.setDate(5, user.getBirthdate());
             preparedStatement.setInt(6, insertId);
@@ -65,21 +68,20 @@ public class UserController
         }
     }
 
-    //Need testing
     public void readUser()
     {
         try(Connection conn = DriverManager.getConnection(databaseURL))
         {
             userlist = new ArrayList<>();
-            String sql = "SELECT u.firstName, u.lastName, u.password, u.email, u.birthdate, a.street, a.city, a.zipCode, a.country FROM User u INNER JOIN a ON u.addressNR = a.addressID";
+            String sql = "SELECT u.firstName, u.lastName, u.password, u.email, u.birthdate, a.street, a.city, a.zipCode, a.country FROM User u INNER JOIN Address a ON u.addressNR = a.ID";
 
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next())
             {
-                Address newadress = new Address(rs.getString("a.street"), rs.getString("a.city"), rs.getString("a.zipCode"), rs.getString("a.country"));
-                User newuser = new User(rs.getString("u.firstName"), rs.getString("u.lastName"), rs.getString("u.password"), rs.getString("u.email"), rs.getDate("u.birthdate"), newadress);
+                Address newadress = new Address(rs.getString("street"), rs.getString("city"), rs.getString("zipCode"), rs.getString("country"));
+                User newuser = new User(rs.getString("firstName"), rs.getString("lastName"), rs.getString("password"), rs.getString("email"), rs.getDate("birthdate"), newadress);
                 userlist.add(newuser);
             }
         }

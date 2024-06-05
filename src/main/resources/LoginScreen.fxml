@@ -12,7 +12,7 @@
          </font>
       </Label>
       <Button fx:id="btnRegistration" layoutX="134.0" layoutY="436.0" mnemonicParsing="false" onAction="#createUser" prefHeight="25.0" prefWidth="149.0" text="Registerung" />
-      <Button fx:id="btnLogin" layoutX="317.0" layoutY="436.0" mnemonicParsing="false" onAction="#loginUser" prefHeight="25.0" prefWidth="149.0" text="Login" />
+      <Button fx:id="btnLogin" layoutX="317.0" layoutY="436.0" mnemonicParsing="false" onAction="#confirmPassword" prefHeight="25.0" prefWidth="149.0" text="Login" />
       <TextField fx:id="emailLoginField" layoutX="92.0" layoutY="119.0" onKeyPressed="#enterPressed" />
       <TextField fx:id="passwordLoginField" layoutX="391.0" layoutY="119.0" />
       <Label fx:id="emailLoginLabel" alignment="CENTER" layoutX="25.0" layoutY="123.0" prefHeight="17.0" prefWidth="70.0" text="Email" />

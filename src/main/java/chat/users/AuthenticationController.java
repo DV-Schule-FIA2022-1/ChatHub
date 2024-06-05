@@ -1,40 +1,56 @@
 package chat.users;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class AuthenticationController
 {
     private LoginController loginController;
     private ArrayList<User> users;
     private int counter = 0;
+    private UserController userController;
 
-    public AuthenticationController()
+    public AuthenticationController(LoginController loginController, UserController userController)
     {
+        this.loginController = loginController;
+        this.userController = userController;
+        userController.readUser();
         users = new ArrayList<>();
     }
 
-    public boolean checkEmail()
+    public boolean checkEmail(String enteredEmail)
     {
-        //Check ob die Email bereits in der Datenbank existiert
+        for (User user: userController.getUserlist())
+        {
+            if(!Objects.equals(enteredEmail, user.getEmail()))
+            {
+                System.out.println("Email nicht vorhanden");
+                return false;
+            }
+        }
+        System.out.println("Email vorhanden");
         return true;
-        //Wenn nicht return false;
     }
 
-    public boolean checkPassword()
+    public boolean checkPassword(String enteredEmail, String enteredPassword)
     {
-        //Wenn die Email existiert dann überprüfe das passwort
-
-
-        //Wenn Passwort falsch dann erlaube nur max 3 versuche
-        if(users.get(counter).getAttempts() < 3)
+        for(User user: userController.getUserlist())
         {
-            users.get(counter).setAttempts();
+            if(checkEmail(enteredEmail))
+            {
+                if(HashFunction.toHexString(HashFunction.getSHA(enteredPassword)).equals(user.getPassword()))
+                {
+                    return true;
+                }
+                else
+                {
+                    if(users.get(counter).getAttempts() < 3)
+                    {
+                        users.get(counter).setAttempts();
+                    }
+                }
+            }
         }
-        //Anmeldeversuch für 5 min blockiert -> return false
-        else
-        {
-
-        }
-        return true;
+        return false;
     }
 }

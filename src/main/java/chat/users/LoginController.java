@@ -1,23 +1,31 @@
 package chat.users;
 
-import chat.users.AuthenticationController;
-import javafx.event.EventHandler;
+import chat.mains.MainLogin;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
 import lombok.Getter;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.Collection;
 import java.util.Date;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable
 {
     private AuthenticationController authenticationManager;
+    @Getter
+    private UserController userController;
+    private static Stage stage;
     @Getter
     @FXML private TextField emailLoginField;
     @FXML private TextField passwordLoginField;
@@ -48,7 +56,8 @@ public class LoginController implements Initializable
 
     public LoginController()
     {
-        authenticationManager = new AuthenticationController();
+        userController = new UserController();
+        authenticationManager = new AuthenticationController(this, userController);
     }
 
     @Override
@@ -94,13 +103,11 @@ public class LoginController implements Initializable
     {
         if(emailLoginField.getText().contains("@"))
         {
-            if(authenticationManager.checkEmail() == true)
+            if(authenticationManager.checkEmail(emailLoginField.getText()) == true)
             {
                 passwordLoginLabel.setVisible(true);
                 passwordLoginField.setVisible(true);
                 btnLogin.setVisible(true);
-
-                //confirmPassword();
             }
             else
             {
@@ -143,18 +150,43 @@ public class LoginController implements Initializable
     {
         Address newAdress = new Address(streetTextfield.getText(), cityTextfield.getText(), zipCodeTextfield.getText(), countryTextfield.getText());
         User newUser = new User(firstNameTextfield.getText(), lastNameTextfield.getText(), passwordTextfield.getText(), emailTextfield.getText(), java.sql.Date.valueOf(birthdateTextfield.getText()), newAdress);
+        userController.addUser(newUser);
     }
 
     public void loginUser()
     {
+        //Angemeldeter User muss in die Main GUI übergeben werden
 
+        System.out.println("Erfolgreich angemeldet");
+        MainLogin.getPrimaryStage().close();
+
+        try
+        {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(MainViewController.class.getResource("/MainWindow.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 630, 400);
+            stage = new Stage();
+            stage.setTitle("Chathub");
+            stage.setScene(scene);
+            stage.setOnCloseRequest(e ->
+            {
+                stage.close();
+                System.out.println("Fenster geschlossen");
+                System.exit(0);
+            });
+            stage.show();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     public void confirmPassword()
     {
-        if(authenticationManager.checkPassword() == true)
+        if(authenticationManager.checkPassword(emailLoginField.getText(), passwordLoginField.getText()) == true)
         {
-            //Zeige User Profile an
+            loginUser();
         }
     }
 

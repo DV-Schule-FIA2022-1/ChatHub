@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Add Test DB + Preparing SQL">
-      <change afterPath="$PROJECT_DIR$/src/main/Icons/searchingIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/users/HashFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Icons/settingsIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Icons/settingsIcon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Chathub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Chathub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TestDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +77,7 @@
       <recent name="C:\Users\Patrick\Desktop\Development\ChatHub\src\main\java\chat\database" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Chathub">
+  <component name="RunManager" selected="Application.MainLogin">
     <configuration name="Chathub" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Chathub" />
       <module name="Netzwerk" />
@@ -178,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715606100013</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed SQL addUser Function + Make Database Path relative + outsource HashFunction + Update MainWindow GUI">
+      <option name="closed" value="true" />
+      <created>1717421858076</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717421858076</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,7 +204,8 @@
     <MESSAGE value="Start with verification from User + Start with the Main Menu" />
     <MESSAGE value="Start with Config + Update MainWindow + Add Key Event to LoginScreen" />
     <MESSAGE value="Add Test DB + Preparing SQL" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Test DB + Preparing SQL" />
+    <MESSAGE value="Fixed SQL addUser Function + Make Database Path relative + outsource HashFunction + Update MainWindow GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed SQL addUser Function + Make Database Path relative + outsource HashFunction + Update MainWindow GUI" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
