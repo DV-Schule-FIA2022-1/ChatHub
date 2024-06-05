@@ -1,6 +1,5 @@
 package chat.Notification;
 
-import chat.Notification.ClientControllerNoti;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -29,7 +28,7 @@ public class Main extends Application
 
     public void showMainView() throws IOException
     {
-        URL fxmlLocation = ClientControllerNoti.class.getResource("/GUITestNotification.fxml");
+        URL fxmlLocation = NotificationController.class.getResource("/GUITestNotification.fxml");
         FXMLLoader loader = new FXMLLoader(fxmlLocation);
         mainLayout = loader.load();
         scene = new Scene(mainLayout);
