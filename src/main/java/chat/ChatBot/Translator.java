@@ -8,6 +8,7 @@ public  class Translator implements Processor {
     private String InputMsg;
     private String OutpubMsg;
     private String Lang;
+    Requester requester = null;
 
     public String getInputMsg() {
         return InputMsg;
@@ -35,15 +36,8 @@ public  class Translator implements Processor {
     @Override
     public String process(String inputMsg) {
         try {
-            String url = "https://aiapi.alowlaomar.de/api/generate";
             String prompt = "Translate the following text in " + getLang() + ": " + inputMsg + ". Please return only the translated text. ";
-            String model = "llama3";
-
-            Requester request = new Requester(url, prompt, model);
-            Gson gson = new Gson();
-            Responser responser = gson.fromJson(request.getResponse(), Responser.class);
-            setOutpubMsg(responser.getResponse());
-            System.out.println(OutpubMsg);
+            setOutpubMsg(requester.sendRequest(prompt));
         } catch (Exception e) {
             e.printStackTrace();
         }

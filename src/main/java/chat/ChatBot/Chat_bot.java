@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 public class Chat_bot implements Processor{
     private String InputMsg;
     private String OutpubMsg;
+    Requester requester = null;
 
     public String getInputMsg() {
         return InputMsg;
@@ -28,14 +29,7 @@ public class Chat_bot implements Processor{
     @Override
     public String process(String inputMsg) {
         try {
-            String url = "https://aiapi.alowlaomar.de/api/generate";
-            String model = "llama3";
-
-            Requester request = new Requester(url, inputMsg , model);
-            Gson gson = new Gson();
-            Responser responser = gson.fromJson(request.getResponse(), Responser.class);
-            setOutpubMsg(responser.getResponse());
-            System.out.println(OutpubMsg);
+            setOutpubMsg(requester.sendRequest(inputMsg));
         } catch (Exception e) {
             e.printStackTrace();
         }
