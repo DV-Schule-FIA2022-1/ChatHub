@@ -2,7 +2,7 @@ package chat.ChatBot;
 
 import com.google.gson.Gson;
 
-public class Improver implements Processor {
+public class Chat_bot implements Processor{
     private String InputMsg;
     private String OutpubMsg;
 
@@ -22,18 +22,16 @@ public class Improver implements Processor {
         OutpubMsg = outpubMsg;
     }
 
+    public Chat_bot() {
+    }
 
     @Override
     public String process(String inputMsg) {
         try {
             String url = "https://aiapi.alowlaomar.de/api/generate";
-            String prompt = "Bitte verbessere den folgenden Text grammatikalisch " +
-                    "und gib nur den verbesserten Text zurück. " +
-                    "Die Ausgabe soll ausschließlich auf Deutsch sein und ohne anführungszeichen. " +
-                    "Text: \"" + inputMsg + "\"";
             String model = "llama3";
 
-            Requester request = new Requester(url, prompt, model);
+            Requester request = new Requester(url, inputMsg , model);
             Gson gson = new Gson();
             Responser responser = gson.fromJson(request.getResponse(), Responser.class);
             setOutpubMsg(responser.getResponse());
