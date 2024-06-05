@@ -178,7 +178,7 @@
     </top>
     <center>
         <AnchorPane style="-fx-background-color: grey;">
-            <JFXTextArea fx:id="textArea" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: lightgrey; -fx-border-width: 5; -fx-border-radius: 5; -fx-padding: 5;">
+            <JFXTextArea onKeyTyped="#changeTextUpdate" fx:id="textArea" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: lightgrey; -fx-border-width: 5; -fx-border-radius: 5; -fx-padding: 5;">
                 <font>
                     <Font name="Cantarell Regular" size="11.0" />
                 </font>

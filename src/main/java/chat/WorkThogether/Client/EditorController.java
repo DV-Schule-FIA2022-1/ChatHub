@@ -1,5 +1,6 @@
 package chat.WorkThogether.Client;
 
+import chat.WorkThogether.Nachricht.ChangeMessage;
 import com.jfoenix.controls.JFXTextArea;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -22,9 +23,6 @@ import java.util.List;
 import java.util.Stack;
 import java.util.logging.Logger;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-
 import static java.util.logging.Level.SEVERE;
 public class EditorController
 {
@@ -32,6 +30,7 @@ public class EditorController
     private File loadedFileReference;
     private FileTime lastModifiedTime;
     @FXML public JFXTextArea textArea;
+    public String oldText;
     private  Client client;
     public int i = 0;
     private Stack undo;
@@ -39,6 +38,8 @@ public class EditorController
     @FXML
     public void initialize()
     {
+        oldText = textArea.getText();
+
 //        textArea.textProperty().addListener(new ChangeListener
 //                () {
 //            @Override
@@ -63,8 +64,66 @@ public class EditorController
 
     public void changeTextUpdate()
     {
-        String newText = "new";
-        System.out.println(newText);
+        if(!textArea.getText().equals(oldText))
+        {
+            //System.out.println(i++);
+            //ChangeMessage update = new ChangeMessage();
+            int[] index = findDifferenceIndexes(textArea.getText(), oldText);
+            //textArea.selectRange(index[0],index[1]);
+            oldText = textArea.getText();
+        }
+    }
+
+    public int[] findDifferenceIndexes(String newTexT, String oldText)
+    {
+        int minLength = Math.min(newTexT.length(), oldText.length());
+        int startIndex = -1;
+        int endIndex = -1;
+        String textWithTheDifferentText = "";
+        String textWithoutTheDifferentText = "";
+
+        if (newTexT.length() > oldText.length())
+        {
+            System.out.println("(element added)");
+            textWithTheDifferentText = newTexT;
+            textWithoutTheDifferentText = oldText;
+        }
+        else if (newTexT.length() < oldText.length())
+        {
+            System.out.println("(element removed)");
+            textWithTheDifferentText = oldText;
+            textWithoutTheDifferentText = newTexT;
+        }
+        else
+        {
+            System.out.println("(element replaced)");
+            textWithTheDifferentText = newTexT;
+            textWithoutTheDifferentText = oldText;
+        }
+
+        startIndex = textWithoutTheDifferentText.length();
+        for (int i = 0; i < minLength; i++)
+        {
+            if (textWithTheDifferentText.charAt(i) != textWithoutTheDifferentText.charAt(i))
+            {
+                startIndex = i;
+                System.out.println("startindex gefunden");
+                break;
+            }
+        }
+        int a = textArea.getCaretPosition(); //hinzufügen, das mit dem Cursor herausgefunden wird in einer reihe gleicher buchstaben welcher verändert wurde.
+        for (int i = 1; i <= minLength; i++)
+        {
+            if (textWithTheDifferentText.charAt(textWithTheDifferentText.length() - i) != textWithoutTheDifferentText.charAt(textWithoutTheDifferentText.length() - i))
+            {
+                endIndex = textWithTheDifferentText.length() - i + 1;
+                System.out.println("endindex gefunden");
+                break;
+            }
+        }
+
+        System.out.println("Difference found between index " + startIndex + " and index " + endIndex);
+        return new int[]{startIndex, endIndex};
     }
 
     public void saveFile()
