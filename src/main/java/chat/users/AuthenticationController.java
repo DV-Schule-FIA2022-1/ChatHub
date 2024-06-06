@@ -2,6 +2,8 @@ package chat.users;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 public class AuthenticationController
 {
@@ -44,9 +46,14 @@ public class AuthenticationController
                 }
                 else
                 {
-                    if(users.get(counter).getAttempts() < 3)
+                    if(user.getAttempts() >= 2)
                     {
-                        users.get(counter).setAttempts();
+                        loginController.disableLoginButton();
+                    }
+                    else
+                    {
+                        user.setAttempts();
+                        System.out.println("Fehler Nummer: " + user.getAttempts());
                     }
                 }
             }

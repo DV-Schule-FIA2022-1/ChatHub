@@ -16,9 +16,9 @@ import lombok.Getter;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Collection;
-import java.util.Date;
-import java.util.ResourceBundle;
+import java.util.*;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 public class LoginController implements Initializable
 {
@@ -49,10 +49,13 @@ public class LoginController implements Initializable
     @FXML private Label countryLabel;
     @FXML private Label zipCodeLabel;
     @FXML private Label emailLabel;
+    @Getter
     @FXML private Button btnLogin;
     @FXML private Button btnRegistration;
     @FXML private Label birthdateLabel;
     @FXML private TextField birthdateTextfield;
+    int counter;
+    Timer timer;
 
     public LoginController()
     {
@@ -188,6 +191,46 @@ public class LoginController implements Initializable
         {
             loginUser();
         }
+    }
+
+
+
+    public void disableLoginButton()
+    {
+        TimerTask timerTask = new TimerTask()
+        {
+            @Override
+            public void run()
+            {
+                counter++;
+            }
+        };
+
+        timer = new Timer("Timer");
+        timer.scheduleAtFixedRate(timerTask, 0, 1000);
+
+        Thread t = new Thread(() ->
+        {
+            while (true)
+            {
+                try
+                {
+                    btnLogin.setVisible(false);
+                    if (counter == 120)
+                    {
+                        btnLogin.setVisible(true);
+                        timer.cancel();
+                        break;
+                    }
+                    Thread.sleep(1000);
+                }
+                catch (InterruptedException ex)
+                {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        t.start();
     }
 
     public static void infoBox(String infoMessage, String titleBar)
