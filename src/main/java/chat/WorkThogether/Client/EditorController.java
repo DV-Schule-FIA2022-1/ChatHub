@@ -68,62 +68,114 @@ public class EditorController
         {
             //System.out.println(i++);
             //ChangeMessage update = new ChangeMessage();
-            int[] index = findDifferenceIndexes(textArea.getText(), oldText);
+            ArrayList<int[]> index = findDifferenceIndexes(textArea.getText(), oldText);
+            //detectChanges(oldText, textArea.getText());
             //textArea.selectRange(index[0],index[1]);
             oldText = textArea.getText();
         }
     }
 
-    public int[] findDifferenceIndexes(String newTexT, String oldText)
+    public ArrayList<int[]> findDifferenceIndexes(String newTexT, String oldText)
     {
+        ArrayList<int[]> arrayList = new ArrayList<int[]>();
         int minLength = Math.min(newTexT.length(), oldText.length());
-        int startIndex = -1;
-        int endIndex = -1;
-        String textWithTheDifferentText = "";
-        String textWithoutTheDifferentText = "";
+        int startIndex = 0;
+        int endIndex = 0;
+        String longText = "";
+        String smallText = "";
 
         if (newTexT.length() > oldText.length())
         {
             System.out.println("(element added)");
-            textWithTheDifferentText = newTexT;
-            textWithoutTheDifferentText = oldText;
+            longText = newTexT;
+            smallText = oldText;
+
+            //endIndex = textArea.getCaretPosition();
+            //startIndex = endIndex - (newTexT.length() - oldText.length());
         }
         else if (newTexT.length() < oldText.length())
         {
             System.out.println("(element removed)");
-            textWithTheDifferentText = oldText;
-            textWithoutTheDifferentText = newTexT;
+            longText = oldText;
+            smallText = newTexT;
+
+            //startIndex = textArea.getCaretPosition();
+            //endIndex = startIndex + (oldText.length() - newTexT.length());
         }
         else
         {
             System.out.println("(element replaced)");
-            textWithTheDifferentText = newTexT;
-            textWithoutTheDifferentText = oldText;
+            longText = newTexT;
+            smallText = oldText;
+            //endIndex = textArea.getCaretPosition();
+
         }
 
-        startIndex = textWithoutTheDifferentText.length();
-        for (int i = 0; i < minLength; i++)
+        //startIndex = smallText.length();
+
+        for (int index = 0; index < minLength; index++)
         {
-            if (textWithTheDifferentText.charAt(i) != textWithoutTheDifferentText.charAt(i))
+            if (longText.charAt(index + (endIndex - startIndex)) != smallText.charAt(index))
             {
-                startIndex = i;
+                startIndex = index;
                 System.out.println("startindex gefunden");
-                break;
+
+                //endIndex = textArea.getCaretPosition(); //hinzufügen, das mit dem Cursor herausgefunden wird in einer reihe gleicher buchstaben welcher verändert wurde.
+                for (int i = startIndex; i <= minLength; i++)
+                {
+                    if (smallText.charAt(index) == longText.charAt(i))
+                    {
+                        endIndex = i;
+                        System.out.println("endindex gefunden");
+                        index = i;
+                        arrayList.add(new int[]{startIndex, endIndex});
+                        break;
+                    }
+                }
             }
         }
-        int a = textArea.getCaretPosition(); //hinzufügen, das mit dem Cursor herausgefunden wird in einer reihe gleicher buchstaben welcher verändert wurde.
-        for (int i = 1; i <= minLength; i++)
-        {
-            if (textWithTheDifferentText.charAt(textWithTheDifferentText.length() - i) != textWithoutTheDifferentText.charAt(textWithoutTheDifferentText.length() - i))
-            {
-                endIndex = textWithTheDifferentText.length() - i + 1;
-                System.out.println("endindex gefunden");
-                break;
-            }
-        }
+        if(endIndex == 0)endIndex = longText.length();
 
         System.out.println("Difference found between index " + startIndex + " and index " + endIndex);
-        return new int[]{startIndex, endIndex};
+        return arrayList;
+    }
+
+    public static void detectChanges(String originalText, String modifiedText) {
+        int[][] dp = new int[originalText.length() + 1][modifiedText.length() + 1];
+
+        for (int i = 0; i <= originalText.length(); i++) {
+            for (int j = 0; j <= modifiedText.length(); j++) {
+                if (i == 0) {
+                    dp[i][j] = j;
+                } else if (j == 0) {
+                    dp[i][j] = i;
+                } else if (originalText.charAt(i - 1) == modifiedText.charAt(j - 1)) {
+                    dp[i][j] = dp[i - 1][j - 1];
+                } else {
+                    dp[i][j] = 1 + Math.min(dp[i - 1][j - 1], Math.min(dp[i][j - 1], dp[i - 1][j]));
+                }
+            }
+        }
+
+        int i = originalText.length();
+        int j = modifiedText.length();
+
+        while (i > 0 || j > 0) {
+            if (i > 0 && j > 0 && originalText.charAt(i - 1) == modifiedText.charAt(j - 1)) {
+                i--;
+                j--;
+            } else if (j > 0 && dp[i][j] == dp[i][j - 1] + 1) {
+                System.out.println("Inserted: " + modifiedText.charAt(j - 1));
+                j--;
+            } else if (i > 0 && dp[i][j] == dp[i - 1][j] + 1) {
+                System.out.println("Deleted: " + originalText.charAt(i - 1));
+                i--;
+            } else if (i > 0 && j > 0 && dp[i][j] == dp[i - 1][j - 1] + 1) {
+                System.out.println("Replaced: " + originalText.charAt(i - 1) + " with " + modifiedText.charAt(j - 1));
+                i--;
+                j--;
+            }
+        }
     }
 
     public void saveFile()
@@ -360,7 +412,7 @@ public class EditorController
                         textArea.selectRange(0, 0);
                     }
 
-
+                    changeTextUpdate();
                 }
             }
         );
@@ -381,7 +433,7 @@ public class EditorController
                        textArea.selectRange(0, 0);
                    }
 
-
+                   changeTextUpdate();
                }
            }
         );
