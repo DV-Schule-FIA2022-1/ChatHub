@@ -14,6 +14,6 @@
       <TextField fx:id="textboxMessage" BorderPane.alignment="CENTER" />
    </top>
    <center>
-      <Button fx:id="buttonSend" mnemonicParsing="false" text="NachrichtSenden" onAction="#sendMessage" BorderPane.alignment="CENTER" />
+      <Button fx:id="buttonSend" mnemonicParsing="false"  text="NachrichtSenden" onAction="#sendMessage" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
