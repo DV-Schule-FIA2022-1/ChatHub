@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.io.IOException;
 import java.net.URL;
@@ -46,18 +47,21 @@ public class LoginController implements Initializable
     @FXML private Label countryLabel;
     @FXML private Label zipCodeLabel;
     @FXML private Label emailLabel;
-    @Getter
     @FXML private Button btnLogin;
     @FXML private Button btnRegistration;
     @FXML private Label birthdateLabel;
     @FXML private DatePicker birthdateTextfield;
-    int counter;
-    Timer timer;
+    private int counter;
+    private Timer timer;
+    @Setter
+    private User activeUser;
+    private CheckEmailFunction checkEmailFunction;
 
     public LoginController()
     {
         userController = new UserController();
-        authenticationManager = new AuthenticationController(this, userController);
+        checkEmailFunction = new CheckEmailFunction(this, userController);
+        authenticationManager = new AuthenticationController(this, checkEmailFunction);
     }
 
     @Override
@@ -103,7 +107,7 @@ public class LoginController implements Initializable
     {
         if(emailLoginField.getText().contains("@"))
         {
-            if(authenticationManager.checkEmail(emailLoginField.getText()) == true)
+            if(checkEmailFunction.checkEmail(emailLoginField.getText()) == true)
             {
                 passwordLoginLabel.setVisible(true);
                 passwordLoginField.setVisible(true);
@@ -156,19 +160,25 @@ public class LoginController implements Initializable
 
     public void createUser()
     {
-        if(passwordTextfield.getText().equals(passwordAgainTextfield.getText()) && emailTextfield.getText().contains("@"))
+        if(passwordTextfield.getText().equals(passwordAgainTextfield.getText()) && emailTextfield.getText().contains("@") && !checkEmailFunction.checkEmail(emailTextfield.getText()))
         {
             Address newAdress = new Address(streetTextfield.getText(), cityTextfield.getText(), zipCodeTextfield.getText(), countryTextfield.getText());
             User newUser = new User(firstNameTextfield.getText(), lastNameTextfield.getText(), passwordTextfield.getText(), emailTextfield.getText(), Date.valueOf(getDate()), newAdress);
             userController.addUser(newUser);
 
-            loginUser();
+            loginUser(newUser);
         }
         else
         {
-            if(passwordTextfield.getText() != passwordAgainTextfield.getText())
+            if(!passwordTextfield.getText().equals(passwordAgainTextfield.getText()))
             {
+                System.out.println(passwordTextfield.getText());
+                System.out.println(passwordAgainTextfield.getText());
                 infoBox("Passwörter stimmen nicht überein", "Error Message");
+            }
+            else if(checkEmailFunction.checkEmail(emailTextfield.getText()))
+            {
+                infoBox("Email bereits Registert", "Error Message");
             }
             else
             {
@@ -177,11 +187,12 @@ public class LoginController implements Initializable
         }
     }
 
-    public void loginUser()
+    public void loginUser(User registeredUser)
     {
         //Angemeldeter User muss in die Main GUI übergeben werden
 
         System.out.println("Erfolgreich angemeldet");
+        MainViewController mainViewController = new MainViewController(registeredUser);
         MainLogin.getPrimaryStage().close();
 
         try
@@ -210,7 +221,7 @@ public class LoginController implements Initializable
     {
         if(authenticationManager.checkPassword(emailLoginField.getText(), passwordLoginField.getText()) == true)
         {
-            loginUser();
+            loginUser(activeUser);
         }
     }
 

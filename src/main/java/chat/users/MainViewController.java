@@ -20,6 +20,18 @@ public class MainViewController implements Initializable
     @FXML private Button settingsIcon;
     private BackgroundImage bgImage;
     private Background bg;
+    private User activeUser;
+
+    public MainViewController(User activeUser)
+    {
+        this.activeUser = activeUser;
+        System.out.println(activeUser.getFirstName());
+    }
+
+    public MainViewController()
+    {
+
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)

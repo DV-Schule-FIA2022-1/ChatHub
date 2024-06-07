@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Add Test DB + Preparing SQL">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/chat/users/CheckEmailFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +76,7 @@
       <recent name="C:\Users\Patrick\Desktop\Development\ChatHub\src\main\java\chat\database" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainLogin">
+  <component name="RunManager" selected="Application.MainWindow">
     <configuration name="Chathub" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Chathub" />
       <module name="Netzwerk" />
@@ -179,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717421858076</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Change Birthdate Textfield to Datepicker and fixed date insert into database">
+      <option name="closed" value="true" />
+      <created>1717751166393</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717751166393</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,7 +212,8 @@
     <MESSAGE value="Start with Config + Update MainWindow + Add Key Event to LoginScreen" />
     <MESSAGE value="Add Test DB + Preparing SQL" />
     <MESSAGE value="Fixed SQL addUser Function + Make Database Path relative + outsource HashFunction + Update MainWindow GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed SQL addUser Function + Make Database Path relative + outsource HashFunction + Update MainWindow GUI" />
+    <MESSAGE value="Change Birthdate Textfield to Datepicker and fixed date insert into database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Birthdate Textfield to Datepicker and fixed date insert into database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
