@@ -189,8 +189,6 @@ public class LoginController implements Initializable
 
     public void loginUser(User registeredUser)
     {
-        //Angemeldeter User muss in die Main GUI übergeben werden
-
         System.out.println("Erfolgreich angemeldet");
         MainViewController mainViewController = new MainViewController(registeredUser);
         MainLogin.getPrimaryStage().close();

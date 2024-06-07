@@ -1,31 +1,49 @@
 package chat.users;
 
+import chat.message.Message;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Chatroom
 {
     private int chatroomID;
-    private int localChatID;
+    @Getter
+    private String chatroomName;
+    @Getter
     private ArrayList<User> users;
+    private ArrayList<Message> messages;
+    @Getter
+    private LocalDateTime createdAt;
+    private User admin;
+    @Getter
+    private int maxUsers;
+    @Getter
+    private String description;
+    @Getter
+    private boolean isPublic;
+    @Setter @Getter
+    private String password;
 
-    public Chatroom()
+    private ChatroomController chatroomController;
+
+    public Chatroom(String chatroomName, String description, String password, LocalDateTime createdAt, int maxUsers, boolean isPublic)
     {
-        localChatID = chatroomID++;
+        this.chatroomName = chatroomName;
+        this.description = description;
+        this.password = password;
+        this.createdAt = createdAt;
+        this.maxUsers = maxUsers;
+        this.isPublic = isPublic;
         users = new ArrayList<>();
+        chatroomController = new ChatroomController(this);
     }
 
-    public void joinChatroom()
+    @Override
+    public String toString()
     {
-
-    }
-
-    public void leaveChatroom()
-    {
-
-    }
-
-    public void createChatroom()
-    {
-
+        return chatroomName + " : " + description;
     }
 }

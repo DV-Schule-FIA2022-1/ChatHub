@@ -18,7 +18,10 @@
                 </AnchorPane>
             <HBox alignment="CENTER" layoutX="57.0" prefHeight="50.0" prefWidth="200.0">
                <children>
-                  <ImageView fx:id="searchingIcon" fitHeight="26.0" fitWidth="30.0"></ImageView>
+                  <ImageView fx:id="searchingIcon" fitHeight="26.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../Icons/searchingIcon.png" />
+                     </image></ImageView>
                   <TextField prefHeight="25.0" prefWidth="158.0" />
                </children>
             </HBox>
