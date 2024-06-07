@@ -4,28 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="">
+    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="It was done: a prime number generator, an ascii converter, an RSA key generator and its own RSA encryption and decryption,">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/AESEncryption.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/AESKeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/generators/AESKeyGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/NewKey.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/Prime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/prime/Prime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/PrimeNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/prime/PrimeNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/RSAEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/encryption/RSAEncryption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/RSAKeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/generators/RSAKeyGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/TestDriver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/TestDriver2self.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/TestDriver2self.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/primes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/AESEncryption.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/AESKeyGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/NewKey.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/Prime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/PrimeNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/RSAEncryption.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/RSAKeyGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/TestDriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/TestDriver2self.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/TestDriver2self.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715864258154</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="It was done: a prime number generator, an ascii converter, an RSA key generator and its own RSA encryption and decryption,">
+      <option name="closed" value="true" />
+      <created>1717755498656</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717755498656</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,6 +221,7 @@
     <MESSAGE value="add Testdriver with rsa key generator" />
     <MESSAGE value="add: AES/RSA-KeyGenerator, AES/RSA-Encryption. &#10;changed: message class" />
     <MESSAGE value="primes number generator" />
-    <option name="LAST_COMMIT_MESSAGE" value="primes number generator" />
+    <MESSAGE value="It was done: a prime number generator, an ascii converter, an RSA key generator and its own RSA encryption and decryption," />
+    <option name="LAST_COMMIT_MESSAGE" value="It was done: a prime number generator, an ascii converter, an RSA key generator and its own RSA encryption and decryption," />
   </component>
 </project>

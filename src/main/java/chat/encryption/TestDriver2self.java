@@ -30,17 +30,15 @@ public class TestDriver2self {
         Prime p = new Prime(prime.start().getNum1(), prime.start().getNum2());
         rsaGenerator.start(p);
 
-        // Получение ключей
         char[] e = rsaGenerator.getE();
         char[] d = rsaGenerator.getD();
         char[] n = rsaGenerator.getN();
 
-        // Преобразование char[] в BigInteger
+
         BigInteger eBigInt = new BigInteger(String.valueOf(e));
         BigInteger dBigInt = new BigInteger(String.valueOf(d));
         BigInteger nBigInt = new BigInteger(String.valueOf(n));
 
-        // Инициализация шифровальщика и дешифровальщика
         encryptor = new RSAEncryption(eBigInt, nBigInt);
         decryptor = new RSADecryption(dBigInt, nBigInt);
 
@@ -48,19 +46,19 @@ public class TestDriver2self {
         String input = in.readLine();
         System.out.println("Original input: " + input);
 
-        // Преобразование строки в ASCII
+
         int[] asciiMessage = AsciiConvertor.stringToAscii(input);
         System.out.println("ASCII: " + Arrays.toString(asciiMessage));
 
-        // Зашифрование сообщения
+
         BigInteger[] encryptedMessage = encryptor.encryptMessage(asciiMessage);
         System.out.println("Encrypted message: " + Arrays.toString(encryptedMessage));
 
-        // Расшифрование сообщения
+
         int[] decryptedMessage = decryptor.decryptMessage(encryptedMessage);
         System.out.println("Decrypted ASCII: " + Arrays.toString(decryptedMessage));
 
-        // Преобразование расшифрованного сообщения обратно в строку
+
         String decryptedText = AsciiConvertor.asciiToString(decryptedMessage);
         System.out.println("Decrypted text: " + decryptedText);
     }
