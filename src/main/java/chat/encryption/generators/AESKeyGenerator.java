@@ -1,4 +1,4 @@
-package chat.encryption;
+package chat.encryption.generators;
 
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
