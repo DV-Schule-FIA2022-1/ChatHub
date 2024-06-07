@@ -15,5 +15,6 @@
    </top>
    <center>
       <Button fx:id="buttonSend" mnemonicParsing="false"  text="NachrichtSenden" onAction="#sendMessage" BorderPane.alignment="CENTER" />
+
    </center>
 </BorderPane>

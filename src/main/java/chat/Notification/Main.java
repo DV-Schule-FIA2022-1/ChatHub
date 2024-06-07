@@ -14,6 +14,7 @@ public class Main extends Application
     private Pane mainLayout;
     private static Scene scene;
 
+
     public static void main(String[] args) throws IOException
     {
         launch();
