@@ -7,11 +7,9 @@
     <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Add Test DB + Preparing SQL">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +93,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-20" />
       <option name="MAIN_CLASS_NAME" value="chat.mains.MainLogin" />
       <module name="Netzwerk" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Patrick\Downloads\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <option name="VM_PARAMETERS" value="--module-path &quot;H:\Java\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

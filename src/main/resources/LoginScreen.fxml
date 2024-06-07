@@ -37,6 +37,6 @@
       <TextField fx:id="emailTextfield" layoutX="143.0" layoutY="298.0" />
       <Label fx:id="emailLabel" alignment="CENTER" layoutX="16.0" layoutY="302.0" prefHeight="17.0" prefWidth="121.0" style="-fx-border-color: black;" text="Email" />
       <Label fx:id="birthdateLabel" alignment="CENTER" layoutX="314.0" layoutY="303.0" prefHeight="17.0" prefWidth="131.0" style="-fx-border-color: black;" text="Geburtstag" />
-      <TextField fx:id="birthdateTextfield" layoutX="466.0" layoutY="300.0" />
+      <DatePicker onAction="#getDate" fx:id="birthdateTextfield" layoutX="465.0" layoutY="300.0" prefHeight="25.0" prefWidth="149.0" />
    </children>
 </AnchorPane>

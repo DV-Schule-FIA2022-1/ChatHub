@@ -5,20 +5,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import lombok.Getter;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
 public class LoginController implements Initializable
 {
@@ -53,7 +50,7 @@ public class LoginController implements Initializable
     @FXML private Button btnLogin;
     @FXML private Button btnRegistration;
     @FXML private Label birthdateLabel;
-    @FXML private TextField birthdateTextfield;
+    @FXML private DatePicker birthdateTextfield;
     int counter;
     Timer timer;
 
@@ -119,7 +116,7 @@ public class LoginController implements Initializable
         }
         else
         {
-            LoginController.infoBox("Email must be included @", "Error Message");
+            infoBox("Email must be included @", "Error Message");
         }
     }
 
@@ -149,11 +146,35 @@ public class LoginController implements Initializable
         birthdateTextfield.setVisible(true);
     }
 
+    public String getDate()
+    {
+        LocalDate date = birthdateTextfield.getValue();
+        String formattedDate = date.format(DateTimeFormatter.ofPattern("YYYY-MM-dd"));
+        System.out.println(formattedDate);
+        return formattedDate;
+    }
+
     public void createUser()
     {
-        Address newAdress = new Address(streetTextfield.getText(), cityTextfield.getText(), zipCodeTextfield.getText(), countryTextfield.getText());
-        User newUser = new User(firstNameTextfield.getText(), lastNameTextfield.getText(), passwordTextfield.getText(), emailTextfield.getText(), java.sql.Date.valueOf(birthdateTextfield.getText()), newAdress);
-        userController.addUser(newUser);
+        if(passwordTextfield.getText().equals(passwordAgainTextfield.getText()) && emailTextfield.getText().contains("@"))
+        {
+            Address newAdress = new Address(streetTextfield.getText(), cityTextfield.getText(), zipCodeTextfield.getText(), countryTextfield.getText());
+            User newUser = new User(firstNameTextfield.getText(), lastNameTextfield.getText(), passwordTextfield.getText(), emailTextfield.getText(), Date.valueOf(getDate()), newAdress);
+            userController.addUser(newUser);
+
+            loginUser();
+        }
+        else
+        {
+            if(passwordTextfield.getText() != passwordAgainTextfield.getText())
+            {
+                infoBox("Passwörter stimmen nicht überein", "Error Message");
+            }
+            else
+            {
+                infoBox("Email must be included @", "Error Message");
+            }
+        }
     }
 
     public void loginUser()
