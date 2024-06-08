@@ -1,6 +1,5 @@
 package chat.users;
 
-import java.util.Set;
 
 public class Settings
 {

@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/users/ChatroomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Preparing Chatroom Class + Chatroom saved in the Database">
+      <change afterPath="$PROJECT_DIR$/src/main/Icons/ProfileIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Chathub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Chathub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Chatroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Chatroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/CheckEmailFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/CheckEmailFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Permission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/PermissionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,14 +74,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Patrick\Desktop\Development\ChatHub\src\main\Icons" />
+      <recent name="C:\Users\Patrick\Desktop\Development\ChatHub\src\main\resources" />
       <recent name="D:\ChatHub\src\main\Icons" />
       <recent name="D:\ChatHub\src\main\resources" />
       <recent name="D:\ChatHub\src\main\java\chat\database" />
-      <recent name="C:\Users\Patrick\Desktop\Development\ChatHub\src\main\resources" />
-      <recent name="C:\Users\Patrick\Desktop\Development\ChatHub\src\main\java\chat\database" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Chathub">
+  <component name="RunManager" selected="Application.MainWindow">
     <configuration name="Chathub" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Chathub" />
       <module name="Netzwerk" />
@@ -111,7 +117,7 @@
     <configuration name="MainWindow" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.mains.MainWindow" />
       <module name="Netzwerk" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;H:\Java\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Patrick\Downloads\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -189,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717751166393</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Preparing Chatroom Class + Chatroom saved in the Database">
+      <created>1717779044898</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717779044898</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,7 +225,8 @@
     <MESSAGE value="Add Test DB + Preparing SQL" />
     <MESSAGE value="Fixed SQL addUser Function + Make Database Path relative + outsource HashFunction + Update MainWindow GUI" />
     <MESSAGE value="Change Birthdate Textfield to Datepicker and fixed date insert into database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change Birthdate Textfield to Datepicker and fixed date insert into database" />
+    <MESSAGE value="Preparing Chatroom Class + Chatroom saved in the Database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Preparing Chatroom Class + Chatroom saved in the Database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,30 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.users.MainViewController">
     <children>
-        <AnchorPane prefHeight="400.0" prefWidth="258.0" style="-fx-background-color: #676765;">
+        <AnchorPane layoutX="-1.0" prefHeight="400.0" prefWidth="258.0" style="-fx-background-color: #676765;">
             <children>
                 <AnchorPane prefHeight="400.0" prefWidth="57.0" style="-fx-background-color: #454545;">
                     <children>
-                        <Button fx:id="homeIcon" layoutX="3.0" layoutY="128.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="51.0" />
-                        <Button fx:id="chatIcon" layoutX="3.0" layoutY="72.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="51.0" />
-                        <Button fx:id="groupIcon" layoutX="3.0" layoutY="186.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="51.0" />
-                        <Button fx:id="settingsIcon" layoutX="3.0" layoutY="242.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="51.0" />
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="4.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/chatIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="4.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/homeIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="4.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/groupIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="4.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/settingsIcon.png" />
+                     </image>
+                  </ImageView>
                     </children>
                 </AnchorPane>
-            <HBox alignment="CENTER" layoutX="57.0" prefHeight="50.0" prefWidth="200.0">
+            <HBox alignment="CENTER" layoutX="69.0" layoutY="8.0" prefHeight="29.0" prefWidth="176.0" stylesheets="@style.css">
                <children>
                   <ImageView fx:id="searchingIcon" fitHeight="26.0" fitWidth="30.0">
                      <image>
                         <Image url="@../Icons/searchingIcon.png" />
                      </image></ImageView>
-                  <TextField prefHeight="25.0" prefWidth="158.0" />
+                  <TextField prefHeight="24.0" prefWidth="140.0" promptText="Search" styleClass="transparent-background" stylesheets="@style.css">
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font></TextField>
                </children>
+               <styleClass>
+                  <String fx:value="dark-gray-background" />
+                  <String fx:value="radius" />
+               </styleClass>
             </HBox>
+            <Line endX="100.0" layoutX="157.0" layoutY="45.0" startX="-100.0" />
+            <Pane layoutX="57.0" layoutY="46.0" prefHeight="200.0" prefWidth="200.0" styleClass="gray-background" stylesheets="@style.css">
+               <children>
+                  <HBox prefHeight="63.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/ProfileIcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
             </children>
         </AnchorPane>
         <AnchorPane layoutX="237.0" prefHeight="400.0" prefWidth="363.0" />

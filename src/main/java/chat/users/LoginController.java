@@ -10,7 +10,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
@@ -172,8 +171,6 @@ public class LoginController implements Initializable
         {
             if(!passwordTextfield.getText().equals(passwordAgainTextfield.getText()))
             {
-                System.out.println(passwordTextfield.getText());
-                System.out.println(passwordAgainTextfield.getText());
                 infoBox("Passwörter stimmen nicht überein", "Error Message");
             }
             else if(checkEmailFunction.checkEmail(emailTextfield.getText()))
@@ -199,7 +196,7 @@ public class LoginController implements Initializable
             fxmlLoader.setLocation(MainViewController.class.getResource("/MainWindow.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 630, 400);
             stage = new Stage();
-            stage.setTitle("Chathub");
+            stage.setTitle("Chathub Login");
             stage.setScene(scene);
             stage.setOnCloseRequest(e ->
             {

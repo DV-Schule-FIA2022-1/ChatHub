@@ -1,8 +1,6 @@
 package chat.users;
 
-import com.mysql.cj.log.Log;
 import lombok.Getter;
-
 import java.util.Objects;
 
 public class CheckEmailFunction

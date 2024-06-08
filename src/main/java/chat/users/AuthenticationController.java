@@ -3,7 +3,6 @@ package chat.users;
 public class AuthenticationController
 {
     private LoginController loginController;
-    private User activeUser;
     private CheckEmailFunction checkEmailFunction;
 
     public AuthenticationController(LoginController loginController, CheckEmailFunction checkEmailFunction)

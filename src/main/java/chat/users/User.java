@@ -1,12 +1,7 @@
 package chat.users;
 
-import lombok.Data;
-import lombok.Getter;
 
-import java.math.BigInteger;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import lombok.Getter;;
 import java.sql.Date;
 
 public class User
@@ -21,8 +16,6 @@ public class User
     private String password;
     @Getter
     private String email;
-    @Getter
-    private int age;
     @Getter
     private Date birthdate;
     @Getter
