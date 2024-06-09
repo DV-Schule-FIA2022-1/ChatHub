@@ -40,17 +40,6 @@ public class EditorController
     {
         oldText = textArea.getText();
 
-//        textArea.textProperty().addListener(new ChangeListener
-//                () {
-//            @Override
-//            public void changed(ObservableValue observable, String oldValue, String newValue) {
-//                changeTextUpdate(newValue);
-//            }
-//        });
-//        textArea.setOnInputMethodTextChanged(event -> {
-//            changeTextUpdate(event.getCommitted());
-//        });
-
         try
         {
             client = new Client(1234, this);
@@ -68,19 +57,18 @@ public class EditorController
         {
             //System.out.println(i++);
             //ChangeMessage update = new ChangeMessage();
-            ArrayList<int[]> index = findDifferenceIndexes(textArea.getText(), oldText);
+            int[] index = findDifferenceIndexes(textArea.getText(), oldText);
             //detectChanges(oldText, textArea.getText());
             //textArea.selectRange(index[0],index[1]);
             oldText = textArea.getText();
         }
     }
 
-    public ArrayList<int[]> findDifferenceIndexes(String newTexT, String oldText)
+    public int[] findDifferenceIndexes(String newTexT, String oldText)
     {
-        ArrayList<int[]> arrayList = new ArrayList<int[]>();
         int minLength = Math.min(newTexT.length(), oldText.length());
-        int startIndex = 0;
-        int endIndex = 0;
+        int startIndex = -1; //von forne der Index
+        int endIndex = -1; //von hinten der Index
         String longText = "";
         String smallText = "";
 
@@ -89,93 +77,69 @@ public class EditorController
             System.out.println("(element added)");
             longText = newTexT;
             smallText = oldText;
-
-            //endIndex = textArea.getCaretPosition();
-            //startIndex = endIndex - (newTexT.length() - oldText.length());
         }
         else if (newTexT.length() < oldText.length())
         {
             System.out.println("(element removed)");
             longText = oldText;
             smallText = newTexT;
-
-            //startIndex = textArea.getCaretPosition();
-            //endIndex = startIndex + (oldText.length() - newTexT.length());
         }
         else
         {
             System.out.println("(element replaced)");
             longText = newTexT;
             smallText = oldText;
-            //endIndex = textArea.getCaretPosition();
-
         }
 
-        //startIndex = smallText.length();
-
-        for (int index = 0; index < minLength; index++)
+        for (int i = 0; i < minLength; i++)
         {
-            if (longText.charAt(index + (endIndex - startIndex)) != smallText.charAt(index))
+            if (longText.charAt(i) != smallText.charAt(i))
             {
-                startIndex = index;
+                startIndex = i;
                 System.out.println("startindex gefunden");
-
-                //endIndex = textArea.getCaretPosition(); //hinzufügen, das mit dem Cursor herausgefunden wird in einer reihe gleicher buchstaben welcher verändert wurde.
-                for (int i = startIndex; i <= minLength; i++)
-                {
-                    if (smallText.charAt(index) == longText.charAt(i))
-                    {
-                        endIndex = i;
-                        System.out.println("endindex gefunden");
-                        index = i;
-                        arrayList.add(new int[]{startIndex, endIndex});
-                        break;
-                    }
-                }
-            }
-        }
-        if(endIndex == 0)endIndex = longText.length();
-
-        System.out.println("Difference found between index " + startIndex + " and index " + endIndex);
-        return arrayList;
-    }
-
-    public static void detectChanges(String originalText, String modifiedText) {
-        int[][] dp = new int[originalText.length() + 1][modifiedText.length() + 1];
-
-        for (int i = 0; i <= originalText.length(); i++) {
-            for (int j = 0; j <= modifiedText.length(); j++) {
-                if (i == 0) {
-                    dp[i][j] = j;
-                } else if (j == 0) {
-                    dp[i][j] = i;
-                } else if (originalText.charAt(i - 1) == modifiedText.charAt(j - 1)) {
-                    dp[i][j] = dp[i - 1][j - 1];
-                } else {
-                    dp[i][j] = 1 + Math.min(dp[i - 1][j - 1], Math.min(dp[i][j - 1], dp[i - 1][j]));
-                }
+                break;
             }
         }
 
-        int i = originalText.length();
-        int j = modifiedText.length();
+        if(startIndex == -1)
+        {
+            startIndex = minLength;
+        }
 
-        while (i > 0 || j > 0) {
-            if (i > 0 && j > 0 && originalText.charAt(i - 1) == modifiedText.charAt(j - 1)) {
-                i--;
-                j--;
-            } else if (j > 0 && dp[i][j] == dp[i][j - 1] + 1) {
-                System.out.println("Inserted: " + modifiedText.charAt(j - 1));
-                j--;
-            } else if (i > 0 && dp[i][j] == dp[i - 1][j] + 1) {
-                System.out.println("Deleted: " + originalText.charAt(i - 1));
-                i--;
-            } else if (i > 0 && j > 0 && dp[i][j] == dp[i - 1][j - 1] + 1) {
-                System.out.println("Replaced: " + originalText.charAt(i - 1) + " with " + modifiedText.charAt(j - 1));
-                i--;
-                j--;
+        for (int i = 1; i <= minLength; i++)
+        {
+            if (longText.charAt(longText.length() - i) != smallText.charAt(smallText.length() - i))
+            {
+                endIndex = i - 1;
+                System.out.println("endindex gefunden");
+                break;
             }
         }
+
+        if(endIndex == -1)
+        {
+            endIndex = minLength;
+        }
+
+        if(startIndex + endIndex > smallText.length())
+        {
+            System.out.println("Ausgelöst");
+            if(startIndex > endIndex)
+            {
+                endIndex = endIndex - (startIndex + endIndex - smallText.length());
+            }
+            else
+            {
+                endIndex = endIndex - (endIndex + startIndex - smallText.length());
+            }
+        }
+        else if(longText.length() - startIndex - endIndex > longText.length() - smallText.length()) // funktioniert noch nicht ganz, erkennt nciht den ganzen bereich beim ersetzen
+        {
+            endIndex = longText.length() - smallText.length();
+        }
+
+        System.out.println("Difference found between index " + startIndex + " and index " + endIndex + " and leangh " + smallText.length());
+        return new int[]{startIndex, endIndex};
     }
 
     public void saveFile()
