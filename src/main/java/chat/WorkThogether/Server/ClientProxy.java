@@ -23,6 +23,7 @@ public class ClientProxy extends Thread
         in = new ObjectInputStream(client.getInputStream());
         out = new ObjectOutputStream(client.getOutputStream());
         this.start();
+        schreiben(new ChangeMessage(0, 0, server.getText()));
     }
 
     @Override
@@ -32,8 +33,9 @@ public class ClientProxy extends Thread
         {
             while ((nachricht = (ChangeMessage)in.readObject())!= null)
             {
-                System.out.println("Empfangen vom Client: " + nachricht);
-                server.verteileNachricht(nachricht);
+                //System.out.println("Empfangen vom Client: " + nachricht);
+                //server.verteileNachricht(nachricht);
+                server.changedText(nachricht, this);
             }
         }
         catch (Exception e)

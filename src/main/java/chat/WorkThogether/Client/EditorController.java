@@ -55,12 +55,19 @@ public class EditorController
     {
         if(!textArea.getText().equals(oldText))
         {
-            //System.out.println(i++);
-            //ChangeMessage update = new ChangeMessage();
             int[] index = findDifferenceIndexes(textArea.getText(), oldText);
-            //detectChanges(oldText, textArea.getText());
-            //textArea.selectRange(index[0],index[1]);
+            //textArea.selectRange(index[0],textArea.getLength() - index[1]);
             oldText = textArea.getText();
+
+            ChangeMessage update = new ChangeMessage(index[0], index[1], textArea.getText());
+            try
+            {
+                client.schreiben(update);
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -74,19 +81,16 @@ public class EditorController
 
         if (newTexT.length() > oldText.length())
         {
-            System.out.println("(element added)");
             longText = newTexT;
             smallText = oldText;
         }
         else if (newTexT.length() < oldText.length())
         {
-            System.out.println("(element removed)");
             longText = oldText;
             smallText = newTexT;
         }
         else
         {
-            System.out.println("(element replaced)");
             longText = newTexT;
             smallText = oldText;
         }
@@ -133,13 +137,53 @@ public class EditorController
                 endIndex = endIndex - (endIndex + startIndex - smallText.length());
             }
         }
-        else if(longText.length() - startIndex - endIndex > longText.length() - smallText.length()) // funktioniert noch nicht ganz, erkennt nciht den ganzen bereich beim ersetzen
+//        else if(longText.length() != startIndex + endIndex ) // funktioniert noch nicht ganz, erkennt nciht den ganzen bereich beim ersetzen
+//        {
+//            endIndex = longText.length() - smallText.length();
+//        }
+        if(startIndex + endIndex != smallText.length() || smallText.length() == longText.length())
         {
-            endIndex = longText.length() - smallText.length();
+            System.out.println("(element replaced)");
+        }
+        else if (newTexT.length() > oldText.length())
+        {
+            System.out.println("(element added)");
+        }
+        else if (newTexT.length() < oldText.length())
+        {
+            System.out.println("(element removed)");
         }
 
         System.out.println("Difference found between index " + startIndex + " and index " + endIndex + " and leangh " + smallText.length());
         return new int[]{startIndex, endIndex};
+    }
+
+    public void changedText(ChangeMessage changeMessage)
+    {
+        try
+        {
+            if(textArea.getText().substring(0, changeMessage.getStartIndex()).equals(changeMessage.getNewText().substring(0, changeMessage.getStartIndex())) &&
+                    textArea.getText().substring(textArea.getText().length() - changeMessage.getEndIndex(), textArea.getText().length()).equals(changeMessage.getNewText().substring(changeMessage.getNewText().length() - changeMessage.getEndIndex(), changeMessage.getNewText().length())))
+            {
+                System.out.println("Text ohne wiederSpruch erkannt");
+                int curserIndex = textArea.getCaretPosition();
+                textArea.setText(changeMessage.getNewText());
+
+                if(changeMessage.getStartIndex() < curserIndex)
+                {
+                    textArea.selectRange(curserIndex + (textArea.getLength() - changeMessage.getNewText().length()), curserIndex + (textArea.getLength() - changeMessage.getNewText().length()));
+                }
+                else
+                {
+                    textArea.selectRange(curserIndex, curserIndex);
+                }
+            }
+            //System.out.println("Difference found between index " + changeMessage.getStartIndex() + " and index " + changeMessage.getEndIndex());
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
     public void saveFile()

@@ -5,32 +5,31 @@ import java.util.Date;
 
 public class ChangeMessage implements Serializable
 {
-    public ChangeMessage(int position, String text, boolean isInsertion, Date timestamp)
-    {
-        this.position = position;
-        this.text = text;
-        this.isInsertion = isInsertion;
-        this.timestamp = timestamp;
-    }
-
-    private int position;
-    private String text;
-    private boolean isInsertion;
+    private int startIndex;
+    private int endIndex;
+    private String newText;
     private Date timestamp;
 
-    public int getPosition()
+    public ChangeMessage(int startIndex, int endIndex, String newText)
     {
-        return position;
+        this.startIndex = startIndex;
+        this.endIndex = endIndex;
+        this.newText = newText;
     }
 
-    public String getText()
+    public int getStartIndex()
     {
-        return text;
+        return startIndex;
     }
 
-    public boolean getIsInsertion()
+    public int getEndIndex()
     {
-        return isInsertion;
+        return endIndex;
+    }
+
+    public String getNewText()
+    {
+        return newText;
     }
 
     public Date getTimestamp()

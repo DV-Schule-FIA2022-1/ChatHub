@@ -1,5 +1,6 @@
 package chat.WorkThogether.Client;
 
+import chat.WorkThogether.Nachricht.ChangeMessage;
 import chat.client.ClientController;
 import chat.nachricht.Nachricht;
 
@@ -14,7 +15,7 @@ public class Client extends Thread
     private ObjectInputStream in;
     private ObjectOutputStream out;
     private EditorController clientController;
-    private Nachricht nachricht;
+    private ChangeMessage nachricht;
 
     public Client(int port, EditorController clientController) throws IOException
     {
@@ -33,9 +34,10 @@ public class Client extends Thread
     {
         try
         {
-            while ((nachricht = (Nachricht)in.readObject())!= null)
+            while ((nachricht = (ChangeMessage)in.readObject())!= null)
             {
-                System.out.println("Empfangen vom Server: " + nachricht);
+                //System.out.println("Empfangen vom Server: " + nachricht);
+                clientController.changedText(nachricht);
             }
         }
         catch (Exception e)
@@ -45,7 +47,7 @@ public class Client extends Thread
     }
 
 
-    public void schreiben(Nachricht nachricht) throws IOException
+    public void schreiben(ChangeMessage nachricht) throws IOException
     {
         this.nachricht = nachricht;
         out.writeObject(nachricht);

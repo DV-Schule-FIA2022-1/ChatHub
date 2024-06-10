@@ -1,7 +1,6 @@
 package chat.WorkThogether.Server;
 
 import chat.WorkThogether.Nachricht.ChangeMessage;
-import chat.nachricht.Nachricht;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -12,7 +11,12 @@ public class Server extends Thread
     private ArrayList<ClientProxy> clientList;
     private ServerSocket socket;
     private int port;
-    private Nachricht nachricht;
+    private String text = "";
+
+    public String getText()
+    {
+        return text;
+    }
 
     public Server(int port) throws IOException
     {
@@ -40,11 +44,41 @@ public class Server extends Thread
         }
     }
 
-    public void verteileNachricht(ChangeMessage nachricht) throws IOException
+    public void changedText(ChangeMessage changeMessage, ClientProxy clientProxy)
+    {
+        try
+        {
+            if(text.substring(0, changeMessage.getStartIndex()).equals(changeMessage.getNewText().substring(0, changeMessage.getStartIndex())) &&
+                    text.substring(text.length() - changeMessage.getEndIndex(), text.length()).equals(changeMessage.getNewText().substring(changeMessage.getNewText().length() - changeMessage.getEndIndex(), changeMessage.getNewText().length())))
+            {
+                System.out.println("Text ohne wiederSpruch erkannt");
+                text = changeMessage.getNewText();
+            }
+            else if (text.substring(0, changeMessage.getStartIndex()).equals(changeMessage.getNewText().substring(0, changeMessage.getStartIndex())))
+            {
+                System.out.println("Linker Text ist gleich geblieben");
+            }
+            else if (text.substring(text.length() - changeMessage.getEndIndex(), text.length()).equals(changeMessage.getNewText().substring(changeMessage.getNewText().length() - changeMessage.getEndIndex(), changeMessage.getNewText().length())))
+            {
+                System.out.println("Rechter Text ist gleich geblieben");
+            }
+            //System.out.println("Difference found between index " + changeMessage.getStartIndex() + " and index " + changeMessage.getEndIndex());
+            verteileNachricht(changeMessage, clientProxy);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void verteileNachricht(ChangeMessage nachricht, ClientProxy clientProxy) throws IOException
     {
         for (ClientProxy c : clientList)
         {
-            c.schreiben(nachricht);
+            if(c != clientProxy)
+            {
+                c.schreiben(nachricht);
+            }
         }
     }
 
