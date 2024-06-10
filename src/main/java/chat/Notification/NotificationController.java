@@ -19,8 +19,6 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -65,7 +63,8 @@ public class NotificationController implements Initializable
         listProperty.set(FXCollections.observableArrayList(messagelist));
 
         //neuer Controller
-        URL fxmlLocation = NotificationController.class.getResource("/NotificationPopUp.fxml");
+        URL fxmlLocation = NotificationControllerPopUp.class.getResource("/NotificationPopUp.fxml");
+        System.out.println(fxmlLocation);
         FXMLLoader loader = new FXMLLoader(fxmlLocation);
         secondLayout = loader.load();
         scene = new Scene(secondLayout);
