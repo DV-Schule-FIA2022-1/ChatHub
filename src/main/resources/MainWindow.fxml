@@ -8,28 +8,28 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.users.MainViewController">
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.users.MainViewController">
     <children>
         <AnchorPane layoutX="-1.0" prefHeight="400.0" prefWidth="289.0" style="-fx-background-color: #676765;">
             <children>
-                <AnchorPane prefHeight="400.0" prefWidth="57.0" style="-fx-background-color: #454545;">
+                <AnchorPane prefHeight="500.0" prefWidth="57.0" style="-fx-background-color: #454545;">
                     <children>
-                  <ImageView fx:id="chatIcon" fitHeight="40.0" fitWidth="50.0" layoutX="9.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="chatIcon" fitHeight="40.0" fitWidth="50.0" layoutX="8.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/chatIcon.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="homeIcon" fitHeight="40.0" fitWidth="50.0" layoutX="9.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="homeIcon" fitHeight="40.0" fitWidth="50.0" layoutX="8.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/homeIcon.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="groupIcon" fitHeight="40.0" fitWidth="50.0" layoutX="9.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="groupIcon" fitHeight="40.0" fitWidth="50.0" layoutX="8.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/groupIcon.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="settingsIcon" fitHeight="40.0" fitWidth="50.0" layoutX="10.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="settingsIcon" fitHeight="40.0" fitWidth="50.0" layoutX="9.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/settingsIcon.png" />
                      </image>
@@ -53,7 +53,7 @@
                </styleClass>
             </HBox>
             <Line endX="129.0" layoutX="157.0" layoutY="45.0" startX="-100.0" />
-            <Pane layoutX="57.0" layoutY="46.0" prefHeight="352.0" prefWidth="229.0" styleClass="gray-background" stylesheets="@style.css">
+            <Pane layoutX="57.0" layoutY="46.0" prefHeight="454.0" prefWidth="253.0" styleClass="gray-background" stylesheets="@style.css">
                <children>
                   <HBox alignment="CENTER" prefHeight="63.0" prefWidth="229.0">
                      <children>
@@ -88,9 +88,9 @@
             </Pane>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="288.0" prefHeight="400.0" prefWidth="312.0">
+        <AnchorPane layoutX="309.0" prefHeight="500.0" prefWidth="375.0">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="82.0" prefWidth="312.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="88.0" prefWidth="494.0">
                <children>
                   <Label prefHeight="21.0" prefWidth="70.0" text="Test" textFill="#9da7a7">
                      <padding>
@@ -111,7 +111,7 @@
                         <Insets left="10.0" />
                      </padding>
                   </Label>
-                  <Pane prefHeight="82.0" prefWidth="55.0" />
+                  <Pane prefHeight="88.0" prefWidth="196.0" />
                   <ImageView fx:id="telephoneIcon" fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/telephoneIcon.png" />
@@ -125,7 +125,7 @@
                         <Image url="@../icons/kameraIcon.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="10.0" />
+                        <Insets left="30.0" />
                      </HBox.margin>
                   </ImageView>
                   <ImageView fx:id="userSettingsIcon" fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
@@ -133,16 +133,16 @@
                         <Image url="@../icons/settingsPointsIcon.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="10.0" />
+                        <Insets left="30.0" />
                      </HBox.margin>
                   </ImageView>
                </children></HBox>
-            <ScrollPane layoutY="88.0" prefHeight="254.0" prefWidth="312.0" styleClass="transparent-background" stylesheets="@style.css">
+            <ScrollPane layoutY="88.0" prefHeight="336.0" prefWidth="494.0" styleClass="transparent-background" stylesheets="@style.css">
                <content>
-                  <Pane prefHeight="253.0" prefWidth="311.0" style="-fx-background-color: #DADADA;" styleClass="light-gray-background" stylesheets="@style.css" />
+                  <Pane prefHeight="354.0" prefWidth="509.0" style="-fx-background-color: #DADADA;" styleClass="light-gray-background" stylesheets="@style.css" />
                </content>
             </ScrollPane>
-            <HBox alignment="CENTER" layoutY="341.0" prefHeight="57.0" prefWidth="312.0">
+            <HBox alignment="CENTER" layoutY="437.0" prefHeight="57.0" prefWidth="494.0">
                <children>
                   <ImageView fx:id="emojiIcon" fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -157,16 +157,16 @@
                         <Image url="@../icons/attachmentIcon.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="10.0" />
+                        <Insets left="20.0" right="20.0" />
                      </HBox.margin>
                   </ImageView>
-                  <TextField prefHeight="39.0" prefWidth="177.0" />
+                  <TextField prefHeight="39.0" prefWidth="291.0" />
                   <ImageView fx:id="sendIcon" fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/sendIcon.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="10.0" />
+                        <Insets left="20.0" />
                      </HBox.margin>
                   </ImageView>
                </children></HBox>
