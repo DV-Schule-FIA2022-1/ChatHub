@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Preparing Chatroom Class + Chatroom saved in the Database">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Icons/ProfileIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/ProfileIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Icons/chatIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/chatIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Icons/groupIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/groupIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Icons/homeIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/homeIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Icons/logoutIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/logoutIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Icons/searchingIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/searchingIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Icons/settingsIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/settingsIcon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/login/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/ChatroomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/ChatroomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/CheckEmailFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/functions/CheckEmailFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/HashFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/functions/HashFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Fixed the icons not being displayed in the Main GUI + new package structure" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +67,7 @@
       <recent name="D:\ChatHub\src\main\java\chat\database" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainWindow">
+  <component name="RunManager" selected="Application.MainLogin">
     <configuration name="Chathub" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Chathub" />
       <module name="Netzwerk" />
@@ -210,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717779044898</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed the icons not being displayed in the Main GUI + new package structure">
+      <option name="closed" value="true" />
+      <created>1718006741654</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718006741654</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,7 +220,8 @@
     <MESSAGE value="Fixed SQL addUser Function + Make Database Path relative + outsource HashFunction + Update MainWindow GUI" />
     <MESSAGE value="Change Birthdate Textfield to Datepicker and fixed date insert into database" />
     <MESSAGE value="Preparing Chatroom Class + Chatroom saved in the Database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Preparing Chatroom Class + Chatroom saved in the Database" />
+    <MESSAGE value="Fixed the icons not being displayed in the Main GUI + new package structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the icons not being displayed in the Main GUI + new package structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
