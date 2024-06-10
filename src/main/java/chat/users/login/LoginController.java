@@ -1,6 +1,8 @@
-package chat.users;
+package chat.users.login;
 
 import chat.mains.MainLogin;
+import chat.users.*;
+import chat.users.functions.CheckEmailFunction;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

@@ -1,5 +1,6 @@
 package chat.users;
 
+import chat.users.functions.HashFunction;
 import lombok.Getter;
 
 import java.sql.*;

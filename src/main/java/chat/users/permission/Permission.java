@@ -1,5 +1,6 @@
-package chat.users;
+package chat.users.permission;
 
+import chat.users.role.Role;
 import lombok.Getter;
 
 import java.util.Set;

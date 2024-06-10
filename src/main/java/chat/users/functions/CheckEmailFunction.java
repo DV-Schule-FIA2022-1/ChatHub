@@ -1,5 +1,8 @@
-package chat.users;
+package chat.users.functions;
 
+import chat.users.User;
+import chat.users.UserController;
+import chat.users.login.LoginController;
 import lombok.Getter;
 import java.util.Objects;
 

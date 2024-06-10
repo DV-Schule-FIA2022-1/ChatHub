@@ -1,4 +1,4 @@
-package chat.users;
+package chat.users.role;
 
 public class RoleController
 {

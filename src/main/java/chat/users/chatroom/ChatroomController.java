@@ -1,4 +1,7 @@
-package chat.users;
+package chat.users.chatroom;
+
+import chat.users.User;
+import chat.users.functions.HashFunction;
 
 import java.sql.*;
 

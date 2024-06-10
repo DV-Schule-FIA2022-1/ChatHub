@@ -5,18 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Preparing Chatroom Class + Chatroom saved in the Database">
-      <change afterPath="$PROJECT_DIR$/src/main/Icons/ProfileIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/CheckEmailFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/CheckEmailFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Icons/ProfileIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/ProfileIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Icons/chatIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/chatIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Icons/groupIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/groupIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Icons/homeIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/homeIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Icons/logoutIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/logoutIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Icons/searchingIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/searchingIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Icons/settingsIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/icons/settingsIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/database/TestDB.accdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/login/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/ChatroomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/ChatroomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/CheckEmailFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/functions/CheckEmailFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/HashFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/functions/HashFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/login/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/PermissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +125,7 @@
     <configuration name="MainWindow" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.mains.MainWindow" />
       <module name="Netzwerk" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Patrick\Downloads\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <option name="VM_PARAMETERS" value="--module-path &quot;H:\Java\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

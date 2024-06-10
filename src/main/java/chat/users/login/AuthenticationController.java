@@ -1,4 +1,7 @@
-package chat.users;
+package chat.users.login;
+
+import chat.users.functions.CheckEmailFunction;
+import chat.users.functions.HashFunction;
 
 public class AuthenticationController
 {

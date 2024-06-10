@@ -1,4 +1,4 @@
-package chat.users;
+package chat.users.functions;
 
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;

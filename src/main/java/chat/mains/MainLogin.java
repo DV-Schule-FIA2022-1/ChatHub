@@ -1,11 +1,9 @@
 package chat.mains;
 
-import chat.users.LoginController;
+import chat.users.login.LoginController;
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import lombok.Getter;

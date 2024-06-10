@@ -1,4 +1,7 @@
-package chat.users;
+package chat.users.role;
+
+import chat.users.User;
+import chat.users.permission.Permission;
 
 import java.util.ArrayList;
 import java.util.Date;

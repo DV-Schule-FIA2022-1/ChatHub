@@ -1,6 +1,7 @@
-package chat.users;
+package chat.users.chatroom;
 
 import chat.message.Message;
+import chat.users.User;
 import lombok.Getter;
 import lombok.Setter;
 
