@@ -4,9 +4,6 @@ import chat.users.User;
 import chat.users.permission.Permission;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.sql.Date;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 

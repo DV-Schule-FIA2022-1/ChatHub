@@ -1,8 +1,6 @@
 package chat.users.role;
 
-import chat.users.functions.HashFunction;
 import chat.users.permission.Permission;
-
 import java.sql.*;
 import java.time.LocalDateTime;
 

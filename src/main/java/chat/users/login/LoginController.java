@@ -198,7 +198,7 @@ public class LoginController implements Initializable
             fxmlLoader.setLocation(MainViewController.class.getResource("/MainWindow.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 630, 400);
             stage = new Stage();
-            stage.setTitle("Chathub Login");
+            stage.setTitle("Chathub MainWindow");
             stage.setScene(scene);
             stage.setOnCloseRequest(e ->
             {

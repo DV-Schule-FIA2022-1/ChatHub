@@ -2,7 +2,6 @@ package chat.users.permission;
 
 import chat.users.role.Role;
 import lombok.Getter;
-
 import java.util.Set;
 
 public class Permission
@@ -19,7 +18,6 @@ public class Permission
     private String action;
     @Getter
     private String condition;
-
     private PermissionController permissionController;
 
     public Permission()
