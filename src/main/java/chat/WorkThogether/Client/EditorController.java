@@ -55,11 +55,21 @@ public class EditorController
     {
         if(!textArea.getText().equals(oldText))
         {
+            ChangeMessage update = null;
             int[] index = findDifferenceIndexes(textArea.getText(), oldText);
             //textArea.selectRange(index[0],textArea.getLength() - index[1]);
+
+            if(index[0] + index[1] != oldText.length())//Nochmal anschauen
+            {
+                update = new ChangeMessage(index[0], index[1], textArea.getText());
+            }
+            else
+            {
+                update = new ChangeMessage(index[0], index[1], textArea.getText());
+            }
+
             oldText = textArea.getText();
 
-            ChangeMessage update = new ChangeMessage(index[0], index[1], textArea.getText());
             try
             {
                 client.schreiben(update);
