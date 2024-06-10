@@ -34,12 +34,13 @@ public class NotificationController implements Initializable
 
 
     @FXML private ListView listboxReceived;
+    @FXML private Button buttonClose;
 
     private ArrayList<String> messagelist;
 
     private ListProperty<String> listProperty = new SimpleListProperty<>();
 
-    public static Stage secondStage;
+    public static Stage primaryStage;
     private Pane secondLayout;
     private static Scene scene;
     @Override
@@ -52,12 +53,15 @@ public class NotificationController implements Initializable
         System.out.println(messagelist);
 
         listProperty.set(FXCollections.observableArrayList(messagelist));
+
         listboxReceived.itemsProperty().bind(listProperty);
     }
     public void sendMessage() throws IOException
     {
-        secondStage = new Stage();
+
+        primaryStage = new Stage();
         messagelist.add(textboxMessage.getText());
+
         listProperty.set(FXCollections.observableArrayList(messagelist));
 
         //neuer Controller
@@ -65,16 +69,20 @@ public class NotificationController implements Initializable
         FXMLLoader loader = new FXMLLoader(fxmlLocation);
         secondLayout = loader.load();
         scene = new Scene(secondLayout);
-        secondStage.setScene(scene);
-        secondStage.setTitle("PopUp");
-        secondStage.setOnCloseRequest(e ->
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("PopUp");
+        primaryStage.setOnCloseRequest(e ->
         {
-            secondStage.close();
+            primaryStage.close();
             System.out.println("Fenster geschlossen");
             System.exit(0);
         });
-        secondStage.show();
+        primaryStage.show();
 
+    }
+    public void close()
+    {
+       primaryStage.close();
     }
     @FXML
     private void handleButtonAction(ActionEvent event) throws IOException
