@@ -1,8 +1,10 @@
 package chat.users.role;
 
 import chat.users.functions.HashFunction;
+import chat.users.permission.Permission;
 
 import java.sql.*;
+import java.time.LocalDateTime;
 
 public class RoleController
 {
@@ -13,6 +15,21 @@ public class RoleController
     public RoleController(Role role)
     {
         this.role = role;
+    }
+
+    public void addPermission(Permission permission)
+    {
+        role.getPermissions().add(permission);
+    }
+
+    public void removePermission(Permission permission)
+    {
+        role.getPermissions().remove(permission);
+    }
+
+    public boolean hasPermisison(Permission permission)
+    {
+        return role.getPermissions().contains(permission);
     }
 
     public void createRole(Role role)
@@ -27,7 +44,9 @@ public class RoleController
             Timestamp timestamp = Timestamp.valueOf(role.getCreateAt());
             Date sqlDate = new Date(timestamp.getTime());
             preparedStatement.setDate(3, sqlDate);
-            preparedStatement.setDate(4, role.getUpdatedAt());
+            Timestamp timestampUpdate = Timestamp.valueOf(role.getUpdatedAt());
+            Date sqlDateUpdate = new Date(timestampUpdate.getTime());
+            preparedStatement.setDate(4, sqlDateUpdate);
             preparedStatement.setBoolean(5, role.isActive());
 
             row = preparedStatement.executeUpdate();
@@ -41,5 +60,23 @@ public class RoleController
         {
             ex.printStackTrace();
         }
+    }
+
+    public void updateRoleDescription(String description)
+    {
+        role.setDescription(description);
+        role.setUpdatedAt(LocalDateTime.now());
+    }
+
+    public void deactivateRole()
+    {
+        role.setActive(false);
+        role.setUpdatedAt(LocalDateTime.now());
+    }
+
+    public void reactivateRole()
+    {
+        role.setActive(true);
+        role.setUpdatedAt(LocalDateTime.now());
     }
 }

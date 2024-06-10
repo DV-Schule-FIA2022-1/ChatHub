@@ -3,6 +3,7 @@ package chat.users.role;
 import chat.users.User;
 import chat.users.permission.Permission;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -14,18 +15,19 @@ public class Role
     private int roleID;
     @Getter
     private String roleName;
-    private Permission permissions;
     @Getter
+    private ArrayList<Permission> permissions;
+    @Getter @Setter
     private String description;
     private ArrayList<User> users;
     @Getter
     private LocalDateTime createAt;
-    @Getter
-    private Date updatedAt;
-    @Getter
+    @Getter @Setter
+    private LocalDateTime updatedAt;
+    @Getter @Setter
     private boolean isActive;
 
-    public Role(String roleName, String description, LocalDateTime createAt, Date updatedAt, boolean isActive)
+    public Role(String roleName, String description, LocalDateTime createAt, LocalDateTime updatedAt, boolean isActive)
     {
         this.roleName = roleName;
         this.description = description;
