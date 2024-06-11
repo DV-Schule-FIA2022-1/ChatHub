@@ -1,8 +1,11 @@
 package chat.users;
 
 
+import chat.users.permission.Permission;
+import chat.users.permission.PermissionEnum;
 import lombok.Getter;;
 import java.sql.Date;
+import java.util.Set;
 
 public class User
 {
@@ -20,6 +23,7 @@ public class User
     private Date birthdate;
     @Getter
     private Address address;
+    private Set<PermissionEnum> permissions;
 
     public User(String firstName, String lastName, String password, String email, Date birthdate, Address address)
     {
@@ -31,10 +35,15 @@ public class User
         this.address = address;
     }
 
-    public User(String firstName, String lastName)
+    public User(String firstName, String lastName, String password, String email, Date birthdate, Address address, Set<PermissionEnum> permissions)
     {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.password = password;
+        this.email = email;
+        this.birthdate = birthdate;
+        this.address = address;
+        this.permissions = permissions;
     }
 
     public void setAttempts()

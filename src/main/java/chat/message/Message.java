@@ -2,9 +2,11 @@ package chat.message;
 
 import chat.client.ClientController;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 public class Message implements Serializable
 {
+    private LocalDateTime sendedAt;
     private String message;
     private String name;
     private transient ClientController clientController;
