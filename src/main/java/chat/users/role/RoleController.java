@@ -1,5 +1,6 @@
 package chat.users.role;
 
+import chat.users.enums.ChathubEnum;
 import chat.users.permission.Permission;
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -7,7 +8,6 @@ import java.time.LocalDateTime;
 public class RoleController
 {
     private Role role;
-    private String databaseURL = "jdbc:ucanaccess://src/main/java/chat/database/TestDB.accdb";
     private int row;
 
     public RoleController(Role role)
@@ -32,7 +32,7 @@ public class RoleController
 
     public void createRole(Role role)
     {
-        try(Connection connection = DriverManager.getConnection(databaseURL))
+        try(Connection connection = DriverManager.getConnection(ChathubEnum.DatabasePath.getPath()))
         {
             String sql = "INSERT INTO Role (roleName, description, createAt, updatedAt, isActive) VALUES (?, ?, ?, ?, ?)";
 

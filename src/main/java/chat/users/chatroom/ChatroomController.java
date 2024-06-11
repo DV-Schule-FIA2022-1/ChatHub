@@ -1,6 +1,7 @@
 package chat.users.chatroom;
 
 import chat.users.User;
+import chat.users.enums.ChathubEnum;
 import chat.users.functions.HashFunction;
 
 import java.sql.*;
@@ -8,7 +9,6 @@ import java.sql.*;
 public class ChatroomController
 {
     private Chatroom chatroom;
-    private String databaseURL = "jdbc:ucanaccess://src/main/java/chat/database/TestDB.accdb";
     private int row;
     public ChatroomController(Chatroom chatroom)
     {
@@ -46,7 +46,7 @@ public class ChatroomController
 
     public void createChatroom(Chatroom chatroom)
     {
-        try(Connection connection = DriverManager.getConnection(databaseURL))
+        try(Connection connection = DriverManager.getConnection(ChathubEnum.DatabasePath.getPath()))
         {
             String sql = "INSERT INTO Chatroom (chatroomName, description, password, createAt, maxUsers, isPublic) VALUES (?, ?, ?, ?, ?, ?)";
 

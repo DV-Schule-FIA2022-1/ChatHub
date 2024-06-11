@@ -1,5 +1,6 @@
 package chat.users;
 
+import chat.users.enums.ChathubEnum;
 import chat.users.functions.HashFunction;
 import lombok.Getter;
 
@@ -12,7 +13,6 @@ public class UserController
     private int insertId;
     @Getter
     private ArrayList<User> userlist;
-    private String databaseURL = "jdbc:ucanaccess://src/main/java/chat/database/TestDB.accdb";
     public UserController()
     {
 
@@ -20,7 +20,7 @@ public class UserController
 
     public void addUser(User user)
     {
-        try(Connection connection = DriverManager.getConnection(databaseURL))
+        try(Connection connection = DriverManager.getConnection(ChathubEnum.DatabasePath.getPath()))
         {
             String sqladdress = "INSERT INTO Address (street, city, zipCode, country) VALUES (?, ?, ?, ?)";
 
@@ -71,7 +71,7 @@ public class UserController
 
     public void readUser()
     {
-        try(Connection conn = DriverManager.getConnection(databaseURL))
+        try(Connection conn = DriverManager.getConnection(ChathubEnum.DatabasePath.getPath()))
         {
             userlist = new ArrayList<>();
             String sql = "SELECT u.firstName, u.lastName, u.password, u.email, u.birthdate, a.street, a.city, a.zipCode, a.country FROM User u INNER JOIN Address a ON u.addressNR = a.ID";
