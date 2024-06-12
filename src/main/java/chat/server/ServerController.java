@@ -1,5 +1,6 @@
 package chat.server;
 
+import chat.server.Server;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -29,7 +30,7 @@ public class ServerController implements Initializable
         {
             try
             {
-                testserver = new Server(this, Integer.parseInt(portnr.getText()));
+                testserver.getInstance(this, Integer.parseInt(portnr.getText()));
             }
             catch (IOException e)
             {

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="486.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.users.login.LoginController">
+   <children>
+      <Label alignment="CENTER" layoutX="18.0" layoutY="60.0" prefHeight="29.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to left, #ff7f50, #6a5acd); -fx-border-color: black;" text="Chathub" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRegistration" layoutX="134.0" layoutY="436.0" mnemonicParsing="false" onAction="#createUser" prefHeight="25.0" prefWidth="149.0" text="Registerung" />
+      <Button fx:id="btnLogin" layoutX="317.0" layoutY="436.0" mnemonicParsing="false" onAction="#confirmPassword" prefHeight="25.0" prefWidth="149.0" text="Login" />
+      <TextField fx:id="emailLoginField" layoutX="92.0" layoutY="119.0" onKeyPressed="#enterPressed" />
+      <TextField fx:id="passwordLoginField" layoutX="391.0" layoutY="119.0" />
+      <Label fx:id="emailLoginLabel" alignment="CENTER" layoutX="25.0" layoutY="123.0" prefHeight="17.0" prefWidth="70.0" text="Email" />
+      <Label fx:id="passwordLoginLabel" alignment="CENTER" layoutX="299.0" layoutY="123.0" prefHeight="17.0" prefWidth="89.0" text="Passwort" />
+      <Label fx:id="registrationLabel" alignment="CENTER" layoutX="17.0" layoutY="182.0" prefHeight="19.0" prefWidth="600.0" style="-fx-border-color: black;" text="Registerung" />
+      <Label fx:id="firstNameLabel" alignment="CENTER" layoutX="14.0" layoutY="224.0" prefHeight="19.0" prefWidth="121.0" style="-fx-border-color: black;" text="Vorname" />
+      <Label fx:id="lastNameLabel" alignment="CENTER" layoutX="314.0" layoutY="223.0" prefHeight="19.0" prefWidth="131.0" style="-fx-border-color: black;" text="Nachname" />
+      <TextField fx:id="firstNameTextfield" layoutX="142.0" layoutY="221.0" />
+      <TextField fx:id="lastNameTextfield" layoutX="466.0" layoutY="220.0" />
+      <TextField fx:id="passwordTextfield" layoutX="142.0" layoutY="259.0" />
+      <Label fx:id="passwordLabel" alignment="CENTER" layoutX="14.0" layoutY="262.0" prefHeight="19.0" prefWidth="121.0" style="-fx-border-color: black;" text="Passwort" />
+      <Label fx:id="passwordAgainLabel" alignment="CENTER" layoutX="314.0" layoutY="262.0" prefHeight="17.0" prefWidth="131.0" style="-fx-border-color: black;" text="Passwort wiederholen" />
+      <TextField fx:id="passwordAgainTextfield" layoutX="466.0" layoutY="258.0" />
+      <TextField fx:id="streetTextfield" layoutX="143.0" layoutY="339.0" />
+      <TextField fx:id="cityTextfield" layoutX="466.0" layoutY="339.0" />
+      <Label fx:id="streetLabel" alignment="CENTER" layoutX="14.0" layoutY="342.0" prefHeight="19.0" prefWidth="121.0" style="-fx-border-color: black;" text="Straße und Nummer" />
+      <Label fx:id="cityLabel" alignment="CENTER" layoutX="314.0" layoutY="342.0" prefHeight="19.0" prefWidth="131.0" style="-fx-border-color: black;" text="Stadt" />
+      <Label fx:id="zipCodeLabel" alignment="CENTER" layoutX="13.0" layoutY="386.0" prefHeight="19.0" prefWidth="121.0" style="-fx-border-color: black;" text="Postleitzahl" />
+      <Label fx:id="countryLabel" alignment="CENTER" layoutX="314.0" layoutY="386.0" prefHeight="19.0" prefWidth="131.0" style="-fx-border-color: black;" text="Land" />
+      <TextField fx:id="zipCodeTextfield" layoutX="143.0" layoutY="383.0" />
+      <TextField fx:id="countryTextfield" layoutX="466.0" layoutY="383.0" />
+      <TextField fx:id="emailTextfield" layoutX="143.0" layoutY="298.0" />
+      <Label fx:id="emailLabel" alignment="CENTER" layoutX="16.0" layoutY="302.0" prefHeight="17.0" prefWidth="121.0" style="-fx-border-color: black;" text="Email" />
+      <Label fx:id="birthdateLabel" alignment="CENTER" layoutX="314.0" layoutY="303.0" prefHeight="17.0" prefWidth="131.0" style="-fx-border-color: black;" text="Geburtstag" />
+      <DatePicker onAction="#getDate" fx:id="birthdateTextfield" layoutX="465.0" layoutY="300.0" prefHeight="25.0" prefWidth="149.0" />
+   </children>
+</AnchorPane>
