@@ -73,14 +73,17 @@ public class Server extends Thread
                             break;
                         }
                     }
+                    String deletedText = text.substring(changeMessage.getStartIndex(), changeMessage.getStartIndex() + skipIndex);
                     text = text.substring(0,changeMessage.getStartIndex()) + changeMessage.getNewText().substring(changeMessage.getStartIndex(), changeMessage.getNewText().length() - changeMessage.getEndIndex()) + text.substring(changeMessage.getStartIndex() + skipIndex, text.length());
+                    changeMessage = new ChangeMessage(changeMessage.getStartIndex(), text.length() - changeMessage.getStartIndex() - (changeMessage.getNewText().length() - changeMessage.getStartIndex() - changeMessage.getEndIndex()), text, deletedText);
+                    clientProxy.schreiben(changeMessage);
                 }
                 else
                 {
                     //Text wird auf der linken seite eingefügt, da wo der vorhandene Teil endet
                     text = text.substring(0,changeMessage.getStartIndex()) + changeMessage.getNewText().substring(changeMessage.getStartIndex(), changeMessage.getNewText().length() - changeMessage.getEndIndex()) + text.substring(changeMessage.getStartIndex(), text.length());
+                    changeMessage = new ChangeMessage(changeMessage.getStartIndex(), text.length() - changeMessage.getStartIndex() - (changeMessage.getNewText().length() - changeMessage.getStartIndex() - changeMessage.getEndIndex()), text);
                 }
-                changeMessage = new ChangeMessage(changeMessage.getStartIndex(), text.length() - changeMessage.getStartIndex(), text);
             }
             //Rechte Seite ist gleich
             else if (text.substring(text.length() - changeMessage.getEndIndex(), text.length()).equals(changeMessage.getNewText().substring(changeMessage.getNewText().length() - changeMessage.getEndIndex(), changeMessage.getNewText().length())))
@@ -105,10 +108,11 @@ public class Server extends Thread
                 }
                 else
                 {
-                    //Text wird auf der linken seite eingefügt, da wo der vorhandene Teil endet
-                    text = text.substring(0, text.length() - changeMessage.getEndIndex()) + changeMessage.getNewText().substring(changeMessage.getStartIndex(), changeMessage.getNewText().length() - changeMessage.getEndIndex()) + text.substring(text.length() - changeMessage.getEndIndex(), text.length());
+                    //Der Text Konnte nicht eingefügt werden, also muss ein Update für den User her, das er auf dem selben stand ist
+                    //text = text.substring(0, text.length() - changeMessage.getEndIndex()) + changeMessage.getNewText().substring(changeMessage.getStartIndex(), changeMessage.getNewText().length() - changeMessage.getEndIndex()) + text.substring(text.length() - changeMessage.getEndIndex(), text.length());
+                    clientProxy.schreiben(new ChangeMessage(0,0,text));
                 }
-                changeMessage = new ChangeMessage(text.length() - changeMessage.getEndIndex(), changeMessage.getEndIndex(), text);
+                changeMessage = new ChangeMessage(text.length() - changeMessage.getEndIndex() - (changeMessage.getNewText().length() - changeMessage.getStartIndex() - changeMessage.getEndIndex()), changeMessage.getEndIndex(), text);
             }
             //Kein Orientierungspunkt da
             else
