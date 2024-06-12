@@ -2,6 +2,7 @@ package chat;
 
 import chat.server.Server;
 import chat.server.ServerController;
+import chat.server.SocketManager;
 import chat.users.login.LoginController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +19,7 @@ public class Chathub extends Application
     @Getter
     private static Chathub instance;
     @Getter
-    private int serverport = 40000;
+    private int serverport = 40003;
     private Server server;
     private ServerController serverController;
     private Thread serverThread;
@@ -28,19 +29,23 @@ public class Chathub extends Application
     private static Scene scene;
     @Getter
     private LoginController loginController;
+    private SocketManager socketManager;
     public static void main(String[] args)
     {
         instance = new Chathub();
 
         instance.startServer();
         instance.testData();
+
+        launch();
     }
 
     public void startServer()
     {
         serverController = new ServerController();
+        socketManager = new SocketManager();
 
-        serverThread = new Thread(() -> server = Server.getInstance(serverController, serverport));
+        serverThread = new Thread(() -> server = Server.getInstance(socketManager, serverController, serverport), "Server-Thread");
         serverThread.start();
 
         System.out.println("Server läuft auf localhost/" + serverport);

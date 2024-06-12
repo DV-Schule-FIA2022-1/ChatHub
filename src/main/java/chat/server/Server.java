@@ -15,23 +15,25 @@ public class Server extends Thread
     private int port;
     private ServerController serverController;
     private Message nachricht;
+    private SocketManager socketManager;
 
-    private Server(ServerController serverController, int port) throws IOException
+    private Server(SocketManager socketManager, ServerController serverController, int port) throws IOException
     {
         System.out.println("Server gestartet!");
         clientList = new ArrayList<>();
         this.port = port;
         this.serverController = serverController;
+        this.socketManager = socketManager;
         this.start();
     }
 
-    public static synchronized Server getInstance(ServerController serverController, int port)
+    public static synchronized Server getInstance(SocketManager socketManager, ServerController serverController, int port)
     {
         try
         {
             if(instance == null)
             {
-                instance = new Server(serverController, port);
+                instance = new Server(socketManager, serverController, port);
             }
         }
         catch (IOException e)
@@ -50,7 +52,9 @@ public class Server extends Thread
             try
             {
                 socket = new ServerSocket(port);
+                socketManager.addSocket(socket);
                 clientList.add(new ClientProxy(this, serverController, socket.accept()));
+                socketManager.closeAllSockets();
             }
             catch (Exception e)
             {
@@ -58,14 +62,7 @@ public class Server extends Thread
             }
             finally
             {
-                try
-                {
-                    socket.close();
-                }
-                catch (IOException e)
-                {
-                    e.printStackTrace();
-                }
+                socketManager.closeAllSockets();
             }
         }
     }
