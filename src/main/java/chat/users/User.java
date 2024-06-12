@@ -55,6 +55,11 @@ public class User
         attempts++;
     }
 
+    public void resetAttempts()
+    {
+        attempts = 0;
+    }
+
     @Override
     public String toString()
     {

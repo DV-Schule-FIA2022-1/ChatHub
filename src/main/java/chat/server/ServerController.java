@@ -26,17 +26,7 @@ public class ServerController implements Initializable
 
     public void startServer()
     {
-        Thread t1 = new Thread(() ->
-        {
-            try
-            {
-                testserver.getInstance(this, Integer.parseInt(portnr.getText()));
-            }
-            catch (IOException e)
-            {
-                e.printStackTrace();
-            }
-        });
+        Thread t1 = new Thread(() -> testserver = Server.getInstance(this, Integer.parseInt(portnr.getText())));
         t1.start();
 
         info.setText("Server läuft auf 0.0.0.0/" + Integer.parseInt(portnr.getText()));

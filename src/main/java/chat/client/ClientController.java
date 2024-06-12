@@ -24,18 +24,6 @@ public class ClientController implements Initializable
 
     }
 
-    public void createUser()
-    {
-        try
-        {
-            client = new Client(Integer.parseInt(serverport.getText()), this, name.getText());
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException(e);
-        }
-    }
-
     public void sendMessage()
     {
         try

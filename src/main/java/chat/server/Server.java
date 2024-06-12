@@ -4,11 +4,12 @@ import chat.message.Message;
 
 import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.ArrayList;
 
 public class Server extends Thread
 {
-    private Server instance = null;
+    private static Server instance = null;
     private ArrayList<ClientProxy> clientList;
     private ServerSocket socket;
     private int port;
@@ -24,11 +25,18 @@ public class Server extends Thread
         this.start();
     }
 
-    public synchronized Server getInstance(ServerController serverController, int port) throws IOException
+    public static synchronized Server getInstance(ServerController serverController, int port)
     {
-        if(instance == null)
+        try
         {
-            instance = new Server(serverController, port);
+            if(instance == null)
+            {
+                instance = new Server(serverController, port);
+            }
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
         }
 
         return instance;
@@ -43,11 +51,21 @@ public class Server extends Thread
             {
                 socket = new ServerSocket(port);
                 clientList.add(new ClientProxy(this, serverController, socket.accept()));
-                socket.close();
             }
             catch (Exception e)
             {
                 e.printStackTrace();
+            }
+            finally
+            {
+                try
+                {
+                    socket.close();
+                }
+                catch (IOException e)
+                {
+                    e.printStackTrace();
+                }
             }
         }
     }

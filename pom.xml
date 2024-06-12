@@ -29,7 +29,7 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>22.0.1</version>
+            <version>20</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -64,14 +64,14 @@
                     <execution>
                     <id>debug</id>
                     <configuration>
-                        <mainClass>chat.mains.MainLogin</mainClass>
+                        <mainClass>chat.Chathub</mainClass>
                         <executable>${config.executable}</executable>
                     </configuration>
                     </execution>
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>chat.mains.MainLogin</mainClass>
+                            <mainClass>chat.Chathub</mainClass>
                             <executable>${config.executable}</executable>
                             <compress>2</compress>
                             <launcher>Chathub</launcher>

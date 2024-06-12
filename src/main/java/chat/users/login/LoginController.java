@@ -1,5 +1,8 @@
 package chat.users.login;
 
+import chat.Chathub;
+import chat.client.Client;
+import chat.client.ClientController;
 import chat.mains.MainLogin;
 import chat.users.*;
 import chat.users.functions.CheckEmailFunction;
@@ -57,12 +60,24 @@ public class LoginController implements Initializable
     @Setter
     private User activeUser;
     private CheckEmailFunction checkEmailFunction;
+    private MainViewController mainViewController;
+    private ClientController clientController;
+    private Client newClient;
+    private Chathub chathub;
 
     public LoginController()
     {
         userController = new UserController();
         checkEmailFunction = new CheckEmailFunction(this, userController);
         authenticationManager = new AuthenticationController(this, checkEmailFunction);
+    }
+
+    public LoginController(Chathub chathub)
+    {
+        userController = new UserController();
+        checkEmailFunction = new CheckEmailFunction(this, userController);
+        authenticationManager = new AuthenticationController(this, checkEmailFunction);
+        this.chathub = chathub;
     }
 
     @Override
@@ -188,8 +203,12 @@ public class LoginController implements Initializable
 
     public void loginUser(User registeredUser)
     {
+        clientController = new ClientController();
+        newClient = new Client(registeredUser, chathub.getServerport(), clientController);
+
         System.out.println("Erfolgreich angemeldet");
-        MainViewController mainViewController = new MainViewController(registeredUser);
+        registeredUser.resetAttempts();
+        mainViewController = new MainViewController(registeredUser);
         MainLogin.getPrimaryStage().close();
 
         try
@@ -200,7 +219,7 @@ public class LoginController implements Initializable
             stage = new Stage();
             stage.setWidth(825);
             stage.setHeight(530);
-            stage.setTitle("Chathub MainWindow");
+            stage.setTitle("chat.Chathub Main Window");
             stage.setScene(scene);
             stage.setOnCloseRequest(e ->
             {

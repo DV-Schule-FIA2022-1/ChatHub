@@ -35,7 +35,7 @@ public class MainWindow extends Application
         mainLayout = loader.load();
         scene = new Scene(mainLayout);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Chathub MainWindow");
+        primaryStage.setTitle("chat.Chathub MainWindow");
         primaryStage.show();
     }
 }
