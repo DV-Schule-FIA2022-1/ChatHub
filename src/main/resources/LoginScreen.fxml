@@ -14,7 +14,6 @@
       <Button fx:id="btnRegistration" layoutX="134.0" layoutY="436.0" mnemonicParsing="false" onAction="#createUser" prefHeight="25.0" prefWidth="149.0" text="Registerung" />
       <Button fx:id="btnLogin" layoutX="317.0" layoutY="436.0" mnemonicParsing="false" onAction="#confirmPassword" prefHeight="25.0" prefWidth="149.0" text="Login" />
       <TextField fx:id="emailLoginField" layoutX="92.0" layoutY="119.0" onKeyPressed="#enterPressed" />
-      <TextField fx:id="passwordLoginField" layoutX="391.0" layoutY="119.0" />
       <Label fx:id="emailLoginLabel" alignment="CENTER" layoutX="25.0" layoutY="123.0" prefHeight="17.0" prefWidth="70.0" text="Email" />
       <Label fx:id="passwordLoginLabel" alignment="CENTER" layoutX="299.0" layoutY="123.0" prefHeight="17.0" prefWidth="89.0" text="Passwort" />
       <Label fx:id="registrationLabel" alignment="CENTER" layoutX="17.0" layoutY="182.0" prefHeight="19.0" prefWidth="600.0" style="-fx-border-color: black;" text="Registerung" />
@@ -37,6 +36,7 @@
       <TextField fx:id="emailTextfield" layoutX="143.0" layoutY="298.0" />
       <Label fx:id="emailLabel" alignment="CENTER" layoutX="16.0" layoutY="302.0" prefHeight="17.0" prefWidth="121.0" style="-fx-border-color: black;" text="Email" />
       <Label fx:id="birthdateLabel" alignment="CENTER" layoutX="314.0" layoutY="303.0" prefHeight="17.0" prefWidth="131.0" style="-fx-border-color: black;" text="Geburtstag" />
-      <DatePicker onAction="#getDate" fx:id="birthdateTextfield" layoutX="465.0" layoutY="300.0" prefHeight="25.0" prefWidth="149.0" />
+      <DatePicker fx:id="birthdateTextfield" layoutX="465.0" layoutY="300.0" onAction="#getDate" prefHeight="25.0" prefWidth="149.0" />
+      <PasswordField fx:id="passwordLoginField" layoutX="407.0" layoutY="119.0" prefHeight="25.0" prefWidth="207.0" />
    </children>
 </AnchorPane>

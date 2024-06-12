@@ -27,7 +27,7 @@ public class LoginController implements Initializable
     private static Stage stage;
     @Getter
     @FXML private TextField emailLoginField;
-    @FXML private TextField passwordLoginField;
+    @FXML private PasswordField passwordLoginField;
     @FXML private TextField firstNameTextfield;
     @FXML private TextField lastNameTextfield;
     @FXML private TextField passwordTextfield;
@@ -198,6 +198,8 @@ public class LoginController implements Initializable
             fxmlLoader.setLocation(MainViewController.class.getResource("/MainWindow.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 630, 400);
             stage = new Stage();
+            stage.setWidth(825);
+            stage.setHeight(530);
             stage.setTitle("Chathub MainWindow");
             stage.setScene(scene);
             stage.setOnCloseRequest(e ->

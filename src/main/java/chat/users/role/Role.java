@@ -1,12 +1,9 @@
 package chat.users.role;
 
-import chat.users.User;
 import chat.users.permission.Permission;
-import chat.users.permission.PermissionEnum;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -18,9 +15,9 @@ public class Role
     @Getter @Setter
     private String description;
     @Getter
-    private Set<PermissionEnum> permissions;
+    private Set<Permission> permissions;
+    @Getter
     private int priortiyLevel;
-    private Date creationDate;
     @Getter
     private LocalDateTime createAt;
     @Getter @Setter
@@ -28,19 +25,11 @@ public class Role
     @Getter @Setter
     private boolean isActive;
 
-    public Role(String roleName, String description, int priortiyLevel)
+    public Role(String roleName, String description, int priortiyLevel, LocalDateTime createAt, LocalDateTime updatedAt, boolean isActive)
     {
         this.roleName = roleName;
         this.description = description;
         this.priortiyLevel = priortiyLevel;
-        this.permissions = new HashSet<>();
-        this.creationDate = new Date();
-    }
-
-    public Role(String roleName, String description, LocalDateTime createAt, LocalDateTime updatedAt, boolean isActive)
-    {
-        this.roleName = roleName;
-        this.description = description;
         this.createAt = createAt;
         this.updatedAt = updatedAt;
         this.isActive = isActive;

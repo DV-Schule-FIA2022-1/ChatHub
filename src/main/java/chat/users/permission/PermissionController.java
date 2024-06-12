@@ -1,5 +1,6 @@
 package chat.users.permission;
 
+import chat.users.User;
 import chat.users.role.Role;
 
 public class PermissionController
@@ -11,25 +12,18 @@ public class PermissionController
         this.permission = permission;
     }
 
-    public boolean hasRole(Role role)
+    public void addPermission(User user, Permission permission)
     {
-        return permission.getRoles().contains(role);
+        user.getPermissions().add(permission);
     }
 
-    public void addRole(Role role)
+    public void removePermission(User user, Permission permission)
     {
-        permission.getRoles().add(role);
+        user.getPermissions().remove(permission);
     }
 
-    public void removeRole(Role role)
+    public boolean hasPermisison(User user, Permission permission)
     {
-        permission.getRoles().remove(role);
-    }
-
-    public boolean validate()
-    {
-        return permission.getName() != null && !permission.getName().isEmpty() &&
-                permission.getResource() != null && !permission.getResource().isEmpty() &&
-                permission.getAction() != null && !permission.getAction().isEmpty();
+        return user.getPermissions().contains(permission);
     }
 }

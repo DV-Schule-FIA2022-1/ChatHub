@@ -1,27 +1,23 @@
 package chat.users.permission;
 
-import chat.users.role.Role;
-import lombok.Getter;
-import java.util.Set;
-
-public class Permission
+public enum Permission
 {
-    @Getter
-    private String name;
-    @Getter
-    private String description;
-    @Getter
-    private Set<Role> roles;
-    @Getter
-    private String resource;
-    @Getter
-    private String action;
-    @Getter
-    private String condition;
-    private PermissionController permissionController;
-
-    public Permission()
-    {
-        permissionController = new PermissionController(this);
-    }
+    SEND_MESSAGE,
+    RECEIVE_MESSAGE,
+    DELETE_MESSAGE,
+    EDIT_MESSAGE,
+    MODERATE_MESSAGE,
+    ADD_USER,
+    EDIT_USER,
+    DELETE_USER,
+    BAN_USER,
+    CREATE_CHATROOM,
+    ENTER_CHATROOM,
+    LEAVE_CHATROOM,
+    DELETE_CHATROOM,
+    EDIT_CHATROOM,
+    VIEW_PROFILE,
+    EDIT_PROFILE,
+    UPLOAD_FILE,
+    DOWNLOAD_FILE
 }

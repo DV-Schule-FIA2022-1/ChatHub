@@ -2,8 +2,9 @@ package chat.users;
 
 
 import chat.users.permission.Permission;
-import chat.users.permission.PermissionEnum;
-import lombok.Getter;;
+import chat.users.role.Role;
+import lombok.Getter;
+import lombok.Setter;;
 import java.sql.Date;
 import java.util.Set;
 
@@ -23,7 +24,10 @@ public class User
     private Date birthdate;
     @Getter
     private Address address;
-    private Set<PermissionEnum> permissions;
+    @Getter @Setter
+    private Role role;
+    @Getter
+    private Set<Permission> permissions;
 
     public User(String firstName, String lastName, String password, String email, Date birthdate, Address address)
     {
@@ -35,7 +39,7 @@ public class User
         this.address = address;
     }
 
-    public User(String firstName, String lastName, String password, String email, Date birthdate, Address address, Set<PermissionEnum> permissions)
+    public User(String firstName, String lastName, String password, String email, Date birthdate, Address address, Set<Permission> permissions)
     {
         this.firstName = firstName;
         this.lastName = lastName;
