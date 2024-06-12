@@ -61,7 +61,7 @@ public class EditorController
 
             if(index[0] + index[1] != oldText.length())//Nochmal anschauen
             {
-                update = new ChangeMessage(index[0], index[1], textArea.getText());
+                update = new ChangeMessage(index[0], index[1], textArea.getText(), oldText.substring(index[0], oldText.length() - index[1]));
             }
             else
             {

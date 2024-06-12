@@ -16,6 +16,7 @@ public class ChangeMessage implements Serializable
         this.startIndex = startIndex;
         this.endIndex = endIndex;
         this.newText = newText;
+        this.removedText = "";
     }
 
     public ChangeMessage(int startIndex, int endIndex, String newText, String removedText)
@@ -39,6 +40,11 @@ public class ChangeMessage implements Serializable
     public String getNewText()
     {
         return newText;
+    }
+
+    public String getRemovedText()
+    {
+        return removedText;
     }
 
     public Date getTimestamp()
