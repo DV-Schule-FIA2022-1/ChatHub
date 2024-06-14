@@ -31,6 +31,7 @@ public class ClientProxy extends Thread
         {
             while ((nachricht = (Message)in.readObject())!= null)
             {
+
                 System.out.println("Empfangen vom Client: " + nachricht);
                 server.verteileNachricht(nachricht);
                 Platform.runLater(() -> serverController.getNachrichten().getItems().add(nachricht));
