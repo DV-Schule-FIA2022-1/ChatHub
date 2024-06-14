@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="Start with Central Control + Updated Client + Server">
-      <change afterPath="$PROJECT_DIR$/src/main/java/chat/server/SocketManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/ServerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +82,7 @@
     </configuration>
     <configuration name="MainClient" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="chat.mains.MainClient" />
-      <module name="Netzwerk" />
+      <module name="Chathub" />
       <option name="VM_PARAMETERS" value="--module-path &quot;H:\Java\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,8 +99,8 @@
     </configuration>
     <configuration name="MainServer" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.mains.MainServer" />
-      <module name="Netzwerk" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Patrick\Downloads\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <module name="Chathub" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;H:\Java\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,11 +139,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.Chathub" />
       <item itemvalue="Application.MainClient" />
+      <item itemvalue="Application.MainLogin" />
       <item itemvalue="Application.MainServer" />
       <item itemvalue="Application.MainWindow" />
-      <item itemvalue="Application.MainLogin" />
-      <item itemvalue="Application.Chathub" />
       <item itemvalue="Maven.Chathub [javafx:run]" />
     </list>
   </component>

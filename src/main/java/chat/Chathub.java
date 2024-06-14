@@ -19,7 +19,7 @@ public class Chathub extends Application
     @Getter
     private static Chathub instance;
     @Getter
-    private int serverport = 40003;
+    private int serverport = 40000;
     private Server server;
     private ServerController serverController;
     private Thread serverThread;
@@ -33,7 +33,6 @@ public class Chathub extends Application
     public static void main(String[] args)
     {
         instance = new Chathub();
-
         instance.startServer();
         instance.testData();
 
@@ -79,6 +78,7 @@ public class Chathub extends Application
         scene = new Scene(mainLayout);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Login");
+        primaryStage.setOnCloseRequest(e -> System.exit(0));
         primaryStage.show();
     }
 }
