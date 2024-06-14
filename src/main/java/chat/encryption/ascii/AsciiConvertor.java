@@ -1,4 +1,4 @@
-package chat.encryption.ascii;
+/*package chat.encryption.ascii;
 
 public class AsciiConvertor {
     public static int[] stringToAscii(String text) {
@@ -17,3 +17,4 @@ public class AsciiConvertor {
         return sb.toString();
     }
 }
+*/

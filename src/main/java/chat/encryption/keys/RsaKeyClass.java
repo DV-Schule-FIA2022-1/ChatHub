@@ -31,20 +31,9 @@ public class RsaKeyClass {
         return pubNum2;
     }
 
-    public void clear() {
-        clearArray(prvNum1);
-        clearArray(prvNum2);
-        clearArray(pubNum1);
-        clearArray(pubNum2);
-    }
 
-    private void clearArray(char[] array) {
-        if (array != null) {
-            for (int i = 0; i < array.length; i++) {
-                array[i] = '\0';
-            }
-        }
-    }
+
+
 
     @Override
     public String toString() {

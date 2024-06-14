@@ -1,6 +1,6 @@
 package chat.encryption;
 
-import chat.encryption.ascii.AsciiConvertor;
+//import chat.encryption.ascii.AsciiConvertor;
 import chat.encryption.decryption.RSADecryption;
 import chat.encryption.encryption.RSAEncryption;
 import chat.encryption.generators.RSAKeyGenerator;
@@ -42,7 +42,7 @@ public class TestDriver2self {
         encryptor = new RSAEncryption(eBigInt, nBigInt);
         decryptor = new RSADecryption(dBigInt, nBigInt);
 
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        /*BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String input = in.readLine();
         System.out.println("Original input: " + input);
 
@@ -60,7 +60,7 @@ public class TestDriver2self {
 
 
         String decryptedText = AsciiConvertor.asciiToString(decryptedMessage);
-        System.out.println("Decrypted text: " + decryptedText);
+        System.out.println("Decrypted text: " + decryptedText);*/
     }
 }
 

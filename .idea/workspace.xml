@@ -4,9 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="It was done: a prime number generator, an ascii converter, an RSA key generator and its own RSA encryption and decryption,">
+    <list default="true" id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="replace prime list to resource">
+      <change afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/decryption/AESDecryption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/encryption/AESEncryption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/keys/AesKeyClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/mian/NewRsaKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/test/SaveKeysToFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/primes/primes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/chat/encryption/decryption/AESDecryption.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/chat/encryption/decryption/RSADecryption.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/chat/encryption/encryption/AESEncryption.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/chat/encryption/keys/AesKeyClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/chat/encryption/mian/NewRsaKey.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/chat/encryption/mian/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/chat/encryption/test/SaveKeysToFile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/primes/primes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/prime/PrimeNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/prime/PrimeNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/TestDriver2self.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/TestDriver2self.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/ascii/AsciiConvertor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/ascii/AsciiConvertor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/keys/RsaKeyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/keys/RsaKeyClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/test/RSAExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/TestDriver2self.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/TestDriver2self.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/keys/RsaKeyClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/keys/RsaKeyClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/prime/PrimeNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/prime/PrimeNumber.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,30 +74,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "H:/javaProjectChat/ChatHub/src/main/resources/primes",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/javaProjectChat/ChatHub/src/main/resources/primes&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="Users" />
     </force-push-targets>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\javaProjectChat\ChatHub\src\main\resources\primes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\javaProjectChat\ChatHub\src\main\java\chat\encryption\prime" />
       <recent name="H:\javaProjectChat\ChatHub\src\main\java\chat\encryption" />
       <recent name="H:\javaProjectChat\ChatHub\src\main\resources\primes" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainClient">
     <configuration name="MainClient" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="chat.client.MainClient" />
       <module name="Netzwerk" />
@@ -188,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717756793919</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="replace prime list to resource">
+      <option name="closed" value="true" />
+      <created>1718019696377</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718019696377</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,6 +272,7 @@
     <MESSAGE value="add: AES/RSA-KeyGenerator, AES/RSA-Encryption. &#10;changed: message class" />
     <MESSAGE value="primes number generator" />
     <MESSAGE value="It was done: a prime number generator, an ascii converter, an RSA key generator and its own RSA encryption and decryption," />
-    <option name="LAST_COMMIT_MESSAGE" value="It was done: a prime number generator, an ascii converter, an RSA key generator and its own RSA encryption and decryption," />
+    <MESSAGE value="replace prime list to resource" />
+    <option name="LAST_COMMIT_MESSAGE" value="replace prime list to resource" />
   </component>
 </project>
