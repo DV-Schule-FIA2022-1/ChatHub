@@ -1,5 +1,6 @@
 package chat.client;
 
+import chat.client.Client;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
@@ -21,18 +22,6 @@ public class ClientController implements Initializable
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
 
-    }
-
-    public void createUser()
-    {
-        try
-        {
-            client = new Client(Integer.parseInt(serverport.getText()), this, name.getText());
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException(e);
-        }
     }
 
     public void sendMessage()

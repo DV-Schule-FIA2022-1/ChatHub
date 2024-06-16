@@ -1,5 +1,6 @@
 package chat.server;
 
+import chat.server.Server;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -25,18 +26,8 @@ public class ServerController implements Initializable
 
     public void startServer()
     {
-        Thread t1 = new Thread(() ->
-        {
-            try
-            {
-                testserver = new Server(this, Integer.parseInt(portnr.getText()));
-            }
-            catch (IOException e)
-            {
-                e.printStackTrace();
-            }
-        });
-        t1.start();
+        //Thread t1 = new Thread(() -> testserver = Server.getInstance(this, Integer.parseInt(portnr.getText())));
+        //t1.start();
 
         info.setText("Server läuft auf 0.0.0.0/" + Integer.parseInt(portnr.getText()));
     }
