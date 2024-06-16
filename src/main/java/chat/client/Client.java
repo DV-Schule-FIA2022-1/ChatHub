@@ -1,6 +1,7 @@
 package chat.client;
 
 import chat.message.Message;
+import chat.users.User;
 
 import java.io.*;
 import java.net.Socket;
@@ -13,18 +14,26 @@ public class Client extends Thread
     private ClientController clientController;
     private String name;
     private Message nachricht;
+    private User user;
 
-    public Client(int port, ClientController clientController, String name) throws IOException
+    public Client(User user, int port, ClientController clientController)
     {
-        socket = new Socket("localhost", port);
-        System.out.println("Client gestartet");
-        this.name = name;
-        this.clientController = clientController;
+        try
+        {
+            socket = new Socket("localhost", port);
+            this.clientController = clientController;
+            this.user = user;
 
-        out = new ObjectOutputStream(socket.getOutputStream());
-        in = new ObjectInputStream(socket.getInputStream());
+            out = new ObjectOutputStream(socket.getOutputStream());
+            in = new ObjectInputStream(socket.getInputStream());
 
-        this.start();
+            System.out.println("Client gestartet");
+            this.start();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     @Override
