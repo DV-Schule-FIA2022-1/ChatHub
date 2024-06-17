@@ -14,19 +14,26 @@ Um mit dem Projekt zu beginnen, befolgen Sie diese Schritte:
 
 ## Funktionen
 
-- **KI Chatbot**: Diese Funktion ermöglicht es den Benutzern, mit einem KI-gestützten Chatbot zu interagieren, der automatisierte Antworten auf häufig gestellte Fragen geben kann, Hilfe und Unterstützung bietet und sogar personalisierte Empfehlungen basierend auf den Interaktionen mit dem Benutzer geben kann. 
-    Der Chatbot kann auch als virtueller Assistent fungieren, der Aufgaben wie Terminplanung, Erinnerungen und Informationen bereitstellen kann. Durch die Integration von KI-Technologien kann der Chatbot lernen und sich weiterentwickeln, um die Benutzererfahrung zu verbessern und effizientere Unterstützung zu bieten.
-- **Benutzer**: Diese Funktion ermöglicht es den Benutzern, sich mit ihren individuellen Benutzerkonten anzumelden, ihren Online-Status anzuzeigen und verschiedene Rollen innerhalb des Chats zu haben. 
-    Administratoren können zusätzliche Rechte und Funktionen haben, während normale Benutzer nur grundlegende Chatfunktionen nutzen können. Die Benutzer können auch ihre persönlichen Einstellungen anpassen, wie z.B. Benachrichtigungseinstellungen, Datenschutzeinstellungen, Profilinformationen und Chatvorlieben. Dadurch können die Benutzer ihr Chat-Erlebnis individuell anpassen und personalisieren.
-- **Datenbankanbindung**: Die Datenbankanbindung ermöglicht es, Benutzerprofile, Chatverläufe und Einstellungen der Benutzer zu speichern und zu verwalten. 
-    Dadurch können die Benutzer nahtlos zwischen verschiedenen Geräten wechseln und ihre Chathistorie beibehalten.
-- **Verschlüsselung**: Die Verschlüsselungsfunktion sorgt dafür, dass alle Nachrichten und Dateien, die über den Chat gesendet werden, sicher und privat sind. 
-    Dadurch wird sichergestellt, dass nur die beabsichtigten Empfänger die Inhalte sehen können..
-- **DDos & Antispam Protection**: Diese Funktion schützt den Chat vor Distributed Denial of Service (DDoS)-Angriffen und Spam-Nachrichten. 
-    Durch die Implementierung von Sicherheitsmaßnahmen wird die Stabilität und Sicherheit des Chats gewährleistet.
-- **Worktogther**: Die "Worktogther"-Funktion ermöglicht es den Benutzern, gemeinsam an Projekten zu arbeiten, Dateien zu teilen und Echtzeit-Kollaborationstools zu nutzen. 
-    Dadurch wird die Effizienz und Produktivität der Benutzer verbessert.
-- **Musikbot**: Der Musikbot ermöglicht es den Benutzern, Musik zu streamen, Wiedergabelisten zu erstellen und gemeinsam Musik zu hören. 
-    Dies schafft eine unterhaltsame und entspannte Atmosphäre im Chat.
-- **Standort teilen**: Mit der Funktion "Standort teilen" können die Benutzer ihren aktuellen Standort mit anderen teilen. 
-    Dies ist nützlich für die Planung von Treffen, das Finden von Freunden in der Nähe und das Teilen von interessanten Orten.
+- <ins>**KI Chatbot**:</ins> 
+  - Der KI Chatbot bietet automatisierte Antworten, Hilfe und personalisierte Empfehlungen für Benutzerinteraktionen. Durch kontinuierliches Lernen und Weiterentwicklung verbessert er die Benutzererfahrung und Effizienz im Chat.
+  - Der virtuelle Assistent unterstützt bei der Terminplanung, Erinnerungen und Informationsabruf. Durch die Integration von KI-Technologien passt er sich an die Bedürfnisse der Benutzer an und bietet personalisierte Unterstützung.
+- <ins>**Benutzer**:</ins>
+  - Benutzer können sich mit ihren individuellen Benutzerkonten anmelden und ihren Online-Status anzeigen. Administratoren haben zusätzliche Rechte und Funktionen im Chat.
+  - Verschiedene Rollen innerhalb des Chats ermöglichen es Administratoren, die Kontrolle über den Chat zu behalten und bestimmte Funktionen einzuschränken. Normale Benutzer können grundlegende Chatfunktionen nutzen.
+  - Benutzer können ihre Benachrichtigungseinstellungen, Datenschutzeinstellungen, Profilinformationen und Chatvorlieben anpassen. Dies ermöglicht es den Benutzern, ihr Chat-Erlebnis individuell anzupassen und zu personalisieren.
+- <ins>**Datenbankanbindung**:</ins>
+  - Die Datenbank speichert Informationen zu Benutzerprofilen, wie Benutzernamen, Profilbilder und Kontaktdaten. Dadurch können Benutzer personalisierte Profile erstellen und Informationen über sich selbst verwalten.
+  - Die Datenbank speichert die Verlaufsnachrichten der Benutzer, sodass diese ihre Chatverläufe über verschiedene Geräte hinweg synchronisieren und fortsetzen können. Dadurch bleibt die Kommunikation konsistent und Benutzer können jederzeit auf vergangene Unterhaltungen zugreifen.
+- <ins>**Verschlüsselung**:</ins>
+  - Die Verschlüsselung erfolgt direkt zwischen den Endgeräten der Benutzer, sodass die Nachrichten und Dateien während der Übertragung geschützt sind. Nur die Sender und Empfänger können die entschlüsselten Inhalte sehen.
+  - Die Verschlüsselung basiert auf sicheren Verschlüsselungsprotokollen und Algorithmen, die eine starke Sicherheit gewährleisten. Dadurch wird sichergestellt, dass die Kommunikation vor unbefugtem Zugriff geschützt ist.
+- <ins>**Worktogther**:</ins>
+  - Benutzer können gemeinsam an Projekten arbeiten, indem sie Dateien teilen, Aufgaben zuweisen und in Echtzeit zusammenarbeiten. Dies fördert die Teamarbeit und ermöglicht eine effiziente Projektdurchführung.
+  - Die Verwendung von Echtzeit-Kollaborationstools wie gemeinsame Dokumentenbearbeitung, Gruppenchats und Videoanrufe erleichtert die Kommunikation und Zusammenarbeit. Benutzer können schnell Feedback geben, Ideen austauschen und gemeinsam Entscheidungen treffen.
+- <ins>**Musikbot**:</ins>
+  - Der Musikbot ermöglicht den Benutzern das Streamen von Musik direkt im Chat. Benutzer können ihre Lieblingssongs abspielen und die Musik gemeinsam genießen, was eine unterhaltsame und entspannte Atmosphäre schafft.
+  - Benutzer können individuelle Wiedergabelisten erstellen und ihre Lieblingssongs speichern. Dadurch können sie ihre Musiksammlung organisieren und schnell auf ihre bevorzugten Titel zugreifen.
+  - Benutzer haben die Möglichkeit, gemeinsam mit anderen im Chat Musik zu hören und sich über ihre Lieblingssongs auszutauschen. Dies fördert den sozialen Austausch und schafft eine unterhaltsame Community-Atmosphäre.
+- <ins>**Standort teilen**:</ins> 
+  - Benutzer können ihren aktuellen Standort mit anderen teilen, um Treffen zu planen und Freunde in der Nähe zu finden. Dies erleichtert die Koordination von Aktivitäten und das Teilen von interessanten Orten in Echtzeit.
+  - Benutzer haben die Kontrolle darüber, mit wem sie ihren Standort teilen und für wie lange. Dadurch wird die Privatsphäre geschützt und die Sicherheit der Benutzer gewährleistet.
