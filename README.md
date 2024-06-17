@@ -5,12 +5,15 @@ Dieses Repository enthält das FIA11 Java Projekt für das Jahr 2024 mit dem Nam
 ![mainChat.PNG](src%2Fmain%2Fresources%2Fimg%2FmainChat.PNG)
 
 ## Erste Schritte
-
 Um mit dem Projekt zu beginnen, befolgen Sie diese Schritte:
 
-1. Klonen Sie das Repository auf Ihren lokalen Rechner.
-2. Öffnen Sie das Projekt in Ihrer bevorzugten Java-IDE.
-3. Führen Sie die Anwendung aus und erkunden Sie ihre Funktionen.
+# Installation
+Klonen Sie das Repository auf Ihren lokalen Rechner.
+>git clone https://github.com/DV-Schule-FIA2022-1/ChatHub.git
+ 
+# Ausführung des Programm
+- Öffnen Sie das Projekt in Ihrer bevorzugten Java-IDE. 
+- Führen Sie die Anwendung aus und erkunden Sie ihre Funktionen.
 
 ## Funktionen
 
@@ -28,8 +31,8 @@ Um mit dem Projekt zu beginnen, befolgen Sie diese Schritte:
   - Die Verschlüsselung erfolgt direkt zwischen den Endgeräten der Benutzer, sodass die Nachrichten und Dateien während der Übertragung geschützt sind. Nur die Sender und Empfänger können die entschlüsselten Inhalte sehen.
   - Die Verschlüsselung basiert auf sicheren Verschlüsselungsprotokollen und Algorithmen, die eine starke Sicherheit gewährleisten. Dadurch wird sichergestellt, dass die Kommunikation vor unbefugtem Zugriff geschützt ist.
 - <ins>**Worktogther**:</ins>
-  - Benutzer können gemeinsam an Projekten arbeiten, indem sie Dateien teilen, Aufgaben zuweisen und in Echtzeit zusammenarbeiten. Dies fördert die Teamarbeit und ermöglicht eine effiziente Projektdurchführung.
-  - Die Verwendung von Echtzeit-Kollaborationstools wie gemeinsame Dokumentenbearbeitung, Gruppenchats und Videoanrufe erleichtert die Kommunikation und Zusammenarbeit. Benutzer können schnell Feedback geben, Ideen austauschen und gemeinsam Entscheidungen treffen.
+  - Benutzer können gemeinsam an Projekten arbeiten, indem sie Nachrichten teilen, Aufgaben zuweisen und in Echtzeit zusammenarbeiten. Dies fördert die Teamarbeit und ermöglicht eine effiziente Projektdurchführung.
+  - Die Verwendung von Echtzeit-Kollaborationstools wie gemeinsame Dokumentenbearbeitung und Gruppenchats erleichtert die Kommunikation und Zusammenarbeit. Benutzer können schnell Feedback geben, Ideen austauschen und gemeinsam Entscheidungen treffen.
 - <ins>**Musikbot**:</ins>
   - Der Musikbot ermöglicht den Benutzern das Streamen von Musik direkt im Chat. Benutzer können ihre Lieblingssongs abspielen und die Musik gemeinsam genießen, was eine unterhaltsame und entspannte Atmosphäre schafft.
   - Benutzer können individuelle Wiedergabelisten erstellen und ihre Lieblingssongs speichern. Dadurch können sie ihre Musiksammlung organisieren und schnell auf ihre bevorzugten Titel zugreifen.
