@@ -32,7 +32,7 @@ public class EditorController
     @FXML public JFXTextArea textArea;
     public String oldText;
     private  Client client;
-    public int i = 0;
+    private int i = 0;
     private Stack undo;
     private Stack redo;
     private Stage stage;
@@ -44,6 +44,12 @@ public class EditorController
     public Client getClient()
     {
         return client;
+    }
+    public String getOldText() {
+        return oldText;
+    }
+    public JFXTextArea getTextArea() {
+        return textArea;
     }
     public void setClient(Client client)
     {
@@ -80,8 +86,6 @@ public class EditorController
                 update = new ChangeMessage(index[0], index[1], textArea.getText());
             }
 
-            oldText = textArea.getText();
-
             try
             {
                 client.schreiben(update);
@@ -90,6 +94,8 @@ public class EditorController
             {
                 e.printStackTrace();
             }
+
+            oldText = textArea.getText();
         }
     }
 
