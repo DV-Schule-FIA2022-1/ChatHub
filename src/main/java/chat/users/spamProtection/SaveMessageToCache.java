@@ -1,4 +1,4 @@
-package chat.Users.spamProtection;
+package chat.users.spamProtection;
 
 import chat.message.Message;
 

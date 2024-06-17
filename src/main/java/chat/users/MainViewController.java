@@ -2,10 +2,12 @@ package chat.users;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Circle;
 
 import java.io.File;
 import java.net.URL;
@@ -28,11 +30,16 @@ public class MainViewController implements Initializable
     @FXML private ImageView sendIcon;
     @FXML private AnchorPane pane;
     @FXML private TextField searchTextfield;
+    @FXML private Label username;
+    @FXML private Label status;
+    @FXML private Label role;
+    @FXML private Circle circleStatus;
 
     public MainViewController(User activeUser)
     {
         this.activeUser = activeUser;
-        System.out.println(activeUser.getFirstName());
+        username.setText(activeUser.getFirstName());
+        role.setText(activeUser.getRole().getRoleName());
     }
 
     public MainViewController()
