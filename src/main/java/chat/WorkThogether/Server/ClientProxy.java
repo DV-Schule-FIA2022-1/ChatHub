@@ -1,9 +1,6 @@
 package chat.WorkThogether.Server;
 
 import chat.WorkThogether.Nachricht.ChangeMessage;
-import chat.nachricht.Nachricht;
-import javafx.application.Platform;
-
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
