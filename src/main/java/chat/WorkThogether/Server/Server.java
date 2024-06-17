@@ -17,6 +17,10 @@ public class Server extends Thread
     {
         return text;
     }
+    public ArrayList<ClientProxy> getClientList()
+    {
+        return clientList;
+    }
 
     public Server(int port) throws IOException
     {

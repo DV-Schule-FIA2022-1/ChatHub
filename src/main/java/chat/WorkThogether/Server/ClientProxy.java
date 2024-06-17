@@ -15,14 +15,16 @@ public class ClientProxy extends Thread
     private ObjectInputStream in;
     private ObjectOutputStream out;
     private ChangeMessage nachricht;
+    private Socket client;
 
     public ClientProxy(Server server, Socket client) throws IOException, ClassNotFoundException
     {
         this.server = server;
-
+        this.client = client;
         in = new ObjectInputStream(client.getInputStream());
         out = new ObjectOutputStream(client.getOutputStream());
         this.start();
+        System.out.println("New client connectet!");
         schreiben(new ChangeMessage(0, 0, server.getText()));
     }
 
@@ -40,7 +42,16 @@ public class ClientProxy extends Thread
         }
         catch (Exception e)
         {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
+            try
+            {
+                client.close();
+            } catch (IOException ex)
+            {
+                throw new RuntimeException(ex);
+            }
+            System.out.println("Client disconectet");
+            server.getClientList().remove(this);
         }
     }
 

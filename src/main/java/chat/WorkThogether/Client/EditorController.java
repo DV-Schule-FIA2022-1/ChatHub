@@ -35,7 +35,12 @@ public class EditorController
     public int i = 0;
     private Stack undo;
     private Stack redo;
+    private Stage stage;
 
+    public Stage getStage()
+    {
+        return stage;
+    }
     public Client getClient()
     {
         return client;
@@ -49,16 +54,13 @@ public class EditorController
     public void initialize()
     {
         oldText = textArea.getText();
-
-        try
-        {
-            client = new Client(1234, this);
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException(e);
-        }
         System.out.println("Controller gestartet");
+    }
+
+    public void loadServerConection(int port, Stage stage)
+    {
+        client = new Client(port, this);
+        this.stage = stage;
     }
 
     public void changeTextUpdate()
