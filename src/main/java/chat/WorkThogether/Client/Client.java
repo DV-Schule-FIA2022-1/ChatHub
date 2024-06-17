@@ -16,6 +16,7 @@ public class Client extends Thread
     private ObjectOutputStream out;
     private EditorController clientController;
     private ChangeMessage nachricht;
+    private boolean running = true;
 
     public Client(int port, EditorController clientController) throws IOException
     {
@@ -34,11 +35,12 @@ public class Client extends Thread
     {
         try
         {
-            while ((nachricht = (ChangeMessage)in.readObject())!= null)
+            while (running && (nachricht = (ChangeMessage)in.readObject())!= null)
             {
                 //System.out.println("Empfangen vom Server: " + nachricht);
                 clientController.changedText(nachricht);
             }
+            socket.close();
         }
         catch (Exception e)
         {
@@ -52,5 +54,11 @@ public class Client extends Thread
         this.nachricht = nachricht;
         out.writeObject(nachricht);
         out.flush();
+    }
+
+    public void closeClient()
+    {
+        this.interrupt();
+        running = false;
     }
 }

@@ -35,6 +35,16 @@ public class EditorController
     public int i = 0;
     private Stack undo;
     private Stack redo;
+
+    public Client getClient()
+    {
+        return client;
+    }
+    public void setClient(Client client)
+    {
+        this.client = client;
+    }
+
     @FXML
     public void initialize()
     {
