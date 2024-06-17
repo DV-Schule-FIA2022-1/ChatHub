@@ -11,6 +11,8 @@
         <module name="Chathub" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="Netzwerk" target="20" />
+    </bytecodeTargetLevel>
   </component>
 </project>

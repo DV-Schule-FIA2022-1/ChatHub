@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d9fd8351-f2c0-4537-9b5b-080772cabd46" name="Changes" comment="Clean up + Fixed Errors from merging">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +31,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="2g5lGfHuMl3lM1eOlaU5IoVPCUG" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -81,7 +81,15 @@
   <component name="RunManager" selected="Maven.Chathub [javafx:run]">
     <configuration name="Chathub" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.Chathub" />
-      <module name="Netzwerk" />
+      <module name="Chathub" />
+      <option name="PROGRAM_PARAMETERS" value="--module-path &quot;H:\Java\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="de.eudaemon.ideaswag.SwingspectorExtension">
+        <Swingspector>
+          <keystroke code="59" modifiers="130" />
+          <active value="false" />
+          <timeout>5.0</timeout>
+        </Swingspector>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,6 +133,7 @@
         <option name="myRunnerSettings" />
         <option name="myRunnerParameters">
           <MavenRunnerParameters>
+            <option name="cmdOptions" />
             <option name="profiles">
               <set />
             </option>
@@ -133,9 +142,13 @@
                 <option value="javafx:run" />
               </list>
             </option>
+            <option name="multimoduleDir" />
             <option name="pomFileName" value="pom.xml" />
             <option name="profilesMap">
               <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
             </option>
             <option name="resolveToWorkspace" value="false" />
             <option name="workingDirPath" value="$PROJECT_DIR$" />
@@ -153,14 +166,22 @@
       <item itemvalue="Maven.Chathub [javafx:run]" />
     </list>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-20.0.2-azul-20.0.2-3183f394aec4-4edb7f01" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="" />
+      <changelist id="d9fd8351-f2c0-4537-9b5b-080772cabd46" name="Changes" comment="Clean up + Fixed Errors from merging" />
       <created>1714995229431</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714995229431</updated>
+      <workItem from="1718624873972" duration="5105000" />
     </task>
     <task id="LOCAL-00001" summary="Add Lombok + User Class">
       <option name="closed" value="true" />
@@ -259,6 +280,9 @@
     </task>
     <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="OPEN_GENERIC_TABS">

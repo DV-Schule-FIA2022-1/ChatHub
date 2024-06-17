@@ -60,6 +60,11 @@ public class LoginController implements Initializable
     @Setter
     private User activeUser;
     private CheckEmailFunction checkEmailFunction;
+
+    public MainViewController getMainViewController() {
+        return mainViewController;
+    }
+
     private MainViewController mainViewController;
     private ClientController clientController;
     private Client newClient;
