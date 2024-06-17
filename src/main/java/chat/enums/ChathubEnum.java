@@ -1,4 +1,4 @@
-package chat.users.enums;
+package chat.enums;
 
 import lombok.Getter;
 

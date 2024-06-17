@@ -1,6 +1,4 @@
-package chat.ChatBot;
-
-import com.google.gson.Gson;
+package chat.chatBot;
 
 public class Improver implements Processor {
     private String InputMsg;

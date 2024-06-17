@@ -1,4 +1,4 @@
-package chat.ChatBot;
+package chat.chatBot;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -8,7 +8,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-
 import java.io.IOException;
 
 public class Requester {

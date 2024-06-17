@@ -4,13 +4,11 @@ import chat.message.Message;
 import chat.users.User;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Chatroom
 {
-    private int chatroomID;
     @Getter
     private String chatroomName;
     @Getter

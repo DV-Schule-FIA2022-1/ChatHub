@@ -9,22 +9,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
 import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
-
-
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import java.io.IOException;
-
-
-import static javafx.application.Application.launch;
 
 public class NotificationController implements Initializable
 {

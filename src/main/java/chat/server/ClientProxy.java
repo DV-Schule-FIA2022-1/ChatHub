@@ -8,7 +8,6 @@ import java.net.Socket;
 
 public class ClientProxy extends Thread
 {
-    ///hhv
     private Server server;
     private ObjectInputStream in;
     private ObjectOutputStream out;

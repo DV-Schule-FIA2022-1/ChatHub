@@ -1,7 +1,6 @@
 package chat.WorkThogether.Server;
 
 import chat.WorkThogether.Nachricht.ChangeMessage;
-
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.ArrayList;

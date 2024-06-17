@@ -1,7 +1,7 @@
 package chat.users.chatroom;
 
 import chat.users.User;
-import chat.users.enums.ChathubEnum;
+import chat.enums.ChathubEnum;
 import chat.users.functions.HashFunction;
 
 import java.sql.*;

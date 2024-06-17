@@ -1,9 +1,8 @@
 package chat.users;
 
-import chat.users.enums.ChathubEnum;
+import chat.enums.ChathubEnum;
 import chat.users.functions.HashFunction;
 import lombok.Getter;
-
 import java.sql.*;
 import java.util.ArrayList;
 

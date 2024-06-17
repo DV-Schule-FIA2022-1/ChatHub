@@ -1,6 +1,4 @@
-package chat.ChatBot;
-
-import com.google.gson.Gson;
+package chat.chatBot;
 
 public class Main {
     public static void main(String[] args) {

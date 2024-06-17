@@ -1,9 +1,6 @@
-package chat.ChatBot;
+package chat.chatBot;
 
-import com.google.gson.Gson;
-import javafx.scene.transform.Translate;
-
-public  class Translator implements Processor {
+public class Translator implements Processor {
 
     private String InputMsg;
     private String OutpubMsg;

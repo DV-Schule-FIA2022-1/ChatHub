@@ -4,7 +4,7 @@ package chat.users;
 import chat.users.permission.Permission;
 import chat.users.role.Role;
 import lombok.Getter;
-import lombok.Setter;;
+import lombok.Setter;
 import java.sql.Date;
 import java.util.Set;
 

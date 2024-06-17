@@ -1,6 +1,4 @@
-package chat.ChatBot;
-
-import com.google.gson.Gson;
+package chat.chatBot;
 
 public interface Processor {
     String process(String inputMsg);

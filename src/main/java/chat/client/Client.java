@@ -3,7 +3,6 @@ package chat.client;
 import chat.message.Message;
 import chat.users.User;
 import lombok.Getter;
-
 import java.io.*;
 import java.net.Socket;
 

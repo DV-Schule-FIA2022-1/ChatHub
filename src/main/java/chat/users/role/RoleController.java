@@ -1,10 +1,7 @@
 package chat.users.role;
 
-import chat.users.Address;
 import chat.users.User;
-import chat.users.enums.ChathubEnum;
-import chat.users.permission.Permission;
-
+import chat.enums.ChathubEnum;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.ZoneId;

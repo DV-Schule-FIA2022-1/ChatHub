@@ -1,9 +1,6 @@
 package chat.encryption.generators;
 
-import chat.encryption.TestDriver2self;
-import chat.encryption.prime.Prime;
 import chat.encryption.prime.TwoRandnumbers;
-
 import java.io.IOException;
 import java.net.MalformedURLException;
 

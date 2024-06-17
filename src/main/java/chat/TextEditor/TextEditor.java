@@ -12,12 +12,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
-
 import javafx.stage.Stage;
-
-
 import java.io.*;
-
 import java.util.ArrayList;
 import java.util.List;
 

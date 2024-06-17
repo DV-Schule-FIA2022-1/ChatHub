@@ -1,4 +1,4 @@
-package chat.ChatBot;
+package chat.chatBot;
 
 public class Responser {
     private String response;

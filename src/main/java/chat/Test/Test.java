@@ -12,8 +12,6 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
-import static javafx.application.Application.launch;
-
 public class Test extends Application
 {
 
