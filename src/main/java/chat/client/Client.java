@@ -2,6 +2,7 @@ package chat.client;
 
 import chat.message.Message;
 import chat.users.User;
+import lombok.Getter;
 
 import java.io.*;
 import java.net.Socket;
@@ -14,6 +15,7 @@ public class Client extends Thread
     private ClientController clientController;
     private String name;
     private Message nachricht;
+    @Getter
     private User user;
 
     public Client(User user, int port, ClientController clientController)

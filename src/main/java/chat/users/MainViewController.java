@@ -1,5 +1,9 @@
 package chat.users;
 
+import chat.Chathub;
+import chat.client.Client;
+import chat.mains.MainLogin;
+import chat.users.login.LoginController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -34,17 +38,21 @@ public class MainViewController implements Initializable
     @FXML private Label status;
     @FXML private Label role;
     @FXML private Circle circleStatus;
+    private Client client;
 
     public MainViewController(User activeUser)
     {
         this.activeUser = activeUser;
-        username.setText(activeUser.getFirstName());
-        role.setText(activeUser.getRole().getRoleName());
     }
 
     public MainViewController()
     {
 
+    }
+
+    public void setUser(Client client)
+    {
+        this.client = client;
     }
 
     @Override
@@ -65,5 +73,10 @@ public class MainViewController implements Initializable
         searchTextfield.setPromptText("Search");
         searchTextfield.setFocusTraversable(false);
         searchTextfield.setStyle("-fx-text-fill: white;");
+
+        this.client = LoginController.getNewClient();
+
+        username.setText(client.getUser().getFirstName());
+        //role.setText(client.getUser().getRole().getRoleName());
     }
 }

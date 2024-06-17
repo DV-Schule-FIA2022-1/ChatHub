@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9fd8351-f2c0-4537-9b5b-080772cabd46" name="Changes" comment="Clean up + Fixed Errors from merging">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="d9fd8351-f2c0-4537-9b5b-080772cabd46" name="Changes" comment="Fixed User Package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +159,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="834323b2-d36f-4c71-a5a5-efacf9e822df" name="Changes" comment="" />
+      <changelist id="d9fd8351-f2c0-4537-9b5b-080772cabd46" name="Changes" comment="Fixed User Package" />
       <created>1714995229431</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -257,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718023685663</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed User Package">
+      <option name="closed" value="true" />
+      <created>1718615374451</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1718615374451</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -320,7 +331,8 @@
     <MESSAGE value="Add Role and Permission in Database" />
     <MESSAGE value="Add Some methods to Role Class" />
     <MESSAGE value="Updated Main Window" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Main Window" />
+    <MESSAGE value="Fixed User Package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed User Package" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
