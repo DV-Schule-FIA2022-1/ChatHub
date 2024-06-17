@@ -54,7 +54,6 @@ public class Server extends Thread
             try
             {
                 socket = new ServerSocket(port);
-                socket.setSoTimeout(1000);
                 socketManager.addSocket(socket);
                 clientList.add(new ClientProxy(this, serverController, socket.accept()));
                 socketManager.closeAllSockets();
@@ -71,7 +70,6 @@ public class Server extends Thread
             {
                 socketManager.closeAllSockets();
             }
-          //  System.out.println(i);
         }
     }
 

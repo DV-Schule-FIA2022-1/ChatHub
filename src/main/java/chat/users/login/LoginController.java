@@ -77,7 +77,18 @@ public class LoginController implements Initializable
         userController = new UserController();
         checkEmailFunction = new CheckEmailFunction(this, userController);
         authenticationManager = new AuthenticationController(this, checkEmailFunction);
-        this.chathub = chathub;
+        if(chathub==null)
+        {
+            System.out.println("NULL");
+
+        }
+        else {
+            //LocalDate date = LocalDate.of(2024, 6, 3);
+            //User usertest = new User("Test", "Test2", "1234", "werwe@test.de", Date.valueOf(date), new Address("teststraße", "Würzburg", "97082", "Germany"));
+
+            this.chathub = chathub;
+            //loginUser(usertest, chathub);
+        }
     }
 
     @Override
@@ -108,6 +119,8 @@ public class LoginController implements Initializable
         registrationLabel.setVisible(false);
         birthdateLabel.setVisible(false);
         birthdateTextfield.setVisible(false);
+
+        chathub = new Chathub();
     }
 
     @FXML
@@ -182,7 +195,7 @@ public class LoginController implements Initializable
             User newUser = new User(firstNameTextfield.getText(), lastNameTextfield.getText(), passwordTextfield.getText(), emailTextfield.getText(), Date.valueOf(getDate()), newAdress);
             userController.addUser(newUser);
 
-            loginUser(newUser);
+            loginUser(newUser, chathub);
         }
         else
         {
@@ -201,15 +214,14 @@ public class LoginController implements Initializable
         }
     }
 
-    public void loginUser(User registeredUser)
+    public void loginUser(User registeredUser, Chathub chathub)
     {
         clientController = new ClientController();
         newClient = new Client(registeredUser, chathub.getServerport(), clientController);
 
-        System.out.println("Erfolgreich angemeldet");
         registeredUser.resetAttempts();
         mainViewController = new MainViewController(registeredUser);
-        MainLogin.getPrimaryStage().close();
+        Chathub.getPrimaryStage().close();
 
         try
         {
@@ -219,7 +231,7 @@ public class LoginController implements Initializable
             stage = new Stage();
             stage.setWidth(825);
             stage.setHeight(530);
-            stage.setTitle("chat.Chathub Main Window");
+            stage.setTitle("Chathub Main Window");
             stage.setScene(scene);
             stage.setOnCloseRequest(e ->
             {
@@ -239,7 +251,7 @@ public class LoginController implements Initializable
     {
         if(authenticationManager.checkPassword(emailLoginField.getText(), passwordLoginField.getText()) == true)
         {
-            loginUser(activeUser);
+            loginUser(activeUser, chathub);
         }
     }
 

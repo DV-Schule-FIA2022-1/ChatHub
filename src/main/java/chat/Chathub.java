@@ -3,6 +3,9 @@ package chat;
 import chat.server.Server;
 import chat.server.ServerController;
 import chat.server.SocketManager;
+import chat.users.Address;
+import chat.users.User;
+import chat.users.UserController;
 import chat.users.login.LoginController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +16,8 @@ import lombok.Getter;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Date;
+import java.time.LocalDate;
 
 public class Chathub extends Application
 {
@@ -28,11 +33,12 @@ public class Chathub extends Application
     private Pane mainLayout;
     private static Scene scene;
     @Getter
-    private LoginController loginController;
+    private static LoginController loginController;
     private SocketManager socketManager;
     public static void main(String[] args)
     {
         instance = new Chathub();
+        loginController = new LoginController();
         instance.startServer();
         instance.testData();
 
@@ -66,7 +72,6 @@ public class Chathub extends Application
     public void start(Stage primaryStage) throws Exception
     {
         this.primaryStage = primaryStage;
-        loginController = new LoginController();
         showMainView();
     }
 

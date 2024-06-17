@@ -4,7 +4,7 @@ import lombok.Getter;
 
 public enum ChathubEnum
 {
-    DatabasePath("jdbc:ucanaccess://src/main/java/chat/database/TestDB.accdb");
+    DatabasePath("jdbc:ucanaccess://src/main/resources/database/ChatDB.accdb");
 
     private ChathubEnum(String path)
     {

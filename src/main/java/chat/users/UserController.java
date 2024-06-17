@@ -46,7 +46,7 @@ public class UserController
                 }
             }
 
-            String sql = "INSERT INTO User (firstName, lastName, password, email, birthdate, addressNr) VALUES (?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO User (firstName, lastName, password, email, birthday, addressNr) VALUES (?, ?, ?, ?, ?, ?)";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, user.getFirstName());
@@ -74,15 +74,15 @@ public class UserController
         try(Connection conn = DriverManager.getConnection(ChathubEnum.DatabasePath.getPath()))
         {
             userlist = new ArrayList<>();
-            String sql = "SELECT u.firstName, u.lastName, u.password, u.email, u.birthdate, a.street, a.city, a.zipCode, a.country FROM User u INNER JOIN Address a ON u.addressNR = a.ID";
+            String sql = "SELECT u.FirstName, u.LastName, u.Password, u.Email, u.Birthday, a.Street, a.City, a.ZipCode, a.Country FROM User u INNER JOIN Address a ON u.AddressNr = a.ID";
 
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
 
             while (rs.next())
             {
-                Address newadress = new Address(rs.getString("street"), rs.getString("city"), rs.getString("zipCode"), rs.getString("country"));
-                User newuser = new User(rs.getString("firstName"), rs.getString("lastName"), rs.getString("password"), rs.getString("email"), rs.getDate("birthdate"), newadress);
+                Address newadress = new Address(rs.getString("Street"), rs.getString("City"), rs.getString("ZipCode"), rs.getString("Country"));
+                User newuser = new User(rs.getString("FirstName"), rs.getString("LastName"), rs.getString("Password"), rs.getString("Email"), rs.getDate("Birthday"), newadress);
                 userlist.add(newuser);
             }
         }

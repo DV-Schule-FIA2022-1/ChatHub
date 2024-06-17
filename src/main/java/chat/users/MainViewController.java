@@ -43,18 +43,18 @@ public class MainViewController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        chatIcon.setImage(new Image("file:src/main/icons/chatIcon.png"));
-        homeIcon.setImage(new Image("file:src/main/icons/homeIcon.png"));
-        groupIcon.setImage(new Image("file:src/main/icons/groupIcon.png"));
-        settingsIcon.setImage(new Image("file:src/main/icons/settingsIcon.png"));
-        searchingIcon.setImage(new Image("file:src/main/icons/searchingIcon.png"));
-        profileIcon.setImage(new Image("file:src/main/icons/profileIcon.png"));
-        telephoneIcon.setImage(new Image("file:src/main/icons/telephoneIcon.png"));
-        kameraIcon.setImage(new Image("file:src/main/icons/kameraIcon.png"));
-        userSettingsIcon.setImage(new Image("file:src/main/icons/settingsPointsIcon.png"));
-        emojiIcon.setImage(new Image("file:src/main/icons/emojiIcon.png"));
-        attachmentIcon.setImage(new Image("file:src/main/icons/attachmentIcon.png"));
-        sendIcon.setImage(new Image("file:src/main/icons/sendIcon.png"));
+        chatIcon.setImage(new Image("file:src/main/resources/img/chatIcon.png"));
+        homeIcon.setImage(new Image("file:src/main/resources/img/homeIcon.png"));
+        groupIcon.setImage(new Image("file:src/main/resources/img/groupIcon.png"));
+        settingsIcon.setImage(new Image("file:src/main/resources/img/settingsIcon.png"));
+        searchingIcon.setImage(new Image("file:src/main/resources/img/searchingIcon.png"));
+        profileIcon.setImage(new Image("file:src/main/resources/img/profileIcon.png"));
+        telephoneIcon.setImage(new Image("file:src/main/resources/img/telephoneIcon.png"));
+        kameraIcon.setImage(new Image("file:src/main/resources/img/kameraIcon.png"));
+        userSettingsIcon.setImage(new Image("file:src/main/resources/img/settingsPointsIcon.png"));
+        emojiIcon.setImage(new Image("file:src/main/resources/img/emojiIcon.png"));
+        attachmentIcon.setImage(new Image("file:src/main/resources/img/attachmentIcon.png"));
+        sendIcon.setImage(new Image("file:src/main/resources/img/sendIcon.png"));
         searchTextfield.setPromptText("Search");
         searchTextfield.setFocusTraversable(false);
         searchTextfield.setStyle("-fx-text-fill: white;");

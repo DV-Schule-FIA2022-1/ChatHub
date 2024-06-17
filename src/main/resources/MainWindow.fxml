@@ -16,22 +16,22 @@
                     <children>
                   <ImageView fx:id="chatIcon" fitHeight="40.0" fitWidth="50.0" layoutX="8.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/chatIcon.png" />
+                        <Image url="@img/chatIcon.png" />
                      </image>
                   </ImageView>
                   <ImageView fx:id="homeIcon" fitHeight="40.0" fitWidth="50.0" layoutX="8.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/homeIcon.png" />
+                        <Image url="@img/homeIcon.png" />
                      </image>
                   </ImageView>
                   <ImageView fx:id="groupIcon" fitHeight="40.0" fitWidth="50.0" layoutX="8.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/groupIcon.png" />
+                        <Image url="@img/groupIcon.png" />
                      </image>
                   </ImageView>
                   <ImageView fx:id="settingsIcon" fitHeight="40.0" fitWidth="50.0" layoutX="9.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/settingsIcon.png" />
+                        <Image url="@img/settingsIcon.png" />
                      </image>
                   </ImageView>
                     </children>
@@ -40,7 +40,7 @@
                <children>
                   <ImageView fx:id="searchingIcon" fitHeight="26.0" fitWidth="30.0">
                      <image>
-                        <Image url="@../icons/searchingIcon.png" />
+                        <Image url="@img/searchingIcon.png" />
                      </image></ImageView>
                   <TextField fx:id="searchTextfield" prefHeight="30.0" prefWidth="177.0" promptText="Search" styleClass="transparent-background" stylesheets="@style.css">
                      <font>
@@ -59,7 +59,7 @@
                      <children>
                         <ImageView fx:id="profileIcon" fitHeight="42.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/ProfileIcon.png" />
+                              <Image url="@img/ProfileIcon.png" />
                            </image>
                         </ImageView>
                         <VBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="159.0">
@@ -122,7 +122,7 @@
                   <Pane prefHeight="88.0" prefWidth="144.0" />
                   <ImageView fx:id="telephoneIcon" fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/telephoneIcon.png" />
+                        <Image url="@img/telephoneIcon.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -130,7 +130,7 @@
                   </ImageView>
                   <ImageView fx:id="kameraIcon" fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/kameraIcon.png" />
+                        <Image url="@img/kameraIcon.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="20.0" />
@@ -138,7 +138,7 @@
                   </ImageView>
                   <ImageView fx:id="userSettingsIcon" fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/settingsPointsIcon.png" />
+                        <Image url="@img/settingsPointsIcon.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="20.0" />
@@ -154,7 +154,7 @@
                <children>
                   <ImageView fx:id="emojiIcon" fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/emojiIcon.png" />
+                        <Image url="@img/emojiIcon.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -162,7 +162,7 @@
                   </ImageView>
                   <ImageView fx:id="attachmentIcon" fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/attachmentIcon.png" />
+                        <Image url="@img/attachmentIcon.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="20.0" right="20.0" />
@@ -171,7 +171,7 @@
                   <TextField prefHeight="39.0" prefWidth="291.0" />
                   <ImageView fx:id="sendIcon" fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/sendIcon.png" />
+                        <Image url="@img/sendIcon.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="20.0" />

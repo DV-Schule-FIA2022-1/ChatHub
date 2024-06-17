@@ -20,9 +20,9 @@ public class Client extends Thread
     {
         try
         {
-            socket = new Socket("localhost", port);
             this.clientController = clientController;
             this.user = user;
+            socket = new Socket("127.0.0.1", port);
 
             out = new ObjectOutputStream(socket.getOutputStream());
             in = new ObjectInputStream(socket.getInputStream());
