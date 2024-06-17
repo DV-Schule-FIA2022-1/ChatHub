@@ -2,7 +2,7 @@
 
 Dieses Repository enthält das FIA11 Java Projekt für das Jahr 2024 mit dem Namen ChatHub. Es handelt sich um ein einfaches Projekt, das zu Bildungszwecken entwickelt wurde.
 
-![img_1.png](img_1.png)
+![mainChat.PNG](src%2Fmain%2Fresources%2Fimg%2FmainChat.PNG)
 
 ## Erste Schritte
 
