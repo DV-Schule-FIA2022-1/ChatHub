@@ -10,7 +10,6 @@ public class ChatMainController {
     public ChatMainController(MainViewController mainViewController) {
         this.mainViewController=mainViewController;
     }
-    //just a comment
     public void clickSetIcon() {
         if (mainViewController.getInputField() != null) {
             String inputText = mainViewController.getInputField().getText(); // Get text from the input field
