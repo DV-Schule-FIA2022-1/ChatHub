@@ -64,7 +64,7 @@
          </Menu>
          <Menu mnemonicParsing="false" text="Edit">
             <items>
-               <MenuItem mnemonicParsing="false" text="Undo">
+               <MenuItem mnemonicParsing="false" text="Undo" onAction="#undo">
                    <accelerator>
                        <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                    </accelerator>
@@ -74,7 +74,7 @@
                        </ImageView>
                    </graphic>
                </MenuItem>
-               <MenuItem mnemonicParsing="false" text="Redo">
+               <MenuItem mnemonicParsing="false" text="Redo" onAction="#redo">
                    <accelerator>
                        <KeyCodeCombination alt="UP" code="Y" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                    </accelerator>

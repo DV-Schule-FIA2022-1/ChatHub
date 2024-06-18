@@ -40,8 +40,8 @@ public class EditorController
     public String oldText;
     private  Client client;
     private int i = 0;
-    private Stack undo;
-    private Stack redo;
+    private Stack undoStack;
+    private Stack redoStack;
     private Stage stage;
 
     public Stage getStage()
@@ -73,7 +73,65 @@ public class EditorController
     {
         this.stage = stage;
         client = new Client(port, this);
-        oldText = textArea.getText();
+    }
+
+    public void closeWindows()
+    {
+        client.disconnectFromServer();
+    }
+
+    public void copyToClipboard()
+    {
+        String text = textArea.getSelectedText();
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(new StringSelection(text), null);
+        System.out.println("Text '" + text + "' wurde in die Zwischenablage kopiert.");
+    }
+
+    public void pasteFromClipboard() {
+        try {
+            Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+            String clipboardText = (String) clipboard.getData(DataFlavor.stringFlavor);
+            textArea.insertText(textArea.getCaretPosition(), clipboardText);
+            System.out.println("Text aus der Zwischenablage: " + clipboardText);
+            changeTextUpdate();
+        } catch (Exception e) {
+            System.out.println("Fehler beim Einfügen aus der Zwischenablage: " + e.getMessage());
+        }
+    }
+
+    public void undo()
+    {
+        if (!undoStack.isEmpty())
+        {
+            redoStack.push(textArea.getText());
+            textArea.setText((String) undoStack.pop());
+        }
+        else
+        {
+            System.out.println("UndoStack empty");
+        }
+    }
+
+    public void redo()
+    {
+        if (!redoStack.isEmpty())
+        {
+            undoStack.push(textArea.getText());
+            textArea.setText((String) redoStack.pop());
+        }
+        else
+        {
+            System.out.println("RedoStack empty");
+        }
+    }
+
+    public void cutToClipboard()
+    {
+        copyToClipboard();
+
+        textArea.replaceSelection("");
+        changeTextUpdate();
     }
 
     public void changeTextUpdate()
@@ -104,39 +162,6 @@ public class EditorController
 
             oldText = textArea.getText();
         }
-    }
-
-    public void closeWindows()
-    {
-        client.disconnectFromServer();
-    }
-
-    public void copyToClipboard()
-    {
-        String text = textArea.getSelectedText();
-        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(new StringSelection(text), null);
-        System.out.println("Text '" + text + "' wurde in die Zwischenablage kopiert.");
-    }
-
-    public void pasteFromClipboard() {
-        try {
-            Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-            String clipboardText = (String) clipboard.getData(DataFlavor.stringFlavor);
-            textArea.insertText(textArea.getCaretPosition(), clipboardText);
-            System.out.println("Text aus der Zwischenablage: " + clipboardText);
-            changeTextUpdate();
-        } catch (Exception e) {
-            System.out.println("Fehler beim Einfügen aus der Zwischenablage: " + e.getMessage());
-        }
-    }
-
-    public void cutToClipboard()
-    {
-        copyToClipboard();
-
-        textArea.replaceSelection("");
-        changeTextUpdate();
     }
 
     public int[] findDifferenceIndexes(String newTexT, String oldText)
@@ -246,6 +271,7 @@ public class EditorController
                     textArea.selectRange(curserIndex, curserIndex);
                 }
             }
+            oldText = textArea.getText();
             //System.out.println("Difference found between index " + changeMessage.getStartIndex() + " and index " + changeMessage.getEndIndex());
         }
         catch (Exception e)
