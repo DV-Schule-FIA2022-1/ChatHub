@@ -31,23 +31,41 @@ public class EditorController
     @FXML public JFXTextArea textArea;
     public String oldText;
     private  Client client;
-    public int i = 0;
+    private int i = 0;
     private Stack undo;
     private Stack redo;
+    private Stage stage;
+
+    public Stage getStage()
+    {
+        return stage;
+    }
+    public Client getClient()
+    {
+        return client;
+    }
+    public String getOldText() {
+        return oldText;
+    }
+    public JFXTextArea getTextArea() {
+        return textArea;
+    }
+    public void setClient(Client client)
+    {
+        this.client = client;
+    }
+
     @FXML
     public void initialize()
     {
         oldText = textArea.getText();
-
-        try
-        {
-            client = new Client(1234, this);
-        }
-        catch (IOException e)
-        {
-            throw new RuntimeException(e);
-        }
         System.out.println("Controller gestartet");
+    }
+
+    public void loadServerConection(int port, Stage stage)
+    {
+        client = new Client(port, this);
+        this.stage = stage;
     }
 
     public void changeTextUpdate()
@@ -67,8 +85,6 @@ public class EditorController
                 update = new ChangeMessage(index[0], index[1], textArea.getText());
             }
 
-            oldText = textArea.getText();
-
             try
             {
                 client.schreiben(update);
@@ -77,6 +93,8 @@ public class EditorController
             {
                 e.printStackTrace();
             }
+
+            oldText = textArea.getText();
         }
     }
 
