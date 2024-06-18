@@ -89,8 +89,11 @@ public class MainViewController implements Initializable
             try
             {
                 chatMainController.clickSetIcon();
-                TextField message = new TextField();
+                TextArea message = new TextArea();
                 message.setText(client.getUser().getFirstName() + ": " + chatMainController.getInputText());
+                message.setEditable(false);
+                message.setWrapText(true);
+                message.prefHeightProperty().bind(message.heightProperty());
                 messageContainer.getChildren().add(message);
             }
             catch (IOException e)
