@@ -1,28 +1,47 @@
-package chat.musikBot;
+package org.example;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class CommandHandler
 {
-    private final Map<String, Command> commands = new HashMap<>();
 
-    public void register(String name, Command command)
+    private static CommandHandler instance;
+    private Map<String, Command> commands = new HashMap<>();
+
+    private CommandHandler() {}
+
+    public static CommandHandler getInstance()
     {
-        commands.put(name, command);
+        if (instance == null)
+        {
+            instance = new CommandHandler();
+        }
+        return instance;
     }
 
+    // Methode zur Registrierung eines neuen Befehls
+    public void register(String command, Command executor)
+    {
+        commands.put(command, executor);
+    }
+
+    // Methode zur Behandlung eines Befehls
     public void handle(String command)
     {
-        String[] parts = command.split(" ", 2);
-        String name = parts[0];
-        String argument = parts.length > 1 ? parts[1] : "";
-
-        Command cmd = commands.get(name);
-        if (cmd != null) {
-            cmd.execute(argument);
-        } else {
-            System.out.println("Unbekannter Befehl: " + name);
+        Command executor = commands.get(command);
+        if (executor != null)
+        {
+            executor.execute(command);
         }
+        else
+        {
+            System.out.println("Unbekannter Befehl: " + command);
+        }
+    }
+
+    public Map<String, Command> getCommands()
+    {
+        return commands;
     }
 }
