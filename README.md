@@ -41,6 +41,6 @@ Klonen Sie das Repository auf Ihren lokalen Rechner.
   - Benutzer können ihren aktuellen Standort mit anderen teilen, um Treffen zu planen und Freunde in der Nähe zu finden. Dies erleichtert die Koordination von Aktivitäten und das Teilen von interessanten Orten in Echtzeit.
   - Benutzer haben die Kontrolle darüber, mit wem sie ihren Standort teilen und für wie lange. Dadurch wird die Privatsphäre geschützt und die Sicherheit der Benutzer gewährleistet.
 
-# Ähnliche Projekte
+# Ähnliches Projekt
 
 - **[ChitChat](https://github.com/frkri/chitchat-test)**
