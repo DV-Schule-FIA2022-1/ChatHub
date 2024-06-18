@@ -79,39 +79,35 @@ public class Client extends Thread
                     try
                     {
                         Platform.runLater(() -> {
-                            clientController.getStage().setTitle("reconnecting    - current try: " + fails);
+                            clientController.getStage().setTitle("reconnecting    - current try: " + fails + " of 10");
                         });
                         Thread.sleep(500);
                         Platform.runLater(() -> {
-                            clientController.getStage().setTitle("reconnecting.   - current try: " + fails);
+                            clientController.getStage().setTitle("reconnecting.   - current try: " + fails + " of 10");
                         });
                         Thread.sleep(500);
                         Platform.runLater(() -> {
-                            clientController.getStage().setTitle("reconnecting..  - current try: " + fails);
+                            clientController.getStage().setTitle("reconnecting..  - current try: " + fails + " of 10");
                         });
                         Thread.sleep(500);
                         Platform.runLater(() -> {
-                            clientController.getStage().setTitle("reconnecting... - current try: " + fails);
+                            clientController.getStage().setTitle("reconnecting... - current try: " + fails + " of 10");
                         });
                         Thread.sleep(500);
-                    } catch (InterruptedException ex)
+                    }
+                    catch (InterruptedException ex)
                     {
                         e.printStackTrace();
                     }
-                    System.out.println("reconnecting - current try: " + fails);
-                    if (socket != null && !socket.isClosed())
-                    {
-                        disconnectFromServer();
-                    }
+                    System.out.println("reconnecting - current try: " + fails + " of 10");
                     clientController.setClient(new Client(port, clientController, fails));
                 }
                 else
                 {
                     System.out.println("No connection possible!");
                     JOptionPane.showMessageDialog(null, "connection error", "error", JOptionPane.ERROR_MESSAGE);
-                    disconnectFromServer();
                     Platform.runLater(() -> {
-                        clientController.getStage().close();
+                        disconnectFromServer();
                     });
                 }
             }
@@ -129,8 +125,9 @@ public class Client extends Thread
             if (socket != null)
             {
                 socket.close();
-                System.out.println("Connection to server lost.");
             }
+            clientController.getStage().close();
+            System.out.println("Connection to server lost.");
         } catch (IOException e)
         {
             e.printStackTrace();

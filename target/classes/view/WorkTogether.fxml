@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import com.jfoenix.controls.JFXTextArea?>
 
-<BorderPane fx:id="txtEditor" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.workThogether.Client.EditorController">
+<BorderPane fx:id="txtEditor" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.WorkThogether.Client.EditorController">
     <top>
         <MenuBar>
          <Menu mnemonicParsing="false" text="File">
@@ -114,7 +114,7 @@
                        </ImageView>
                    </graphic>
                </MenuItem>
-               <MenuItem mnemonicParsing="false" text="Delete" onAction="#delete">
+               <MenuItem mnemonicParsing="false" text="Delete" >
                    <accelerator>
                        <KeyCodeCombination alt="UP" code="D" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                    </accelerator>
