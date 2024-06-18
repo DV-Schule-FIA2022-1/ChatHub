@@ -35,8 +35,8 @@ public class ClientProxy extends Thread
                 //System.out.println("Empfangen vom Client: " + nachricht);
                 //server.verteileNachricht(nachricht);
                 //EinerWarteschlange hinzufügen, damit nicht 2 gleichzeitig bearbeitet werden
-                //server.getChangeRequestsMemoriesList().add(new ChangeRequestsMemory(this, nachricht));
-                //server.getChangeRequestsMemoriesList().add(new ChangeRequestsMemory(this, nachricht));
+                server.getChangeRequestsMemoriesList().add(new ChangeRequestsMemory(this, nachricht));
+                server.getChangeRequestsMemoriesList().add(new ChangeRequestsMemory(this, nachricht));
                 server.changedText();
             }
         }

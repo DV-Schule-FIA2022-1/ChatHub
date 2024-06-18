@@ -5,34 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="Try to close open socket, but must look again">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Location/LocationMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/location/LocationMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Location/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/location/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Location/UsernameDistanceClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/location/UsernameDistanceClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Notification/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/notification/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Notification/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/notification/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Notification/NotificationControllerPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/notification/NotificationControllerPopUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/OpenMeteoApi/GeolocationOpenMeteoApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/openMeteoApi/GeolocationOpenMeteoApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WeaterAPI/Current.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/weaterAPI/Current.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WeaterAPI/Current_Units.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/weaterAPI/Current_Units.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WeaterAPI/Hourly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/weaterAPI/Hourly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WeaterAPI/Hourly_units.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/weaterAPI/Hourly_units.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WeaterAPI/WeatherClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/weaterAPI/WeatherClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Client/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Client/EditorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Client/SimpleFileEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Client/SimpleFileEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Nachricht/ChangeMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Nachricht/ChangeMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Server/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Server/ClientProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/TextEditor/Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/TextEditor/Editor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/TextEditor/SimpleFileEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/TextEditor/SimpleFileEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/TextEditor/SimpleFileEditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/TextEditor/SimpleFileEditorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/TextEditor/TextEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/TextEditor/TextEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/GUITestNotification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUITestNotification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SimpleFileEditor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SimpleFileEditor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TextEditor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TextEditor.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/WorkTogether.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/WorkTogether.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/workThogether/Server/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Server/ClientProxy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
