@@ -13,7 +13,7 @@ public class PrimeNumber {
     private int num1 = randNumbers.getNumbers().getNum1();
     private int num2 = randNumbers.getNumbers().getNum2();
 
-    private String fileName = "H:\\javaProjectChat\\ChatHub\\src\\main\\resources\\primes\\primes.txt";
+    private String fileName = "M:\\programmirovanie\\javaChat\\ChatHub\\src\\main\\resources\\primes\\primes.txt";
     Scanner sr;
 
     public Prime start() throws FileNotFoundException {

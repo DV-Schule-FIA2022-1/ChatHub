@@ -1,10 +1,11 @@
 package chat.encryption.generators;
 
-import java.math.BigInteger;
 import chat.encryption.keys.RsaKeyClass;
 import chat.encryption.prime.Prime;
 
-public class RSAKeyGenerator {
+import java.math.BigInteger;
+
+public class RSAKeyGenerator implements KeyGeneration {
     private char[] num1;
     private char[] num2;
     private char[] n;
@@ -13,13 +14,11 @@ public class RSAKeyGenerator {
     private char[] d;
     private RsaKeyClass keys;
 
-
     public void start(Prime p) {
         this.num1 = BigInteger.valueOf(p.getNum1()).toString().toCharArray();
         this.num2 = BigInteger.valueOf(p.getNum2()).toString().toCharArray();
         computeTheModulus();
     }
-
 
     private void computeTheModulus() {
         BigInteger num1BI = new BigInteger(new String(num1));
@@ -56,6 +55,11 @@ public class RSAKeyGenerator {
         keys = new RsaKeyClass(e, n, d, n);
     }
 
+    @Override
+    public RsaKeyClass generateKey() {
+        return keys;
+    }
+
     public RsaKeyClass getKeys() {
         return keys;
     }
@@ -79,4 +83,3 @@ public class RSAKeyGenerator {
                 '}';
     }
 }
-//https://www.chiragbhalodia.com/2021/09/rsa-algorithm-with-example.html#google_vignette
