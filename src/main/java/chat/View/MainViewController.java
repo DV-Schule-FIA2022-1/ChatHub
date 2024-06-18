@@ -1,10 +1,7 @@
-package chat.users;
+package chat.view;
 
-import chat.Chathub;
-import chat.View.ChatMainController;
-import chat.client.Client;
-import chat.mains.MainLogin;
 import chat.users.User;
+import chat.client.Client;
 import chat.users.login.LoginController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,10 +12,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 
-import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
-import chat.*;
+
 import lombok.Getter;
 
 public class MainViewController implements Initializable

@@ -7,8 +7,6 @@ import java.util.Date;
 
 public class Message implements Serializable
 {
-    private String chatID;
-    private String messageId;
     private int protocoll;
     private String value;
     private Date date;
@@ -20,13 +18,9 @@ public class Message implements Serializable
 
     private transient ClientController clientController;
 
-    public Message(ClientController clientController, String chatID,
-                   String messageId, int protocoll, String value, Date date,
-                   int inputUserID, boolean status)
+    public Message(ClientController clientController, int protocoll, String value, Date date, int inputUserID, boolean status)
     {
         this.clientController = clientController;
-        this.chatID = chatID;
-        this.messageId = messageId;
         this.protocoll = protocoll;
         this.value = value;
         this.date = date;
@@ -39,20 +33,5 @@ public class Message implements Serializable
         this.clientController = clientController;
         this.name = clientController.getName().getText().toString();
         this.value = value;
-    }
-
-    @Override
-    public String toString() {
-        return "Message{" +
-                "chatID='" + chatID + '\'' +
-                ", messageId='" + messageId + '\'' +
-                ", protocoll=" + protocoll +
-                ", value='" + value + '\'' +
-                ", date=" + date +
-                ", inputUserID=" + inputUserID +
-                ", status=" + status +
-                ", name='" + name + '\'' +
-                ", clientController=" + clientController +
-                '}';
     }
 }

@@ -2,7 +2,7 @@ package chat.location;
 
 import java.io.IOException;
 import java.net.URL;
-import chat.IpGeolocationAPIFolder.Geolocation;
+import chat.ipGeolocationAPIFolder.Geolocation;
 import chat.openMeteoApi.GeolocationOpenMeteoApi;
 import chat.weaterAPI.WeatherClass;
 import com.google.gson.Gson;

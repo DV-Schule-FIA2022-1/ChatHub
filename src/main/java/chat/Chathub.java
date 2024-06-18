@@ -34,6 +34,7 @@ public class Chathub extends Application
     @Getter
     private static LoginController loginController;
     private SocketManager socketManager;
+
     public static void main(String[] args)
     {
         instance = new Chathub();

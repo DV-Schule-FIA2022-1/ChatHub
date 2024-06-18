@@ -4,6 +4,7 @@ import chat.Chathub;
 import chat.client.Client;
 import chat.client.ClientController;
 import chat.users.*;
+import chat.view.MainViewController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
