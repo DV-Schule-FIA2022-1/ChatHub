@@ -50,7 +50,7 @@
                    </graphic>
                </MenuItem>
                <SeparatorMenuItem mnemonicParsing="false" />
-               <MenuItem mnemonicParsing="false" text="Exit">
+               <MenuItem mnemonicParsing="false" text="Exit" onAction="#closeWindows">
                    <accelerator>
                        <KeyCodeCombination alt="UP" code="W" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                    </accelerator>
@@ -84,7 +84,7 @@
                        </ImageView>
                    </graphic>
                </MenuItem>
-               <MenuItem mnemonicParsing="false" text="cut">
+               <MenuItem mnemonicParsing="false" text="cut" onAction="#cutToClipboard">
                    <accelerator>
                        <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                    </accelerator>
@@ -94,7 +94,7 @@
                        </ImageView>
                    </graphic>
                </MenuItem>
-               <MenuItem mnemonicParsing="false" text="copy">
+               <MenuItem mnemonicParsing="false" text="copy" onAction="#copyToClipboard">
                    <accelerator>
                        <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                    </accelerator>
@@ -104,7 +104,7 @@
                        </ImageView>
                    </graphic>
                </MenuItem>
-               <MenuItem mnemonicParsing="false" text="paste">
+               <MenuItem mnemonicParsing="false" text="paste" onAction="#pasteFromClipboard">
                    <accelerator>
                        <KeyCodeCombination alt="UP" code="V" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                    </accelerator>

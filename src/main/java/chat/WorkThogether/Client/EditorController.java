@@ -10,12 +10,19 @@ import javafx.print.Printer;
 import javafx.print.PrinterJob;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.StringSelection;
 import java.io.*;
 import java.nio.file.attribute.FileTime;
 import java.util.ArrayList;
@@ -59,14 +66,14 @@ public class EditorController
     @FXML
     public void initialize()
     {
-        oldText = textArea.getText();
         System.out.println("Controller gestartet");
     }
 
     public void loadServerConection(int port, Stage stage)
     {
-        client = new Client(port, this);
         this.stage = stage;
+        client = new Client(port, this);
+        oldText = textArea.getText();
     }
 
     public void changeTextUpdate()
@@ -97,6 +104,39 @@ public class EditorController
 
             oldText = textArea.getText();
         }
+    }
+
+    public void closeWindows()
+    {
+        client.disconnectFromServer();
+    }
+
+    public void copyToClipboard()
+    {
+        String text = textArea.getSelectedText();
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(new StringSelection(text), null);
+        System.out.println("Text '" + text + "' wurde in die Zwischenablage kopiert.");
+    }
+
+    public void pasteFromClipboard() {
+        try {
+            Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+            String clipboardText = (String) clipboard.getData(DataFlavor.stringFlavor);
+            textArea.insertText(textArea.getCaretPosition(), clipboardText);
+            System.out.println("Text aus der Zwischenablage: " + clipboardText);
+            changeTextUpdate();
+        } catch (Exception e) {
+            System.out.println("Fehler beim Einfügen aus der Zwischenablage: " + e.getMessage());
+        }
+    }
+
+    public void cutToClipboard()
+    {
+        copyToClipboard();
+
+        textArea.replaceSelection("");
+        changeTextUpdate();
     }
 
     public int[] findDifferenceIndexes(String newTexT, String oldText)
