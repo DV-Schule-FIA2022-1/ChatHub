@@ -27,5 +27,8 @@ public class ChatMainController {
         Date today = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
         Message msg = new Message(mainViewController.getClient().getClientController(),1,
                 inputText,today,mainViewController.getClient().getUser().getAttempts(),true);
+
+
+
     }
 }

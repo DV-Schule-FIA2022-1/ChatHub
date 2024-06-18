@@ -10,8 +10,8 @@
     <properties>
         <!-- Add the Jackson dependency here -->
         <jackson.version>2.13.1</jackson.version> <!-- Check for the latest version -->
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
