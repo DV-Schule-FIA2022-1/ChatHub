@@ -27,6 +27,7 @@ public class LoginController implements Initializable
     private AuthenticationController authenticationManager;
     @Getter
     private UserController userController;
+    @Getter
     private static Stage stage;
     @Getter
     @FXML private TextField emailLoginField;
@@ -67,7 +68,8 @@ public class LoginController implements Initializable
 
     private MainViewController mainViewController;
     private ClientController clientController;
-    private Client newClient;
+    @Getter
+    private static Client newClient;
     private Chathub chathub;
 
     public LoginController()
@@ -75,25 +77,6 @@ public class LoginController implements Initializable
         userController = new UserController();
         checkEmailFunction = new CheckEmailFunction(this, userController);
         authenticationManager = new AuthenticationController(this, checkEmailFunction);
-    }
-
-    public LoginController(Chathub chathub)
-    {
-        userController = new UserController();
-        checkEmailFunction = new CheckEmailFunction(this, userController);
-        authenticationManager = new AuthenticationController(this, checkEmailFunction);
-        if(chathub==null)
-        {
-            System.out.println("NULL");
-
-        }
-        else {
-            //LocalDate date = LocalDate.of(2024, 6, 3);
-            //User usertest = new User("Test", "Test2", "1234", "werwe@test.de", Date.valueOf(date), new Address("teststraße", "Würzburg", "97082", "Germany"));
-
-            this.chathub = chathub;
-            //loginUser(usertest, chathub);
-        }
     }
 
     @Override
@@ -238,12 +221,7 @@ public class LoginController implements Initializable
             stage.setHeight(530);
             stage.setTitle("Chathub Main Window");
             stage.setScene(scene);
-            stage.setOnCloseRequest(e ->
-            {
-                stage.close();
-                System.out.println("Fenster geschlossen");
-                System.exit(0);
-            });
+            stage.setOnCloseRequest(e -> System.exit(0));
             stage.show();
         }
         catch (IOException e)

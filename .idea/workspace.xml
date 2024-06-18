@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9fd8351-f2c0-4537-9b5b-080772cabd46" name="Changes" comment="ChatMainContoller for msg handling added" />
+    <list default="true" id="d9fd8351-f2c0-4537-9b5b-080772cabd46" name="Changes" comment="Clean up + Fixed Errors from merging">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/mainChat.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/login/LoginController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,8 +32,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
+  "associatedIndex": 1
 }]]></component>
   <component name="ProjectId" id="2g5lGfHuMl3lM1eOlaU5IoVPCUG" />
   <component name="ProjectLevelVcsManager">
@@ -74,15 +80,7 @@
   <component name="RunManager" selected="Maven.Chathub [javafx:run]">
     <configuration name="Chathub" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.Chathub" />
-      <module name="Chathub" />
-      <option name="PROGRAM_PARAMETERS" value="--module-path &quot;H:\Java\openjfx-20.0.2_windows-x64_bin-sdk\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
-      <extension name="de.eudaemon.ideaswag.SwingspectorExtension">
-        <Swingspector>
-          <keystroke code="59" modifiers="130" />
-          <active value="false" />
-          <timeout>5.0</timeout>
-        </Swingspector>
-      </extension>
+      <module name="Netzwerk" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -169,12 +167,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d9fd8351-f2c0-4537-9b5b-080772cabd46" name="Changes" comment="Clean up + Fixed Errors from merging" />
+      <changelist id="d9fd8351-f2c0-4537-9b5b-080772cabd46" name="Changes" comment="Fixed User Package" />
       <created>1714995229431</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714995229431</updated>
-      <workItem from="1718624873972" duration="5428000" />
+      <workItem from="1718703843232" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="Add Lombok + User Class">
       <option name="closed" value="true" />
@@ -271,13 +269,13 @@
       <option name="project" value="LOCAL" />
       <updated>1718023685663</updated>
     </task>
-    <task id="LOCAL-00013" summary="ChatMainContoller for msg handling added">
+    <task id="LOCAL-00013" summary="Fixed User Package">
       <option name="closed" value="true" />
-      <created>1718630283071</created>
+      <created>1718615374451</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1718630283071</updated>
+      <updated>1718615374451</updated>
     </task>
     <option name="localTasksCounter" value="14" />
     <servers />
@@ -345,8 +343,8 @@
     <MESSAGE value="Add Role and Permission in Database" />
     <MESSAGE value="Add Some methods to Role Class" />
     <MESSAGE value="Updated Main Window" />
-    <MESSAGE value="ChatMainContoller for msg handling added" />
-    <option name="LAST_COMMIT_MESSAGE" value="ChatMainContoller for msg handling added" />
+    <MESSAGE value="Fixed User Package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed User Package" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
