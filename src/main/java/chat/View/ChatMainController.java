@@ -1,11 +1,7 @@
 package chat.View;
 import chat.*;
 import chat.users.MainViewController;
-
-import java.nio.file.LinkPermission;
-
 public class ChatMainController {
-    Chathub chathub = new Chathub();
     private MainViewController mainViewController;
     public ChatMainController(MainViewController mainViewController) {
         this.mainViewController=mainViewController;

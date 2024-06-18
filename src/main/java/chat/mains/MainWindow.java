@@ -1,6 +1,6 @@
 package chat.mains;
 
-import chat.users.mainView.MainViewController;
+import chat.users.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

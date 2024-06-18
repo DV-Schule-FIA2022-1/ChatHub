@@ -16,12 +16,12 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.users.mainView.MainViewController">
-    <children>
-        <AnchorPane layoutX="-1.0" prefHeight="400.0" prefWidth="289.0" style="-fx-background-color: #676765;">
-            <children>
-                <AnchorPane prefHeight="500.0" prefWidth="57.0" style="-fx-background-color: #454545;">
-                    <children>
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.users.MainViewController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="400.0" prefWidth="289.0" style="-fx-background-color: #676765;">
+         <children>
+            <AnchorPane prefHeight="500.0" prefWidth="57.0" style="-fx-background-color: #454545;">
+               <children>
                   <ImageView fx:id="chatIcon" fitHeight="40.0" fitWidth="50.0" layoutX="8.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/chatIcon.png" />
@@ -42,8 +42,8 @@
                         <Image url="@../img/settingsIcon.png" />
                      </image>
                   </ImageView>
-                    </children>
-                </AnchorPane>
+               </children>
+            </AnchorPane>
             <HBox alignment="CENTER" layoutX="69.0" layoutY="8.0" prefHeight="30.0" prefWidth="200.0" stylesheets="@../style.css">
                <children>
                   <ImageView fx:id="searchingIcon" fitHeight="26.0" fitWidth="30.0">
@@ -67,7 +67,7 @@
                      <children>
                         <ImageView fx:id="profileIcon" fitHeight="42.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@img/ProfileIcon.png" />
+                              <Image url="@/img/ProfileIcon.png" />
                            </image>
                         </ImageView>
                         <VBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="159.0">
@@ -94,9 +94,9 @@
                   </HBox>
                </children>
             </Pane>
-            </children>
-        </AnchorPane>
-        <AnchorPane layoutX="309.0" prefHeight="500.0" prefWidth="375.0">
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="309.0" prefHeight="500.0" prefWidth="375.0">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="88.0" prefWidth="494.0">
                <children>
@@ -165,7 +165,7 @@
                <children>
                   <ImageView fx:id="emojiIcon" fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@img/emojiIcon.png" />
+                        <Image url="@/img/emojiIcon.png" />
                      </image>
                      <HBox.margin>
                         <Insets />
@@ -190,5 +190,5 @@
                   </ImageView>
                </children></HBox>
          </children></AnchorPane>
-    </children>
+   </children>
 </AnchorPane>

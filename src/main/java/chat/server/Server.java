@@ -4,6 +4,7 @@ import chat.message.Message;
 
 import java.io.IOException;
 import java.io.InterruptedIOException;
+import java.net.BindException;
 import java.net.ServerSocket;
 import java.util.ArrayList;
 
@@ -24,21 +25,32 @@ public class Server extends Thread
         this.port = port;
         this.serverController = serverController;
         this.socketManager = socketManager;
+        this.socket = new ServerSocket(port); // Bind the socket during initialization
         this.start();
     }
 
     public static synchronized Server getInstance(SocketManager socketManager, ServerController serverController, int port)
     {
-        try
+        if (instance == null)
         {
-            if(instance == null)
+            try
             {
                 instance = new Server(socketManager, serverController, port);
             }
+            catch (BindException e)
+            {
+                System.out.println("Port " + port + " is already in use. Server not started.");
+                instance = null;
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+                instance = null;
+            }
         }
-        catch (IOException e)
+        else
         {
-            e.printStackTrace();
+            System.out.println("Server is already running on port " + instance.port);
         }
 
         return instance;
@@ -51,24 +63,21 @@ public class Server extends Thread
         {
             try
             {
-                socket = new ServerSocket(port);
-                socketManager.addSocket(socket);
                 clientList.add(new ClientProxy(this, serverController, socket.accept()));
-                socketManager.closeAllSockets();
             }
             catch (InterruptedIOException e)
             {
                 this.interrupt();
             }
-            catch (Exception e)
+            catch (IOException e)
             {
                 e.printStackTrace();
-            }
-            finally
-            {
-                socketManager.closeAllSockets();
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
             }
         }
+
+        socketManager.closeAllSockets();
     }
 
     public void verteileNachricht(Message nachricht) throws IOException

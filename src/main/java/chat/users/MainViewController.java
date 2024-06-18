@@ -50,8 +50,6 @@ public class MainViewController implements Initializable
     public MainViewController(User activeUser)
     {
         this.activeUser = activeUser;
-        username.setText(activeUser.getFirstName());
-        role.setText(activeUser.getRole().getRoleName());
     }
 
     public MainViewController()

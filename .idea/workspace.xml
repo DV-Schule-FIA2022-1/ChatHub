@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="fixed connection errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/mainView/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/View/ChatMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/View/ChatMainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/server/Server.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +292,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718704249589</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixed connection errors">
+      <option name="closed" value="true" />
+      <created>1718704543394</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1718704543394</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fixed connection errors">
+      <option name="closed" value="true" />
+      <created>1718704559688</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1718704559688</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
