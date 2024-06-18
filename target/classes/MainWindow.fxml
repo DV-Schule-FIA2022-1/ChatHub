@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.users.MainViewController">
+    <children>
+        <AnchorPane layoutX="-1.0" prefHeight="400.0" prefWidth="289.0" style="-fx-background-color: #676765;">
+            <children>
+                <AnchorPane prefHeight="500.0" prefWidth="57.0" style="-fx-background-color: #454545;">
+                    <children>
+                  <ImageView fx:id="chatIcon" fitHeight="40.0" fitWidth="50.0" layoutX="8.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/chatIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="homeIcon" fitHeight="40.0" fitWidth="50.0" layoutX="8.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/homeIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="groupIcon" fitHeight="40.0" fitWidth="50.0" layoutX="8.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/groupIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="settingsIcon" fitHeight="40.0" fitWidth="50.0" layoutX="9.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/settingsIcon.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </AnchorPane>
+            <HBox alignment="CENTER" layoutX="69.0" layoutY="8.0" prefHeight="30.0" prefWidth="200.0" stylesheets="@style.css">
+               <children>
+                  <ImageView fx:id="searchingIcon" fitHeight="26.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@../icons/searchingIcon.png" />
+                     </image></ImageView>
+                  <TextField fx:id="searchTextfield" prefHeight="30.0" prefWidth="177.0" promptText="Search" styleClass="transparent-background" stylesheets="@style.css">
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font></TextField>
+               </children>
+               <styleClass>
+                  <String fx:value="dark-gray-background" />
+                  <String fx:value="radius" />
+               </styleClass>
+            </HBox>
+            <Line endX="129.0" layoutX="157.0" layoutY="45.0" startX="-100.0" />
+            <Pane layoutX="57.0" layoutY="46.0" prefHeight="454.0" prefWidth="253.0" styleClass="gray-background" stylesheets="@style.css">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="229.0">
+                     <children>
+                        <ImageView fx:id="profileIcon" fitHeight="42.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/ProfileIcon.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="159.0">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <children>
+                              <Label prefHeight="4.0" prefWidth="159.0" text="Default Room" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="162.0" text="You: wqeqweqweqweqweq" textFill="#9da7a7">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="309.0" prefHeight="500.0" prefWidth="375.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="88.0" prefWidth="494.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="64.0" text="Test" textFill="#9da7a7">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Ebrima Bold" size="16.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></Label>
+                  <Label prefHeight="25.0" prefWidth="66.0" text="Moderator">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Circle fill="#8bdd76" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label prefHeight="18.0" prefWidth="64.0" text="Online" textFill="#9da7a7">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="88.0" prefWidth="144.0" />
+                  <ImageView fx:id="telephoneIcon" fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/telephoneIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="kameraIcon" fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/kameraIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="userSettingsIcon" fitHeight="29.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/settingsPointsIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children></HBox>
+            <ScrollPane layoutY="88.0" prefHeight="336.0" prefWidth="494.0" styleClass="transparent-background" stylesheets="@style.css">
+               <content>
+                  <Pane prefHeight="354.0" prefWidth="509.0" style="-fx-background-color: #DADADA;" styleClass="light-gray-background" stylesheets="@style.css" />
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER" layoutY="437.0" prefHeight="57.0" prefWidth="494.0">
+               <children>
+                  <ImageView fx:id="emojiIcon" fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/emojiIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="attachmentIcon" fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/attachmentIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField prefHeight="39.0" prefWidth="291.0" />
+                  <ImageView fx:id="sendIcon" fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/sendIcon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children></HBox>
+         </children></AnchorPane>
+    </children>
+</AnchorPane>
