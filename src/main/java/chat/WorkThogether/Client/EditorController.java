@@ -66,6 +66,8 @@ public class EditorController
     @FXML
     public void initialize()
     {
+        undoStack = new Stack();
+        redoStack = new Stack();
         System.out.println("Controller gestartet");
     }
 
@@ -130,6 +132,12 @@ public class EditorController
     {
         copyToClipboard();
 
+        textArea.replaceSelection("");
+        changeTextUpdate();
+    }
+
+    public void delete()
+    {
         textArea.replaceSelection("");
         changeTextUpdate();
     }
@@ -313,14 +321,16 @@ public class EditorController
         PrinterJob printerJob = PrinterJob.createPrinterJob();
         if (printerJob != null)
         {
-            printerJob.showPageSetupDialog(txtEditor.getScene().getWindow());
-            if (printerJob.printPage(textArea))
+            if(printerJob.showPageSetupDialog(txtEditor.getScene().getWindow()))
             {
-                printerJob.endJob();
-            }
-            else
-            {
-                new Alert(Alert.AlertType.ERROR,"Failed to print, try again").showAndWait();
+                if (printerJob.printPage(textArea))
+                {
+                    printerJob.endJob();
+                }
+                else
+                {
+                    new Alert(Alert.AlertType.ERROR,"Failed to print, try again").showAndWait();
+                }
             }
         }
         else
