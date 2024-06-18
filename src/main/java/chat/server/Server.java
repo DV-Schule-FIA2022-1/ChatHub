@@ -63,7 +63,6 @@ public class Server extends Thread
             try
             {
                 clientList.add(new ClientProxy(this, serverController, socket.accept()));
-                System.out.println("Client joined");
             }
             catch (InterruptedIOException e)
             {

@@ -3,6 +3,7 @@ package chat.view;
 import chat.chatBot.Chat_bot;
 import chat.message.Message;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import lombok.Getter;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -40,14 +41,27 @@ public class ChatMainController
         Date today = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
         Message msg = new Message(mainViewController.getClient().getClientController(),1,
                 inputText,today,mainViewController.getClient().getUser().getAttempts(),true);
-
         mainViewController.getClient().schreiben(msg);
+        TextArea message = new TextArea();
+        message.setText(mainViewController.getClient().getUser().getFirstName() +
+                ": " + msg.toString());
+        message.setEditable(false);
+        message.setWrapText(true);
+        message.prefHeightProperty().bind(message.heightProperty());
+        mainViewController.getMessageContainer().getChildren().add(message);
+
     }
     public void sendToBot()
     {
         Chat_bot chatBot = new Chat_bot();
         chatResponse = chatBot.process(mainViewController.getInputField().getText());
         mainViewController.getInputField().clear(); // Optionally clear the input field after sending
+        TextArea message = new TextArea();
+        message.setText("bot: " + chatResponse);
+        message.setEditable(false);
+        message.setWrapText(true);
+        message.prefHeightProperty().bind(message.heightProperty());
+        mainViewController.getMessageContainer().getChildren().add(message);
     }
 
 }

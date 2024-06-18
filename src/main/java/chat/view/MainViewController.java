@@ -89,12 +89,6 @@ public class MainViewController implements Initializable
             try
             {
                 chatMainController.clickSetIcon();
-                TextArea message = new TextArea();
-                message.setText(client.getUser().getFirstName() + ": " + chatMainController.getInputText());
-                message.setEditable(false);
-                message.setWrapText(true);
-                message.prefHeightProperty().bind(message.heightProperty());
-                messageContainer.getChildren().add(message);
             }
             catch (IOException e)
             {
@@ -104,12 +98,6 @@ public class MainViewController implements Initializable
         sendToBot.setOnMouseClicked(event ->
         {
             chatMainController.sendToBot();
-            TextArea message = new TextArea();
-            message.setText("bot: " + chatMainController.getChatResponse());
-            message.setEditable(false);
-            message.setWrapText(true);
-            message.prefHeightProperty().bind(message.heightProperty());
-            messageContainer.getChildren().add(message);
         });
 
     }
