@@ -11,6 +11,7 @@ public enum Permission
     EDIT_USER,
     DELETE_USER,
     BAN_USER,
+    WARN_USER,
     CREATE_CHATROOM,
     ENTER_CHATROOM,
     LEAVE_CHATROOM,

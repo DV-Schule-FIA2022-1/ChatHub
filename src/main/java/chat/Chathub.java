@@ -1,9 +1,13 @@
 package chat;
 
+import chat.enums.ChathubEnum;
 import chat.server.Server;
 import chat.server.ServerController;
 import chat.server.SocketManager;
 import chat.users.login.LoginController;
+import chat.users.permission.Permission;
+import chat.users.role.Role;
+import chat.users.role.RoleController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,6 +16,8 @@ import javafx.stage.Stage;
 import lombok.Getter;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.util.Set;
 
 public class Chathub extends Application
 {
@@ -52,6 +58,7 @@ public class Chathub extends Application
 
     public void testData()
     {
+        //insertRoles();
         //LocalDate date = LocalDate.of(2024, 6, 3);
         //UserController test = new UserController();
         //User usertest = new User("Test", "Test2", "1234", "werwe@test.de", Date.valueOf(date), new Address("teststraße", "Würzburg", "97082", "Germany"));
@@ -61,6 +68,19 @@ public class Chathub extends Application
         //Chatroom defaultroom = new Chatroom("Default", "Default Roomn", "1234", LocalDateTime.now(), 20, true);
         //ChatroomController chatroomController = new ChatroomController(defaultroom);
         //chatroomController.createChatroom(defaultroom);
+    }
+
+    public void insertRoles()
+    {
+        Role admin = new Role("Admin", "Administrator role with full permissions", 1, Set.of(Permission.BAN_USER, Permission.EDIT_USER, Permission.DELETE_USER, Permission.EDIT_PROFILE) ,LocalDateTime.now(), LocalDateTime.now(), true);
+        Role moderator = new Role("Moderator", "Moderator role with limited permissions", 2, Set.of(Permission.EDIT_MESSAGE, Permission.DELETE_MESSAGE, Permission.MODERATE_MESSAGE, Permission.ADD_USER, Permission.DELETE_CHATROOM, Permission.EDIT_CHATROOM, Permission.WARN_USER), LocalDateTime.now(), LocalDateTime.now(), true);
+        Role user = new Role("User", "Regular user role with basic permissions", 3, Set.of(Permission.SEND_MESSAGE, Permission.DOWNLOAD_FILE, Permission.RECEIVE_MESSAGE, Permission.UPLOAD_FILE, Permission.ENTER_CHATROOM, Permission.CREATE_CHATROOM, Permission.LEAVE_CHATROOM, Permission.VIEW_PROFILE), LocalDateTime.now(), LocalDateTime.now(), true);
+
+        RoleController roleController = new RoleController();
+
+        roleController.createRole(admin);
+        roleController.createRole(moderator);
+        roleController.createRole(user);
     }
 
     public void start(Stage primaryStage) throws Exception

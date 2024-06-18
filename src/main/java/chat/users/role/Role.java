@@ -24,7 +24,7 @@ public class Role
     @Getter @Setter
     private boolean isActive;
 
-    public Role(String roleName, String description, int priortiyLevel, LocalDateTime createAt, LocalDateTime updatedAt, boolean isActive)
+    public Role(String roleName, String description, int priortiyLevel, Set<Permission> permissions, LocalDateTime createAt, LocalDateTime updatedAt, boolean isActive)
     {
         this.roleName = roleName;
         this.description = description;
@@ -33,6 +33,16 @@ public class Role
         this.updatedAt = updatedAt;
         this.isActive = isActive;
         this.permissions = new HashSet<>();
+    }
+
+    public Role(String roleName, String description, int priortiyLevel, LocalDateTime createAt, LocalDateTime updatedAt, boolean isActive)
+    {
+        this.roleName = roleName;
+        this.description = description;
+        this.priortiyLevel = priortiyLevel;
+        this.createAt = createAt;
+        this.updatedAt = updatedAt;
+        this.isActive = isActive;
     }
 
     //Rolen Übersicht
@@ -55,9 +65,4 @@ public class Role
     //- Kann private Nachrichten senden und empfangen.
     //- Kann Chatrooms betreten und verlassen.
     //- Kann Chatrooms erstellen (optional, abhängig von der Implementierung).
-
-    //Gast:
-
-    //- Kann Nachrichten lesen (öffentlich zugängliche Chatrooms).
-    //-Kann eingeschränkten Zugriff auf bestimmte Funktionen haben.
 }

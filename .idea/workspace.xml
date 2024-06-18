@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="Try to close open socket, but must look again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/workThogether/Server/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Server/ClientProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/permission/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/permission/Permission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/role/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/role/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/role/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/role/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
