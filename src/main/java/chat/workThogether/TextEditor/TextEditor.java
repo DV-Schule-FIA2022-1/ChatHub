@@ -20,12 +20,14 @@ import java.util.List;
 
 public class TextEditor extends Application{
     public int i = 0;
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Application.launch(args);
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage)
+    {
         BorderPane root = new BorderPane();
         Scene scene = new Scene(root,800,600);
         JFXTextArea text = new JFXTextArea("");
@@ -39,10 +41,14 @@ public class TextEditor extends Application{
         MenuItem newMenuItem = new MenuItem("Datei neu");
         newMenuItem.setOnAction(actionEvent -> text.setText(""));
         MenuItem openMenuItem = new MenuItem("Datei öffnen");
-        openMenuItem.setOnAction(actionEvent -> {
-            try {
+        openMenuItem.setOnAction(actionEvent ->
+        {
+            try
+            {
                 open(primaryStage, text);
-            } catch (IOException e) {
+            }
+            catch (IOException e)
+            {
                 e.printStackTrace();
             }
         });
@@ -72,19 +78,22 @@ public class TextEditor extends Application{
     }
 
 
-    public void open(Stage primaryStage, JFXTextArea text) throws IOException {
+    public void open(Stage primaryStage, JFXTextArea text) throws IOException
+    {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("open File");
         fileChooser.setSelectedExtensionFilter(new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt"));
         fileChooser.setInitialFileName("file.txt");
         File file = fileChooser.showOpenDialog(primaryStage);
 
-        if(file != null){
+        if(file != null)
+        {
             InputStream in = new FileInputStream(file);
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
             StringBuilder out = new StringBuilder();
             String line;
-            while ((line = reader.readLine()) != null) {
+            while ((line = reader.readLine()) != null)
+            {
                 out.append(line + "\n");
             }
             text.setText(out.toString());
@@ -94,25 +103,31 @@ public class TextEditor extends Application{
 
 
 
-    public void save(Stage primaryStage, JFXTextArea text){
+    public void save(Stage primaryStage, JFXTextArea text)
+    {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Save File");
         fileChooser.setSelectedExtensionFilter(new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt"));
         fileChooser.setInitialFileName("file.txt");
         File file = fileChooser.showSaveDialog(primaryStage);
 
-        if(file != null){
-            try {
+        if(file != null)
+        {
+            try
+            {
                 FileWriter fileWriter = null;
                 fileWriter = new FileWriter(file);
                 fileWriter.write(text.getText());
                 fileWriter.close();
-            } catch (IOException ex) {
+            }
+            catch (IOException ex)
+            {
 
             }}
     };
 
-    public void suche(JFXTextArea fullText){
+    public void suche(JFXTextArea fullText)
+    {
         Stage sucheStage = new Stage();
         BorderPane root = new BorderPane();
         Scene scene = new Scene(root,400,100);
@@ -129,7 +144,8 @@ public class TextEditor extends Application{
         Label eLabel = new Label("");
         List<Integer> fList = new ArrayList<Integer>(1);
 
-        bsuche.setOnAction(new EventHandler<ActionEvent>() {
+        bsuche.setOnAction(new EventHandler<ActionEvent>()
+                           {
                                @Override
                                public void handle(ActionEvent e) {
                                    asuche(checkBox,fList,fullText,stext,eLabel);
@@ -138,12 +154,17 @@ public class TextEditor extends Application{
         );
 
         Button bnext = new Button("Next");
-        bnext.setOnAction(new EventHandler<ActionEvent>() {
+        bnext.setOnAction(new EventHandler<ActionEvent>()
+                          {
                               @Override
-                              public void handle(ActionEvent e) {
-                                  if(i == fList.size()-1){
+                              public void handle(ActionEvent e)
+                              {
+                                  if(i == fList.size()-1)
+                                  {
                                       i=0;
-                                  }else{
+                                  }
+                                  else
+                                  {
                                       i ++;
                                   }
                                   fullText.selectRange(fList.get(i), fList.get(i)+ stext.getText().length());
@@ -153,12 +174,17 @@ public class TextEditor extends Application{
         );
 
         Button bPrevious  = new Button("Previous");
-        bPrevious.setOnAction(new EventHandler<ActionEvent>() {
+        bPrevious.setOnAction(new EventHandler<ActionEvent>()
+                              {
                                   @Override
-                                  public void handle(ActionEvent e) {
-                                      if(i == 0){
+                                  public void handle(ActionEvent e)
+                                  {
+                                      if(i == 0)
+                                      {
                                           i=fList.size()-1;
-                                      }else{
+                                      }
+                                      else
+                                      {
                                           i --;
                                       }
                                       fullText.selectRange(fList.get(i), fList.get(i)+ stext.getText().length());
@@ -177,7 +203,8 @@ public class TextEditor extends Application{
         sucheStage.show();
     };
 
-    public void esuche(JFXTextArea fullText){
+    public void esuche(JFXTextArea fullText)
+    {
         Stage sucheStage = new Stage();
         BorderPane root = new BorderPane();
         Scene scene = new Scene(root,400,150);
@@ -202,9 +229,11 @@ public class TextEditor extends Application{
         Label eLabel = new Label("");
         List<Integer> fList = new ArrayList<Integer>(1);
 
-        bsuche.setOnAction(new EventHandler<ActionEvent>() {
+        bsuche.setOnAction(new EventHandler<ActionEvent>()
+                           {
                                @Override
-                               public void handle(ActionEvent e) {
+                               public void handle(ActionEvent e)
+                               {
                                    asuche(checkBox,fList,fullText,stext,eLabel);
                                }
                            }
@@ -212,13 +241,19 @@ public class TextEditor extends Application{
 
 
         Button bnext = new Button("Next");
-        bnext.setOnAction(new EventHandler<ActionEvent>() {
+        bnext.setOnAction(new EventHandler<ActionEvent>()
+                          {
                               @Override
-                              public void handle(ActionEvent e) {
-                                  if(fList.size() != 0){
-                                      if(i == fList.size()-1){
+                              public void handle(ActionEvent e)
+                              {
+                                  if(fList.size() != 0)
+                                  {
+                                      if(i == fList.size()-1)
+                                      {
                                           i=0;
-                                      }else{
+                                      }
+                                      else
+                                      {
                                           i ++;
                                       }
                                       fullText.selectRange(fList.get(i), fList.get(i)+ stext.getText().length());
@@ -228,14 +263,19 @@ public class TextEditor extends Application{
         );
 
         Button bPrevious  = new Button("Previous");
-        bPrevious.setOnAction(new EventHandler<ActionEvent>() {
+        bPrevious.setOnAction(new EventHandler<ActionEvent>()
+                              {
                                   @Override
-                                  public void handle(ActionEvent e) {
-                                      if(fList.size() != 0){
-
-                                          if(i == 0){
+                                  public void handle(ActionEvent e)
+                                  {
+                                      if(fList.size() != 0)
+                                      {
+                                          if(i == 0)
+                                          {
                                               i=fList.size()-1;
-                                          }else{
+                                          }
+                                          else
+                                          {
                                               i --;
                                           }
                                           fullText.selectRange(fList.get(i), fList.get(i)+ stext.getText().length());
@@ -246,50 +286,61 @@ public class TextEditor extends Application{
         );
 
         Button replace   = new Button("ersetzen");
-        replace.setOnAction(new EventHandler<ActionEvent>() {
+        replace.setOnAction(new EventHandler<ActionEvent>()
+                            {
                                 @Override
-                                public void handle(ActionEvent e) {
+                                public void handle(ActionEvent e)
+                                {
                                     System.out.println(fList.size());
                                     System.out.println(i);
-                                    for(int i:fList){
+                                    for(int i:fList)
+                                    {
                                         System.out.println(i);
                                     }
-                                    if(fList.size() != 0){
+                                    if(fList.size() != 0)
+                                    {
                                         fullText.replaceText(fList.get(i), fList.get(i)+ stext.getText().length(),stext2.getText());
                                         fList.remove(i);
-                                        if(fList.size() != 0){
+                                        if(fList.size() != 0)
+                                        {
                                             checkindex(checkBox,fList,fullText,stext);
                                         }}
-                                    if(fList.size() != 0){
-                                        if(i >= fList.size()){
+                                    if(fList.size() != 0)
+                                    {
+                                        if(i >= fList.size())
+                                        {
                                             i = fList.size() -1 ;
                                         }
                                         fullText.selectRange(fList.get(i), fList.get(i)+ stext.getText().length());
-                                    }else{
+                                    }
+                                    else
+                                    {
                                         fullText.selectRange(0, 0);
                                     }
-
-
                                 }
                             }
         );
 
         Button replaceAll  = new Button("alles ersetzen");
-        replaceAll.setOnAction(new EventHandler<ActionEvent>() {
+        replaceAll.setOnAction(new EventHandler<ActionEvent>()
+                               {
                                    @Override
-                                   public void handle(ActionEvent e) {
+                                   public void handle(ActionEvent e)
+                                   {
                                        asuche(checkBox,fList,fullText,stext,eLabel);
-                                       if(fList.size() != 0){
-                                           if(checkBox.isSelected()){
+                                       if(fList.size() != 0)
+                                       {
+                                           if(checkBox.isSelected())
+                                           {
                                                fullText.setText(fullText.getText().replaceAll("(?i)"+stext.getText(), stext2.getText()));
-                                           }else{
+                                           }
+                                           else
+                                           {
                                                fullText.setText(fullText.getText().replaceAll(stext.getText(), stext2.getText()));
                                            }
                                            fList.clear();
                                            fullText.selectRange(0, 0);
                                        }
-
-
                                    }
                                }
         );
@@ -309,46 +360,61 @@ public class TextEditor extends Application{
         sucheStage.show();
     };
 
-    public void checkindex(CheckBox checkBox,List fList,JFXTextArea fullText,TextField stext){
-        if(checkBox.isSelected()){
+    public void checkindex(CheckBox checkBox,List fList,JFXTextArea fullText,TextField stext)
+    {
+        if(checkBox.isSelected())
+        {
             fList.clear();
             int x = fullText.getText().toLowerCase().indexOf(stext.getText().toLowerCase());
             fList.add(x);
-            while(x >= 0) {
+            while(x >= 0)
+            {
                 x = fullText.getText().toLowerCase().indexOf(stext.getText().toLowerCase(), x+1);
-                if (x != -1) {
-                    fList.add(x);
-                }
-            }
-        }else{
-            fList.clear();
-            int x = fullText.getText().indexOf(stext.getText());
-            fList.add(x);
-            while(x >= 0) {
-                x = fullText.getText().indexOf(stext.getText(), x+1);
-                if (x != -1) {
+                if (x != -1)
+                {
                     fList.add(x);
                 }
             }
         }
-
+        else
+        {
+            fList.clear();
+            int x = fullText.getText().indexOf(stext.getText());
+            fList.add(x);
+            while(x >= 0)
+            {
+                x = fullText.getText().indexOf(stext.getText(), x+1);
+                if (x != -1)
+                {
+                    fList.add(x);
+                }
+            }
+        }
     }
 
 
-    public void asuche(CheckBox checkBox,List<Integer> fList,JFXTextArea fullText,TextField stext,Label eLabel){
+    public void asuche(CheckBox checkBox,List<Integer> fList,JFXTextArea fullText,TextField stext,Label eLabel)
+    {
         fList.clear();
         i = 0;
-        if(checkBox.isSelected()){
-            if (stext.getText().toLowerCase() != null && !stext.getText().isEmpty()) {
+        if(checkBox.isSelected())
+        {
+            if (stext.getText().toLowerCase() != null && !stext.getText().isEmpty())
+            {
                 int index = fullText.getText().toLowerCase().indexOf(stext.getText().toLowerCase());
-                if (index == -1) {
+                if (index == -1)
+                {
                     eLabel.setText("Search key Not in the text");
-                } else {
+                }
+                else
+                {
                     int x = fullText.getText().toLowerCase().indexOf(stext.getText().toLowerCase());
                     fList.add(x);
-                    while(x >= 0) {
+                    while(x >= 0)
+                    {
                         x = fullText.getText().toLowerCase().indexOf(stext.getText().toLowerCase(), x+1);
-                        if (x != -1) {
+                        if (x != -1)
+                        {
                             fList.add(x);
                         }
                     }
@@ -356,22 +422,31 @@ public class TextEditor extends Application{
                     i = 0;
                     fullText.selectRange(fList.get(i), fList.get(i)+ stext.getText().toLowerCase().length());
                 }
-            } else {
+            }
+            else
+            {
                 eLabel.setText("Missing search key");
                 //  errorText.setFill(Color.RED);
-
             }
-        }else{
-            if (stext.getText() != null && !stext.getText().isEmpty()) {
+        }
+        else
+        {
+            if (stext.getText() != null && !stext.getText().isEmpty())
+            {
                 int index = fullText.getText().indexOf(stext.getText());
-                if (index == -1) {
+                if (index == -1)
+                {
                     eLabel.setText("Search key Not in the text");
-                } else {
+                }
+                else
+                {
                     int x = fullText.getText().indexOf(stext.getText());
                     fList.add(x);
-                    while(x >= 0) {
+                    while(x >= 0)
+                    {
                         x = fullText.getText().indexOf(stext.getText(), x+1);
-                        if (x != -1) {
+                        if (x != -1)
+                        {
                             fList.add(x);
                         }
                     }
@@ -379,10 +454,11 @@ public class TextEditor extends Application{
                     i = 0;
                     fullText.selectRange(fList.get(i), fList.get(i)+ stext.getText().length());
                 }
-            } else {
+            }
+            else
+            {
                 eLabel.setText("Missing search key");
                 //  errorText.setFill(Color.RED);
-
             }
         }
 

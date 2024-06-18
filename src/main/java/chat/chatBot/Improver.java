@@ -1,11 +1,13 @@
 package chat.chatBot;
 
-public class Improver implements Processor {
+public class Improver implements Processor
+{
     private String InputMsg;
     private String OutpubMsg;
     private Requester requester;
 
-    public Improver() {
+    public Improver()
+    {
     }
 
     public String getInputMsg() {
@@ -25,15 +27,19 @@ public class Improver implements Processor {
     }
 
     @Override
-    public String process(String inputMsg) {
-        try {
+    public String process(String inputMsg)
+    {
+        try
+        {
             requester = new Requester();
             String prompt = "Bitte verbessere den folgenden Text grammatikalisch " +
                     "und gib nur den verbesserten Text zurück. " +
                     "Die Ausgabe soll ausschließlich auf Deutsch sein und ohne Anführungszeichen. " +
                     "Text: \"" + inputMsg + "\"";
             setOutpubMsg(requester.sendRequest(prompt));
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
         return OutpubMsg;

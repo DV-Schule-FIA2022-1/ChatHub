@@ -7,18 +7,25 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Base64;
 
-public class KeyReader {
-    public static SecretKey readAESKeyFromFile(String fileName) {
+public class KeyReader
+{
+    public static SecretKey readAESKeyFromFile(String fileName)
+    {
         StringBuilder keyPEM = new StringBuilder();
-        try (BufferedReader keyReader = new BufferedReader(new FileReader("M:\\programmirovanie\\javaChat\\ChatHub\\src\\main\\resources\\keys" + fileName))) {
+        try (BufferedReader keyReader = new BufferedReader(new FileReader("M:\\programmirovanie\\javaChat\\ChatHub\\src\\main\\resources\\keys" + fileName)))
+        {
             String line;
-            while ((line = keyReader.readLine()) != null) {
-                if (line.contains("-----BEGIN") || line.contains("-----END")) {
+            while ((line = keyReader.readLine()) != null)
+            {
+                if (line.contains("-----BEGIN") || line.contains("-----END"))
+                {
                     continue;
                 }
                 keyPEM.append(line);
             }
-        } catch (IOException e) {
+        }
+        catch (IOException e)
+        {
             e.printStackTrace();
         }
         byte[] decodedKey = Base64.getDecoder().decode(keyPEM.toString());

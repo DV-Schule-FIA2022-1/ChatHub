@@ -6,7 +6,6 @@ import chat.encryption.generators.AESKeyGenerator;
 import chat.encryption.keys.KeyReader;
 import chat.encryption.keys.KeySaver;
 import chat.encryption.keys.RsaKeyClass;
-
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
@@ -18,7 +17,8 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
-public class Test {
+public class Test
+{
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException, InvalidKeyException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
         System.out.println("start");
         NewRsaKey test = new NewRsaKey();

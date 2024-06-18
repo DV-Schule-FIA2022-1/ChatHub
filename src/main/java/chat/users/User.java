@@ -1,6 +1,5 @@
 package chat.users;
 
-
 import chat.users.permission.Permission;
 import chat.users.role.Role;
 import lombok.Getter;

@@ -1,6 +1,7 @@
 package chat.chatBot;
 
-public class Chat_bot implements Processor {
+public class Chat_bot implements Processor
+{
     private String InputMsg;
     private String OutpubMsg;
     private Requester requester;
@@ -24,11 +25,15 @@ public class Chat_bot implements Processor {
     }
 
     @Override
-    public String process(String inputMsg) {
-        try {
+    public String process(String inputMsg)
+    {
+        try
+        {
             requester = new Requester();
             setOutpubMsg(requester.sendRequest(inputMsg));
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
         return OutpubMsg;

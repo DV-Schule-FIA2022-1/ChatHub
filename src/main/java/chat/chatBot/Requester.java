@@ -11,12 +11,13 @@ import okhttp3.Response;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class Requester {
-
+public class Requester
+{
     private final OkHttpClient client;
     private final Gson gson;
 
-    public Requester() {
+    public Requester()
+    {
         this.client = new OkHttpClient.Builder()
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .writeTimeout(30, TimeUnit.SECONDS)
@@ -25,8 +26,10 @@ public class Requester {
         this.gson = new Gson();
     }
 
-    public String sendRequest(String prompt) {
-        try {
+    public String sendRequest(String prompt)
+    {
+        try
+        {
             ObjectMapper mapper = new ObjectMapper();
             ObjectNode json = mapper.createObjectNode();
             json.put("prompt", prompt);
@@ -44,15 +47,19 @@ public class Requester {
                     .addHeader("Content-Type", "application/json")
                     .build();
 
-            try (Response httpResponse = client.newCall(request).execute()) {
-                if (!httpResponse.isSuccessful()) {
+            try (Response httpResponse = client.newCall(request).execute())
+            {
+                if (!httpResponse.isSuccessful())
+                {
                     throw new IOException("Unexpected response code: " + httpResponse);
                 }
                 String response = httpResponse.body().string();
                 Responser responser = gson.fromJson(response, Responser.class);
                 return responser.getResponse();
             }
-        } catch (IOException e) {
+        }
+        catch (IOException e)
+        {
             throw new RuntimeException("Error during request", e);
         }
     }

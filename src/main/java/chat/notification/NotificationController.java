@@ -1,6 +1,5 @@
 package chat.notification;
 
-
 import javafx.beans.property.ListProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

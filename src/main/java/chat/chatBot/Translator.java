@@ -1,16 +1,16 @@
 package chat.chatBot;
-import chat.*;
 
 import java.io.IOException;
 
-public class Translator implements Processor {
-
+public class Translator implements Processor
+{
     private String InputMsg;
     private String OutpubMsg;
     private String Lang;
     private Requester requester;
 
-    public Translator(String lang) {
+    public Translator(String lang)
+    {
         this.Lang = lang;
     }
 
@@ -39,12 +39,16 @@ public class Translator implements Processor {
     }
 
     @Override
-    public String process(String inputMsg) throws IOException {
-        try {
+    public String process(String inputMsg)
+    {
+        try
+        {
             requester = new Requester();
             String prompt = "Translate the following text in " + getLang() + ": " + inputMsg + ". Please return only the translated text.";
             setOutpubMsg(requester.sendRequest(prompt));
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
         return OutpubMsg;

@@ -7,10 +7,13 @@ import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
-public class SaveKeysToFile {
+public class SaveKeysToFile
+{
 
-    public static void main(String[] args) {
-        try {
+    public static void main(String[] args)
+    {
+        try
+        {
 
             KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
             keyGen.initialize(2048);
@@ -22,21 +25,23 @@ public class SaveKeysToFile {
 
 
             String publicKeyPEM = encodeKeyToPEM(pair.getPublic().getEncoded(), "PUBLIC KEY");
-            try (FileWriter privateKeyWriter = new FileWriter("H:\\javaProjectChat\\ChatHub\\src\\main\\resources\\keys\\private_key.pem")) {
+            try (FileWriter privateKeyWriter = new FileWriter("H:\\javaProjectChat\\ChatHub\\src\\main\\resources\\keys\\private_key.pem"))
+            {
                 privateKeyWriter.write(privateKeyPEM);
             }
-            try (FileWriter publicKeyWriter = new FileWriter("H:\\javaProjectChat\\ChatHub\\src\\main\\resources\\keys.pem")) {
+            try (FileWriter publicKeyWriter = new FileWriter("H:\\javaProjectChat\\ChatHub\\src\\main\\resources\\keys.pem"))
+            {
                 publicKeyWriter.write(publicKeyPEM);
             }
-
-
-
-        } catch (NoSuchAlgorithmException | IOException e) {
+        }
+        catch (NoSuchAlgorithmException | IOException e)
+        {
             e.printStackTrace();
         }
     }
 
-    private static String encodeKeyToPEM(byte[] keyBytes, String keyType) {
+    private static String encodeKeyToPEM(byte[] keyBytes, String keyType)
+    {
         String encodedKey = Base64.getEncoder().encodeToString(keyBytes);
         StringBuilder pem = new StringBuilder();
         pem.append("-----BEGIN ").append(keyType).append("-----\n");

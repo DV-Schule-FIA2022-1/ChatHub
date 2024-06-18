@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class PrimeNumber {
+public class PrimeNumber
+{
     APINumberGenerator randNumbers = new APINumberGenerator();
     private Prime p;
     private int num1 = randNumbers.getNumbers().getNum1();
@@ -16,24 +17,30 @@ public class PrimeNumber {
     private String fileName = "M:\\programmirovanie\\javaChat\\ChatHub\\src\\main\\resources\\primes\\primes.txt";
     Scanner sr;
 
-    public Prime start() throws FileNotFoundException {
+    public Prime start() throws FileNotFoundException
+    {
         return readFile(num1, num2);
     }
 
-    private Prime readFile(int num1, int num2) throws FileNotFoundException {
+    private Prime readFile(int num1, int num2) throws FileNotFoundException
+    {
         List<String> lines = new ArrayList<>();
         sr = new Scanner(new FileReader(fileName));
-        while (sr.hasNextLine()) {
+        while (sr.hasNextLine())
+        {
             lines.add(sr.nextLine());
         }
         sr.close();
 
-        if (num1 <= lines.size() && num2 <= lines.size()) {
+        if (num1 <= lines.size() && num2 <= lines.size())
+        {
             int firstPrime = Integer.parseInt(lines.get(num1 - 1));
             int secondPrime = Integer.parseInt(lines.get(num2 - 1));
 
             return new Prime(firstPrime, secondPrime);
-        } else {
+        }
+        else
+        {
             throw new IllegalArgumentException("Number > file size");
         }
     }

@@ -1,5 +1,6 @@
 package chat.encryption.generators;
 
-public interface KeyGeneration {
+public interface KeyGeneration
+{
     Object generateKey() throws Exception;
 }

@@ -1,8 +1,6 @@
 package chat.server;
 
-import javafx.application.Platform;
 import chat.message.Message;
-
 import java.io.*;
 import java.net.Socket;
 

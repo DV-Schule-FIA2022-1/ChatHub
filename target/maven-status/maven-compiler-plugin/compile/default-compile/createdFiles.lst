@@ -1,10 +1,8 @@
-chat\encryption\mian\NewRsaKey.class
 chat\users\role\Role.class
 chat\view\ChatMainController.class
 chat\location\Main.class
 chat\ipGeolocationAPIFolder\GeolocationTimezone.class
 chat\encryption\keys\RsaKeyClass.class
-chat\encryption\mian\Test.class
 chat\users\settings\Settings.class
 chat\notification\NotificationControllerPopUp.class
 chat\encryption\encryption\AESEncryption.class

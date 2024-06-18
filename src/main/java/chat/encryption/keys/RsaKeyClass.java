@@ -2,13 +2,15 @@ package chat.encryption.keys;
 
 import java.util.Arrays;
 
-public class RsaKeyClass {
+public class RsaKeyClass
+{
     private char[] prvNum1;
     private char[] prvNum2;
     private char[] pubNum1;
     private char[] pubNum2;
 
-    public RsaKeyClass(char[] prvNum1, char[] prvNum2, char[] pubNum1, char[] pubNum2) {
+    public RsaKeyClass(char[] prvNum1, char[] prvNum2, char[] pubNum1, char[] pubNum2)
+    {
         this.prvNum1 = prvNum1;
         this.prvNum2 = prvNum2;
         this.pubNum1 = pubNum1;
@@ -30,10 +32,6 @@ public class RsaKeyClass {
     public char[] getPubNum2() {
         return pubNum2;
     }
-
-
-
-
 
     @Override
     public String toString() {

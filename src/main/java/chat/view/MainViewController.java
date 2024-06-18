@@ -3,23 +3,18 @@ package chat.view;
 import chat.users.User;
 import chat.client.Client;
 import chat.users.login.LoginController;
-import chat.workThogether.Server.Server;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import lombok.Getter;
 
 public class MainViewController implements Initializable

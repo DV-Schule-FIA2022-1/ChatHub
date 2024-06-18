@@ -11,13 +11,15 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 
-public class TestDriver2self {
+public class TestDriver2self
+{
     private PrimeNumber prime;
     private RSAKeyGenerator rsaGenerator;
     private RSAEncryption encryptor;
     private RSADecryption decryptor;
 
-    public TestDriver2self() throws IOException {
+    public TestDriver2self() throws IOException
+    {
         prime = new PrimeNumber();
         System.out.println(prime);
         rsaGenerator = new RSAKeyGenerator();
@@ -58,8 +60,10 @@ public class TestDriver2self {
     }
 }
 
-class Main {
-    public static void main(String[] args) throws IOException, KeyStoreException, CertificateException, NoSuchAlgorithmException {
+class Main
+{
+    public static void main(String[] args) throws IOException, KeyStoreException, CertificateException, NoSuchAlgorithmException
+    {
         new TestDriver2self();
     }
 }

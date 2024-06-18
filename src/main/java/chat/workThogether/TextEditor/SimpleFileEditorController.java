@@ -27,7 +27,8 @@ public class SimpleFileEditorController
     public void initialize() {
         loadChangesButton.setVisible(false);
     }
-    public void openFile(ActionEvent event) {
+    public void openFile(ActionEvent event)
+    {
         FileChooser fileChooser = new FileChooser();
         //only allow text files to be selected using chooser
         fileChooser.getExtensionFilters().add(
@@ -38,16 +39,19 @@ public class SimpleFileEditorController
         //let user select file
         File fileToLoad = fileChooser.showOpenDialog(null);
         //if file has been chosen, load it using asynchronous method (define later)
-        if (fileToLoad != null) {
+        if (fileToLoad != null)
+        {
             loadFileToTextArea(fileToLoad);
         }
     }
-    private void loadFileToTextArea(File fileToLoad) {
+    private void loadFileToTextArea(File fileToLoad)
+    {
         Task<String> loadTask = fileLoaderTask(fileToLoad);
         progressBar.progressProperty().bind(loadTask.progressProperty());
         loadTask.run();
     }
-    private Task<String> fileLoaderTask(File fileToLoad) {
+    private Task<String> fileLoaderTask(File fileToLoad)
+    {
         //Create a task to load the file asynchronously
         Task<String> loadFileTask = new Task<>() {
             @Override
@@ -55,14 +59,16 @@ public class SimpleFileEditorController
                 BufferedReader reader = new BufferedReader(new FileReader(fileToLoad));
                 //Use Files.lines() to calculate total lines - used for progress
                 long lineCount;
-                try (Stream<String> stream = Files.lines(fileToLoad.toPath())) {
+                try (Stream<String> stream = Files.lines(fileToLoad.toPath()))
+                {
                     lineCount = stream.count();
                 }
                 //Load in all lines one by one into a StringBuilder separated by "\n" - compatible with TextArea
                 String line;
                 StringBuilder totalFile = new StringBuilder();
                 long linesLoaded = 0;
-                while ((line = reader.readLine()) != null) {
+                while ((line = reader.readLine()) != null)
+                {
                     totalFile.append(line);
                     totalFile.append("\n");
                     updateProgress(++linesLoaded, lineCount);
@@ -71,13 +77,17 @@ public class SimpleFileEditorController
             }
         };
         //If successful, update the text area, display a success message and store the loaded file reference
-        loadFileTask.setOnSucceeded(workerStateEvent -> {
-            try {
+        loadFileTask.setOnSucceeded(workerStateEvent ->
+        {
+            try
+            {
                 textArea.setText(loadFileTask.get());
                 statusMessage.setText("File loaded: " + fileToLoad.getName());
                 loadedFileReference = fileToLoad;
                 lastModifiedTime = Files.readAttributes(fileToLoad.toPath(), BasicFileAttributes.class).lastModifiedTime();
-            } catch (InterruptedException | ExecutionException | IOException e) {
+            }
+            catch (InterruptedException | ExecutionException | IOException e)
+            {
                 Logger.getLogger(getClass().getName()).log(SEVERE, null, e);
                 textArea.setText("Could not load file from:\n " + fileToLoad.getAbsolutePath());
             }
@@ -90,11 +100,14 @@ public class SimpleFileEditorController
         });
         return loadFileTask;
     }
-    private void scheduleFileChecking(File file) {
+    private void scheduleFileChecking(File file)
+    {
         ScheduledService<Boolean> fileChangeCheckingService = createFileChangesCheckingService(file);
-        fileChangeCheckingService.setOnSucceeded(workerStateEvent -> {
+        fileChangeCheckingService.setOnSucceeded(workerStateEvent ->
+        {
             if (fileChangeCheckingService.getLastValue() == null) return;
-            if (fileChangeCheckingService.getLastValue()) {
+            if (fileChangeCheckingService.getLastValue())
+            {
                 //no need to keep checking
                 fileChangeCheckingService.cancel();
                 notifyUserOfChanges();
@@ -103,7 +116,8 @@ public class SimpleFileEditorController
         System.out.println("Starting Checking Service...");
         fileChangeCheckingService.start();
     }
-    private ScheduledService<Boolean> createFileChangesCheckingService(File file) {
+    private ScheduledService<Boolean> createFileChangesCheckingService(File file)
+    {
         ScheduledService<Boolean> scheduledService = new ScheduledService<>() {
             @Override
             protected Task<Boolean> createTask() {
@@ -122,18 +136,23 @@ public class SimpleFileEditorController
     private void notifyUserOfChanges() {
         loadChangesButton.setVisible(true);
     }
-    public void loadChanges(ActionEvent event) {
+    public void loadChanges(ActionEvent event)
+    {
         loadFileToTextArea(loadedFileReference);
         loadChangesButton.setVisible(false);
     }
-    public void saveFile(ActionEvent event) {
-        try {
+    public void saveFile(ActionEvent event)
+    {
+        try
+        {
             FileWriter myWriter = new FileWriter(loadedFileReference);
             myWriter.write(textArea.getText());
             myWriter.close();
             lastModifiedTime = FileTime.fromMillis(System.currentTimeMillis() + 3000);
             System.out.println("Successfully wrote to the file.");
-        } catch (IOException e) {
+        }
+        catch (IOException e)
+        {
             Logger.getLogger(getClass().getName()).log(SEVERE, null, e);
         }
     }

@@ -2,8 +2,10 @@ package chat.chatBot;
 
 import java.io.IOException;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
+public class Main
+{
+    public static void main(String[] args) throws IOException
+    {
         Translator translator = new Translator("arabic");
         String translatedText = translator.process("whats up i am omar how are you");
         System.out.println(translatedText);

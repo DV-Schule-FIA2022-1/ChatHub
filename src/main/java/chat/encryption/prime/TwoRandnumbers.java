@@ -1,6 +1,7 @@
 package chat.encryption.prime;
 
-public class TwoRandnumbers {
+public class TwoRandnumbers
+{
     private int num1;
     private int num2;
 
@@ -13,7 +14,8 @@ public class TwoRandnumbers {
     }
 
 
-    public TwoRandnumbers(int num1, int mun2) {
+    public TwoRandnumbers(int num1, int mun2)
+    {
         this.num1 = num1;
         this.num2 = mun2;
     }

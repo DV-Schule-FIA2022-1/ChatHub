@@ -6,12 +6,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class RecaptchaExample {
+public class RecaptchaExample
+{
 
     private static final String VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify";
     private static final String SECRET_KEY = "твой_секретный_ключ_от_reCAPTCHA";
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         // Примеры ответов от reCAPTCHA для тестирования
         String validResponse = "valid-recaptcha-response";
         String invalidResponse = "invalid-recaptcha-response";
@@ -27,21 +29,26 @@ public class RecaptchaExample {
         System.out.println("Is valid? " + isInvalid);
     }
 
-    public static boolean verify(String recaptchaResponse) {
-        try {
+    public static boolean verify(String recaptchaResponse)
+    {
+        try
+        {
             String url = VERIFY_URL + "?secret=" + URLEncoder.encode(SECRET_KEY, "UTF-8") + "&response=" + URLEncoder.encode(recaptchaResponse, "UTF-8");
             HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
             connection.setRequestMethod("GET");
             BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             String inputLine;
             StringBuilder response = new StringBuilder();
-            while ((inputLine = in.readLine()) != null) {
+            while ((inputLine = in.readLine()) != null)
+            {
                 response.append(inputLine);
             }
             in.close();
             // Парсим ответ от сервера Google
             return response.toString().contains("\"success\": true");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
             return false;
         }

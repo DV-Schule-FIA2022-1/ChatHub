@@ -6,37 +6,39 @@ import chat.encryption.generators.RSAKeyGenerator;
 import chat.encryption.keys.RsaKeyClass;
 import chat.encryption.prime.Prime;
 import chat.encryption.prime.PrimeNumber;
-
-import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigInteger;
-import java.util.Base64;
 
-public class NewRsaKey {
+public class NewRsaKey
+{
     private PrimeNumber prime;
     private RSAKeyGenerator rsaGenerator;
     private RSAEncryption encryptor;
     private RSADecryption decryptor;
 
-    public RsaKeyClass createNewRsaKey() throws IOException {
+    public RsaKeyClass createNewRsaKey() throws IOException
+    {
         prime = new PrimeNumber();
         rsaGenerator = new RSAKeyGenerator();
         return startNewKeyGenerator(generateTwoPrimes());
     }
 
-    private Prime generateTwoPrimes() throws IOException {
+    private Prime generateTwoPrimes() throws IOException
+    {
         Prime p = new Prime(prime.start().getNum1(), prime.start().getNum2());
         return p;
     }
 
-    private RsaKeyClass startNewKeyGenerator(Prime p) {
+    private RsaKeyClass startNewKeyGenerator(Prime p)
+    {
         rsaGenerator.start(p);
 
         char[] e = rsaGenerator.getE();
         char[] d = rsaGenerator.getD();
         char[] n = rsaGenerator.getN();
 
-        if (e == null || d == null || n == null) {
+        if (e == null || d == null || n == null)
+        {
             throw new IllegalStateException("RSA key generation failed. e, d, or n is null.");
         }
 

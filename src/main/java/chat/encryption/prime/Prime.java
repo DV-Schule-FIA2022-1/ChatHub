@@ -1,11 +1,12 @@
 package chat.encryption.prime;
 
-public class Prime {
+public class Prime
+{
     private final long num1;
     private final long num2;
 
-
-    public Prime(long num1, long num2) {
+    public Prime(long num1, long num2)
+    {
         this.num1 = num1;
         this.num2 = num2;
 
