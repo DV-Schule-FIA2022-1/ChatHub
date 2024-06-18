@@ -60,6 +60,7 @@ public class NotificationController implements Initializable
         System.out.println(fxmlLocation);
         FXMLLoader loader = new FXMLLoader(fxmlLocation);
         secondLayout = loader.load();
+
         scene = new Scene(secondLayout);
         primaryStage.setScene(scene);
         primaryStage.setTitle("PopUp");
