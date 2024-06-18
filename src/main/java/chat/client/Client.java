@@ -45,9 +45,9 @@ public class Client extends Thread
         {
             while ((nachricht = (Message)in.readObject())!= null)
             {
-                clientController.getEmpfangen().clear();
+                //clientController.getEmpfangen().clear();
                 System.out.println("Empfangen vom Server: " + nachricht);
-                clientController.getEmpfangen().setText(nachricht.toString());
+                //clientController.getEmpfangen().setText(nachricht.toString());
             }
         }
         catch (Exception e)
@@ -59,6 +59,7 @@ public class Client extends Thread
 
     public void schreiben(Message nachricht) throws IOException
     {
+
         this.nachricht = nachricht;
         out.writeObject(nachricht);
         out.flush();

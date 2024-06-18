@@ -4,47 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="fixed GUI not starting">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="Added ChatBot View">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/ClientProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/view/ChatMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/view/ChatMainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/EditorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/SimpleFileEditor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Client/SimpleFileEditor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Nachricht/ChangeMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Nachricht/ChangeMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Server/ChangeRequestsMemory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Server/ChangeRequestsMemory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Server/ClientProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Server/ClientProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/Server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/Editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/Editor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/SimpleFileEditor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/SimpleFileEditor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/SimpleFileEditorController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/SimpleFileEditorController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/SimpleFileEditorController$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/SimpleFileEditorController$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/SimpleFileEditorController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/SimpleFileEditorController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/SimpleFileEditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/SimpleFileEditorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/WorkThogether/TextEditor/TextEditor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/view/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/view/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/chat/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/client/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/client/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/test/RecaptchaExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/test/RecaptchaExample.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/chat/server/ClientProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/server/ClientProxy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/chat/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/server/ServerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/server/ServerController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +126,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Chathub 2" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="Chathub [javafx:run]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -191,6 +193,7 @@
       <item itemvalue="Application.MainServer" />
       <item itemvalue="Application.MainWindow" />
       <item itemvalue="Maven.Chathub [javafx:run]" />
+      <item itemvalue="Maven.Chathub 2" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -208,7 +211,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714995229431</updated>
-      <workItem from="1718734278165" duration="1802000" />
+      <workItem from="1718734278165" duration="5367000" />
     </task>
     <task id="LOCAL-00001" summary="Add Lombok + User Class">
       <option name="closed" value="true" />
@@ -361,7 +364,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718709562413</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added ChatBot View">
+      <option name="closed" value="true" />
+      <created>1718736795152</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1718736795152</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added ChatBot View">
+      <option name="closed" value="true" />
+      <created>1718736841726</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1718736841726</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +451,8 @@
     <MESSAGE value="Update Role + Entered Roles into database" />
     <MESSAGE value="fixed connection errors" />
     <MESSAGE value="fixed GUI not starting" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed GUI not starting" />
+    <MESSAGE value="Added ChatBot View" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ChatBot View" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

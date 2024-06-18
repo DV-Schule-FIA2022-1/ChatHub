@@ -3,6 +3,7 @@ package chat.view;
 import chat.users.User;
 import chat.client.Client;
 import chat.users.login.LoginController;
+import chat.workThogether.Server.Server;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -12,6 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -89,7 +91,13 @@ public class MainViewController implements Initializable
         searchTextfield.setStyle("-fx-text-fill: white;");
 
         // Attach click handler to sendIcon
-        sendIcon.setOnMouseClicked(event -> chatMainController.clickSetIcon());
+        sendIcon.setOnMouseClicked(event -> {
+            try {
+                chatMainController.clickSetIcon();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
 

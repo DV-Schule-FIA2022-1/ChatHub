@@ -32,9 +32,9 @@ public class ClientProxy extends Thread
             while ((nachricht = (Message)in.readObject())!= null)
             {
 
-                System.out.println("Empfangen vom Client: " + nachricht);
+                System.out.println("Empfangen vom Client: " + nachricht.toString());
                 server.verteileNachricht(nachricht);
-                Platform.runLater(() -> serverController.getNachrichten().getItems().add(nachricht));
+                //Platform.runLater(() -> serverController.getNachrichten().getItems().add(nachricht));
             }
         }
         catch (Exception e)
@@ -45,7 +45,6 @@ public class ClientProxy extends Thread
 
     public void schreiben(Message nachricht) throws IOException
     {
-
         out.writeObject(nachricht);
         out.flush();
     }

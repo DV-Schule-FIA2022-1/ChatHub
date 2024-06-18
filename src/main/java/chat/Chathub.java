@@ -24,6 +24,7 @@ public class Chathub extends Application
     private static Chathub instance;
     @Getter
     private int serverport = 40000;
+    @Getter
     private Server server;
     private ServerController serverController;
     private Thread serverThread;
