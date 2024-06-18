@@ -1,5 +1,6 @@
 package chat.view;
 
+import chat.chatBot.Chat_bot;
 import chat.message.Message;
 import javafx.scene.control.Label;
 import lombok.Getter;
@@ -13,6 +14,8 @@ public class ChatMainController
     private MainViewController mainViewController;
     @Getter
     private String inputText;
+    @Getter
+    private String  chatResponse;
     public ChatMainController(MainViewController mainViewController)
     {
         this.mainViewController=mainViewController;
@@ -23,6 +26,7 @@ public class ChatMainController
         {
             inputText = mainViewController.getInputField().getText(); // Get text from the input field
             mainViewController.getInputField().clear(); // Optionally clear the input field after sending
+
             sendMsgToServer();
         }
         else
@@ -39,14 +43,11 @@ public class ChatMainController
 
         mainViewController.getClient().schreiben(msg);
     }
-
-    public void addMessage(String message)
+    public void sendToBot()
     {
-        Label messageLabel = new Label(message);
-        mainViewController.getMessageContainer().getChildren().add(messageLabel);
-        mainViewController.getMessageContainer().setMinSize(300, 400);
-        mainViewController.getMessageContainer().setMaxSize(300, 400);
-        System.out.println("Add msg");
+        Chat_bot chatBot = new Chat_bot();
+        chatResponse = chatBot.process(mainViewController.getInputField().getText());
+        mainViewController.getInputField().clear(); // Optionally clear the input field after sending
     }
 
 }

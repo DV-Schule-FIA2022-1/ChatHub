@@ -6,6 +6,7 @@ import chat.users.login.LoginController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -29,15 +30,10 @@ public class MainViewController implements Initializable
     @FXML private ImageView telephoneIcon;
     @FXML private ImageView kameraIcon;
     @FXML private ImageView userSettingsIcon;
-    @FXML private ImageView emojiIcon;
-    @FXML private ImageView attachmentIcon;
     @FXML private ImageView sendIcon;
-    @FXML private AnchorPane pane;
+    @FXML private ImageView sendToBot;
     @FXML private TextField searchTextfield;
     @FXML private Label username;
-    @FXML private Label status;
-    @FXML private Label role;
-    @FXML private Circle circleStatus;
     @Getter
     @FXML private TextField inputField;
     @Getter
@@ -74,9 +70,8 @@ public class MainViewController implements Initializable
         telephoneIcon.setImage(new Image("file:src/main/resources/img/telephoneIcon.png"));
         kameraIcon.setImage(new Image("file:src/main/resources/img/kameraIcon.png"));
         userSettingsIcon.setImage(new Image("file:src/main/resources/img/settingsPointsIcon.png"));
-        emojiIcon.setImage(new Image("file:src/main/resources/img/emojiIcon.png"));
-        attachmentIcon.setImage(new Image("file:src/main/resources/img/attachmentIcon.png"));
         sendIcon.setImage(new Image("file:src/main/resources/img/sendIcon.png"));
+        sendToBot.setImage(new Image("file:src/main/resources/img/sendIcon.png"));
         searchTextfield.setPromptText("Search");
         searchTextfield.setFocusTraversable(false);
         searchTextfield.setStyle("-fx-text-fill: white;");
@@ -84,8 +79,6 @@ public class MainViewController implements Initializable
         this.client = LoginController.getNewClient();
 
         username.setText(client.getUser().getFirstName());
-        //role.setText(client.getUser().getRole().getRoleName());
-        // Initialize search text field
         searchTextfield.setPromptText("Search");
         searchTextfield.setFocusTraversable(false);
         searchTextfield.setStyle("-fx-text-fill: white;");
@@ -104,6 +97,16 @@ public class MainViewController implements Initializable
             {
                 throw new RuntimeException(e);
             }
+        });
+        sendToBot.setOnMouseClicked(event ->
+        {
+            chatMainController.sendToBot();
+            TextArea message = new TextArea();
+            message.setText("bot: " + chatMainController.getChatResponse());
+            message.setEditable(false);
+            message.setWrapText(true);
+            message.prefHeightProperty().bind(message.heightProperty());
+            messageContainer.getChildren().add(message);
         });
 
     }
