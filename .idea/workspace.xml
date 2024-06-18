@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="Fixed some AI issues">
+    <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="Added columns in Database and changed some things">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Chat_bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Chat_bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Improver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Improver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/client/MainClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/nachricht/Nachricht.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/server/MainServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/View/ChatMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/View/ChatMainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +28,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectId" id="2g5lGfHuMl3lM1eOlaU5IoVPCUG" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -68,7 +63,6 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Qabo_tech\Desktop\ChatHub\src\main\resources\view" />
       <recent name="H:\javaProjectChat\ChatHub\src\main\resources\primes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -81,7 +75,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Maven.Chathub [javafx:run]">
     <configuration name="Chathub" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.Chathub" />
       <module name="Netzwerk" />
@@ -122,36 +116,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Chathub 2" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="javafx:run" />
-              </list>
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
     <configuration name="Chathub [javafx:run]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -189,13 +153,12 @@
       <item itemvalue="Application.MainServer" />
       <item itemvalue="Application.MainWindow" />
       <item itemvalue="Maven.Chathub [javafx:run]" />
-      <item itemvalue="Maven.Chathub 2" />
     </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-20.0.2-azul-20.0.2-249ae16d76d6-8f6f4fc2" />
+        <option value="jdk-20.0.2-temurin-20.0.2-4caba194b151-b0be1f17" />
       </set>
     </attachedChunks>
   </component>
@@ -207,8 +170,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714995229431</updated>
-      <workItem from="1718734278165" duration="8845000" />
-      <workItem from="1718744399547" duration="1490000" />
     </task>
     <task id="LOCAL-00001" summary="Add Lombok + User Class">
       <option name="closed" value="true" />
@@ -361,43 +322,16 @@
       <option name="project" value="LOCAL" />
       <updated>1718709562413</updated>
     </task>
-    <task id="LOCAL-00020" summary="Added ChatBot View">
+    <task id="LOCAL-00020" summary="Added columns in Database and changed some things">
       <option name="closed" value="true" />
-      <created>1718736795152</created>
+      <created>1718737818736</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1718736795152</updated>
+      <updated>1718737818736</updated>
     </task>
-    <task id="LOCAL-00021" summary="Added ChatBot View">
-      <option name="closed" value="true" />
-      <created>1718736841726</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1718736841726</updated>
-    </task>
-    <task id="LOCAL-00022" summary="connected gui with client and server">
-      <option name="closed" value="true" />
-      <created>1718741028400</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1718741028400</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Fixed some AI issues">
-      <option name="closed" value="true" />
-      <created>1718745499183</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1718745499183</updated>
-    </task>
-    <option name="localTasksCounter" value="24" />
+    <option name="localTasksCounter" value="21" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="OPEN_GENERIC_TABS">
@@ -405,11 +339,38 @@
         <entry key="f036b984-9d5e-4092-b711-f94575d416fd" value="TOOL_WINDOW" />
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/DB" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/DB" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
         <entry key="f036b984-9d5e-4092-b711-f94575d416fd">
@@ -441,6 +402,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Lombok + User Class" />
     <MESSAGE value="test" />
     <MESSAGE value="add Testdriver with rsa key generator" />
     <MESSAGE value="add: AES/RSA-KeyGenerator, AES/RSA-Encryption. &#10;changed: message class" />
@@ -463,10 +425,8 @@
     <MESSAGE value="Update Role + Entered Roles into database" />
     <MESSAGE value="fixed connection errors" />
     <MESSAGE value="fixed GUI not starting" />
-    <MESSAGE value="Added ChatBot View" />
-    <MESSAGE value="connected gui with client and server" />
-    <MESSAGE value="Fixed some AI issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed some AI issues" />
+    <MESSAGE value="Added columns in Database and changed some things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added columns in Database and changed some things" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
