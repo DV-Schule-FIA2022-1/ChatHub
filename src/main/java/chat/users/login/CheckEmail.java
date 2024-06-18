@@ -1,4 +1,4 @@
-package chat.users.functions;
+package chat.users.login;
 
 import chat.users.User;
 import chat.users.UserController;
@@ -6,14 +6,14 @@ import chat.users.login.LoginController;
 import lombok.Getter;
 import java.util.Objects;
 
-public class CheckEmailFunction
+public class CheckEmail
 {
     private UserController userController;
     @Getter
     private User activeUser;
     private LoginController loginController;
 
-    public CheckEmailFunction(LoginController loginController, UserController userController)
+    public CheckEmail(LoginController loginController, UserController userController)
     {
         this.loginController = loginController;
         this.userController = userController;

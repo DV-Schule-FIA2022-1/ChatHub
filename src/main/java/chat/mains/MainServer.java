@@ -29,7 +29,7 @@ public class MainServer extends Application
 
     public void showMainView() throws IOException
     {
-        URL fxmlLocation = ServerController.class.getResource("/GUIServer.fxml");
+        URL fxmlLocation = ServerController.class.getResource("/view/GUIServer.fxml");
         FXMLLoader loader = new FXMLLoader(fxmlLocation);
         mainLayout = loader.load();
         scene = new Scene(mainLayout);

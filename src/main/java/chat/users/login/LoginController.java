@@ -4,7 +4,7 @@ import chat.Chathub;
 import chat.client.Client;
 import chat.client.ClientController;
 import chat.users.*;
-import chat.users.functions.CheckEmailFunction;
+import chat.users.mainView.MainViewController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -59,7 +59,7 @@ public class LoginController implements Initializable
     private Timer timer;
     @Setter
     private User activeUser;
-    private CheckEmailFunction checkEmailFunction;
+    private CheckEmail checkEmailFunction;
     private MainViewController mainViewController;
     private ClientController clientController;
     @Getter
@@ -69,7 +69,7 @@ public class LoginController implements Initializable
     public LoginController()
     {
         userController = new UserController();
-        checkEmailFunction = new CheckEmailFunction(this, userController);
+        checkEmailFunction = new CheckEmail(this, userController);
         authenticationManager = new AuthenticationController(this, checkEmailFunction);
     }
 
@@ -208,7 +208,7 @@ public class LoginController implements Initializable
         try
         {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(MainViewController.class.getResource("/MainWindow.fxml"));
+            fxmlLoader.setLocation(MainViewController.class.getResource("/view/MainWindow.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 630, 400);
             stage = new Stage();
             stage.setWidth(825);

@@ -32,7 +32,7 @@ public class MainLogin extends Application
 
     public void showMainView() throws IOException
     {
-        URL fxmlLocation = LoginController.class.getResource("/LoginScreen.fxml");
+        URL fxmlLocation = LoginController.class.getResource("/view/LoginScreen.fxml");
         FXMLLoader loader = new FXMLLoader(fxmlLocation);
         mainLayout = loader.load();
         scene = new Scene(mainLayout);

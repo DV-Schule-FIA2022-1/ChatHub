@@ -1,6 +1,5 @@
 package chat;
 
-import chat.enums.ChathubEnum;
 import chat.server.Server;
 import chat.server.ServerController;
 import chat.server.SocketManager;
@@ -91,7 +90,7 @@ public class Chathub extends Application
 
     public void showMainView() throws IOException
     {
-        URL fxmlLocation = LoginController.class.getResource("/LoginScreen.fxml");
+        URL fxmlLocation = LoginController.class.getResource("/view/LoginScreen.fxml");
         FXMLLoader loader = new FXMLLoader(fxmlLocation);
         mainLayout = loader.load();
         scene = new Scene(mainLayout);

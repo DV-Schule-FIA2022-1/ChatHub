@@ -34,7 +34,7 @@ public class Editor extends Application
 
     public void showMainView() throws IOException
     {
-        URL fxmlLocation = ServerController.class.getResource("/TextEditor.fxml");
+        URL fxmlLocation = ServerController.class.getResource("/view/TextEditor.fxml");
         FXMLLoader loader = new FXMLLoader(fxmlLocation);
         mainLayout = loader.load();
         scene = new Scene(mainLayout);

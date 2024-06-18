@@ -1,6 +1,7 @@
-package chat.users;
+package chat.users.mainView;
 
 import chat.client.Client;
+import chat.users.User;
 import chat.users.login.LoginController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

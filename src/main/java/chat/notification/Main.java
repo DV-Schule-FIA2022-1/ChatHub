@@ -29,7 +29,7 @@ public class Main extends Application
 
     public void showMainView() throws IOException
     {
-        URL fxmlLocation = NotificationController.class.getResource("/GUITestNotification.fxml");
+        URL fxmlLocation = NotificationController.class.getResource("/view/GUITestNotification.fxml");
         FXMLLoader loader = new FXMLLoader(fxmlLocation);
         mainLayout = loader.load();
         scene = new Scene(mainLayout);
