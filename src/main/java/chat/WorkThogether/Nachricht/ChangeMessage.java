@@ -9,7 +9,6 @@ public class ChangeMessage implements Serializable
     private int endIndex;
     private String newText;
     private  String removedText;
-    private Date timestamp;
 
     public ChangeMessage(int startIndex, int endIndex, String newText)
     {
@@ -45,10 +44,5 @@ public class ChangeMessage implements Serializable
     public String getRemovedText()
     {
         return removedText;
-    }
-
-    public Date getTimestamp()
-    {
-        return timestamp;
     }
 }

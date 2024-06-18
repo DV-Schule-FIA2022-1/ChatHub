@@ -18,18 +18,6 @@ public class SimpleFileEditor extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/WorkTogether.fxml"));
-//        Parent root = loader.load();
-////        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("@img/EdenCodingIcon.png")));
-//        primaryStage.setTitle("Work Thogether");
-//        primaryStage.setScene(new Scene(root));
-//        primaryStage.show();
-//        EditorController editorController = loader.getController();
-//        primaryStage.setOnCloseRequest(event -> {
-//            editorController.getClient().closeClient();
-//            System.out.println("Stage wird geschlossen");
-//            //Nochmal bearbeiten, das der Thread richtig geschlossen wird
-//        });
         creatTextEditor(port);
     }
 
