@@ -1,6 +1,7 @@
 package chat.users;
 
 import chat.Chathub;
+import chat.View.ChatMainController;
 import chat.client.Client;
 import chat.mains.MainLogin;
 import chat.users.login.LoginController;
@@ -17,6 +18,7 @@ import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 import chat.*;
+import lombok.Getter;
 
 public class MainViewController implements Initializable
 {

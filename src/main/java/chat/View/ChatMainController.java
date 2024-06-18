@@ -1,6 +1,5 @@
 package chat.View;
 import chat.*;
-import chat.ChatBot.Main;
 import chat.users.MainViewController;
 
 import java.nio.file.LinkPermission;
