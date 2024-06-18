@@ -1,14 +1,13 @@
 package chat.users.login;
 
-import chat.users.functions.CheckEmailFunction;
-import chat.users.functions.HashFunction;
+import chat.users.HashedText;
 
 public class AuthenticationController
 {
     private LoginController loginController;
-    private CheckEmailFunction checkEmailFunction;
+    private CheckEmail checkEmailFunction;
 
-    public AuthenticationController(LoginController loginController, CheckEmailFunction checkEmailFunction)
+    public AuthenticationController(LoginController loginController, CheckEmail checkEmailFunction)
     {
         this.loginController = loginController;
         this.checkEmailFunction = checkEmailFunction;
@@ -18,7 +17,7 @@ public class AuthenticationController
     {
         if(checkEmailFunction.checkEmail(enteredEmail))
         {
-            if(HashFunction.toHexString(HashFunction.getSHA(enteredPassword)).equals(checkEmailFunction.getActiveUser().getPassword()))
+            if(HashedText.toHexString(HashedText.getSHA(enteredPassword)).equals(checkEmailFunction.getActiveUser().getPassword()))
             {
                 loginController.setActiveUser(checkEmailFunction.getActiveUser());
                 return true;

@@ -1,8 +1,8 @@
 package chat.users.chatroom;
 
 import chat.users.User;
-import chat.users.enums.ChathubEnum;
-import chat.users.functions.HashFunction;
+import chat.enums.ChathubEnum;
+import chat.users.HashedText;
 
 import java.sql.*;
 
@@ -53,7 +53,7 @@ public class ChatroomController
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, chatroom.getChatroomName());
             preparedStatement.setString(2, chatroom.getDescription());
-            preparedStatement.setString(3, HashFunction.toHexString(HashFunction.getSHA(chatroom.getPassword())));
+            preparedStatement.setString(3, HashedText.toHexString(HashedText.getSHA(chatroom.getPassword())));
             Timestamp timestamp = Timestamp.valueOf(chatroom.getCreatedAt());
             Date sqlDate = new Date(timestamp.getTime());
             preparedStatement.setDate(4, sqlDate);

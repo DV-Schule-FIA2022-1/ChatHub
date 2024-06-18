@@ -1,6 +1,5 @@
 package chat.client;
 
-import chat.client.Client;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;

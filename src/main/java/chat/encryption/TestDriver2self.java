@@ -1,21 +1,15 @@
 package chat.encryption;
 
-//import chat.encryption.ascii.AsciiConvertor;
 import chat.encryption.decryption.RSADecryption;
 import chat.encryption.encryption.RSAEncryption;
 import chat.encryption.generators.RSAKeyGenerator;
 import chat.encryption.prime.Prime;
 import chat.encryption.prime.PrimeNumber;
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.math.BigInteger;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
-
-import java.util.Arrays;
 
 public class TestDriver2self {
     private PrimeNumber prime;

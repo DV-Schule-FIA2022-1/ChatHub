@@ -29,7 +29,7 @@ public class MainClient extends Application
 
     public void showMainView() throws IOException
     {
-        URL fxmlLocation = ClientController.class.getResource("/NewClient.fxml");
+        URL fxmlLocation = ClientController.class.getResource("/view/NewClient.fxml");
         FXMLLoader loader = new FXMLLoader(fxmlLocation);
         mainLayout = loader.load();
         scene = new Scene(mainLayout);

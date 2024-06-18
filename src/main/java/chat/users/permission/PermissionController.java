@@ -1,7 +1,6 @@
 package chat.users.permission;
 
 import chat.users.User;
-import chat.users.role.Role;
 
 public class PermissionController
 {

@@ -1,10 +1,7 @@
 package chat.users.role;
 
-import chat.users.Address;
 import chat.users.User;
-import chat.users.enums.ChathubEnum;
-import chat.users.permission.Permission;
-
+import chat.enums.ChathubEnum;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -12,13 +9,12 @@ import java.util.ArrayList;
 
 public class RoleController
 {
-    private Role role;
     private int row;
     private ArrayList<Role> roleList;
 
-    public RoleController(Role role)
+    public RoleController()
     {
-        this.role = role;
+        roleList = new ArrayList<>();
     }
 
     public boolean hasRole(User user, Role role)
@@ -31,19 +27,19 @@ public class RoleController
         user.setRole(role);
     }
 
-    public void updateRoleDescription(String description)
+    public void updateRoleDescription(Role role, String description)
     {
         role.setDescription(description);
         role.setUpdatedAt(LocalDateTime.now());
     }
 
-    public void deactivateRole()
+    public void deactivateRole(Role role)
     {
         role.setActive(false);
         role.setUpdatedAt(LocalDateTime.now());
     }
 
-    public void reactivateRole()
+    public void reactivateRole(Role role)
     {
         role.setActive(true);
         role.setUpdatedAt(LocalDateTime.now());
@@ -53,7 +49,7 @@ public class RoleController
     {
         try(Connection connection = DriverManager.getConnection(ChathubEnum.DatabasePath.getPath()))
         {
-            String sql = "INSERT INTO Role (roleName, description, priortiyLevel, createAt, updatedAt, isActive) VALUES (?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO Role (roleName, description, priortiyLevel, createdAt, updatedAt, isActive) VALUES (?, ?, ?, ?, ?, ?)";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, role.getRoleName());

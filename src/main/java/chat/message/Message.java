@@ -1,7 +1,6 @@
 package chat.message;
 
 import chat.client.ClientController;
-import com.mysql.cj.exceptions.DataConversionException;
 import java.time.LocalDateTime;
 import java.io.Serializable;
 import java.util.Date;

@@ -1,9 +1,7 @@
 package chat.users;
 
-import chat.users.enums.ChathubEnum;
-import chat.users.functions.HashFunction;
+import chat.enums.ChathubEnum;
 import lombok.Getter;
-
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -51,7 +49,7 @@ public class UserController
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, user.getFirstName());
             preparedStatement.setString(2, user.getLastName());
-            preparedStatement.setString(3, HashFunction.toHexString(HashFunction.getSHA(user.getPassword())));
+            preparedStatement.setString(3, HashedText.toHexString(HashedText.getSHA(user.getPassword())));
             preparedStatement.setString(4, user.getEmail());
             preparedStatement.setDate(5, user.getBirthdate());
             preparedStatement.setInt(6, insertId);

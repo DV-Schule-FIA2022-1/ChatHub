@@ -1,8 +1,6 @@
 package chat.encryption.prime;
 
 import chat.encryption.generators.APINumberGenerator;
-import chat.encryption.prime.Prime;
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
