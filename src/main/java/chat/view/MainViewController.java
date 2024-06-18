@@ -96,10 +96,17 @@ public class MainViewController implements Initializable
         searchTextfield.setStyle("-fx-text-fill: white;");
 
         // Attach click handler to sendIcon
-        sendIcon.setOnMouseClicked(event -> {
-            try {
+        sendIcon.setOnMouseClicked(event ->
+        {
+            try
+            {
                 chatMainController.clickSetIcon();
-            } catch (IOException e) {
+                TextField message = new TextField();
+                message.setText(client.getUser().getFirstName() + ": " + chatMainController.getInputText());
+                messageContainer.getChildren().add(message);
+            }
+            catch (IOException e)
+            {
                 throw new RuntimeException(e);
             }
         });

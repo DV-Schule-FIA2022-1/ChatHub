@@ -1,4 +1,4 @@
-package org.example;
+package chat.musikBot;
 
 public interface Command
 {

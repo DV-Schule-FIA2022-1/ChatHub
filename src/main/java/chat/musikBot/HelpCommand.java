@@ -1,4 +1,4 @@
-package org.example;
+package chat.musikBot;
 
 import java.util.Map;
 

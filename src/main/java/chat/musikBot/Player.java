@@ -1,15 +1,12 @@
-package org.example;
+package chat.musikBot;
 
 import com.google.api.services.youtube.YouTube;
-import com.google.api.services.youtube.model.Video;
-import com.google.api.services.youtube.model.VideoListResponse;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.Collections;
@@ -45,7 +42,8 @@ public class Player extends Application {
 
     // Startet die JavaFX-Anwendung und lädt das YouTube-Video
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage)
+    {
         webView = new WebView();
         webView.getEngine().load(getYoutubeEmbedLink(videoId));
 

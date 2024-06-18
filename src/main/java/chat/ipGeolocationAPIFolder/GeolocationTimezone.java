@@ -1,4 +1,4 @@
-package chat.IpGeolocationAPIFolder;
+package chat.ipGeolocationAPIFolder;
 
 import java.math.BigDecimal;
 
