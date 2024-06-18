@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="connected gui with client and server">
+    <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="Fixed some AI issues">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Chat_bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Chat_bot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Improver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Improver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Processor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Requester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Requester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/ClientProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/view/ChatMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/view/ChatMainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/view/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/view/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/MainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SimpleFileEditor.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TextEditor.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/client/MainClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/nachricht/Nachricht.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/server/MainServer.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +208,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714995229431</updated>
       <workItem from="1718734278165" duration="8845000" />
-      <workItem from="1718744399547" duration="1070000" />
+      <workItem from="1718744399547" duration="1490000" />
     </task>
     <task id="LOCAL-00001" summary="Add Lombok + User Class">
       <option name="closed" value="true" />
@@ -391,7 +385,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718741028400</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Fixed some AI issues">
+      <option name="closed" value="true" />
+      <created>1718745499183</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1718745499183</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +441,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Lombok + User Class" />
     <MESSAGE value="test" />
     <MESSAGE value="add Testdriver with rsa key generator" />
     <MESSAGE value="add: AES/RSA-KeyGenerator, AES/RSA-Encryption. &#10;changed: message class" />
@@ -464,7 +465,8 @@
     <MESSAGE value="fixed GUI not starting" />
     <MESSAGE value="Added ChatBot View" />
     <MESSAGE value="connected gui with client and server" />
-    <option name="LAST_COMMIT_MESSAGE" value="connected gui with client and server" />
+    <MESSAGE value="Fixed some AI issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some AI issues" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

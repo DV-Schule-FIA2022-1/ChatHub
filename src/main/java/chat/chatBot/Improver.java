@@ -5,8 +5,7 @@ public class Improver implements Processor {
     private String OutpubMsg;
     private Requester requester;
 
-    public Improver(Requester requester) {
-        this.requester = requester;
+    public Improver() {
     }
 
     public String getInputMsg() {
@@ -28,6 +27,7 @@ public class Improver implements Processor {
     @Override
     public String process(String inputMsg) {
         try {
+            requester = new Requester();
             String prompt = "Bitte verbessere den folgenden Text grammatikalisch " +
                     "und gib nur den verbesserten Text zurück. " +
                     "Die Ausgabe soll ausschließlich auf Deutsch sein und ohne Anführungszeichen. " +

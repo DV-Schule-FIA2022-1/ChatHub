@@ -10,9 +10,8 @@ public class Translator implements Processor {
     private String Lang;
     private Requester requester;
 
-    public Translator(String lang, Requester requester) {
+    public Translator(String lang) {
         this.Lang = lang;
-        this.requester = requester;
     }
 
     public String getInputMsg() {
@@ -42,6 +41,7 @@ public class Translator implements Processor {
     @Override
     public String process(String inputMsg) throws IOException {
         try {
+            requester = new Requester();
             String prompt = "Translate the following text in " + getLang() + ": " + inputMsg + ". Please return only the translated text.";
             setOutpubMsg(requester.sendRequest(prompt));
         } catch (Exception e) {

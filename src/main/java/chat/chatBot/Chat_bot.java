@@ -5,9 +5,7 @@ public class Chat_bot implements Processor {
     private String OutpubMsg;
     private Requester requester;
 
-    public Chat_bot(Requester requester) {
-        this.requester = requester;
-    }
+    public Chat_bot() {}
 
     public String getInputMsg() {
         return InputMsg;
@@ -28,6 +26,7 @@ public class Chat_bot implements Processor {
     @Override
     public String process(String inputMsg) {
         try {
+            requester = new Requester();
             setOutpubMsg(requester.sendRequest(inputMsg));
         } catch (Exception e) {
             e.printStackTrace();
