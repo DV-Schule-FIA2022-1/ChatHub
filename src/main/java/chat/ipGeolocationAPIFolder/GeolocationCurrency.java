@@ -1,4 +1,4 @@
-package chat.ipGeolocationAPIFolder;
+package chat.IpGeolocationAPIFolder;
 
 public class GeolocationCurrency
 {

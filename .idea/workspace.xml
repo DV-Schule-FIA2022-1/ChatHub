@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="Added columns in Database and changed some things">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/Geolocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/Geolocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/GeolocationCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/GeolocationCurrency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/GeolocationTimezone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/GeolocationTimezone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/View/ChatMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/View/ChatMainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/TestDB.accdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +154,13 @@
       <item itemvalue="Application.MainWindow" />
       <item itemvalue="Maven.Chathub [javafx:run]" />
     </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-20.0.2-temurin-20.0.2-4caba194b151-b0be1f17" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
