@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="fixed GUI not starting">
+    <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="Added columns in Database and changed some things">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/Geolocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/Geolocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/GeolocationCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/GeolocationCurrency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/GeolocationTimezone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/GeolocationTimezone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/View/ChatMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/View/ChatMainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database/TestDB.accdb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +31,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectId" id="2g5lGfHuMl3lM1eOlaU5IoVPCUG" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -122,6 +125,7 @@
         <option name="myRunnerSettings" />
         <option name="myRunnerParameters">
           <MavenRunnerParameters>
+            <option name="cmdOptions" />
             <option name="profiles">
               <set />
             </option>
@@ -130,9 +134,13 @@
                 <option value="javafx:run" />
               </list>
             </option>
+            <option name="multimoduleDir" />
             <option name="pomFileName" value="pom.xml" />
             <option name="profilesMap">
               <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
             </option>
             <option name="resolveToWorkspace" value="false" />
             <option name="workingDirPath" value="$PROJECT_DIR$" />
@@ -310,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718709562413</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added columns in Database and changed some things">
+      <option name="closed" value="true" />
+      <created>1718737818736</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1718737818736</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -319,11 +335,38 @@
         <entry key="f036b984-9d5e-4092-b711-f94575d416fd" value="TOOL_WINDOW" />
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/DB" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/DB" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
         <entry key="f036b984-9d5e-4092-b711-f94575d416fd">
@@ -378,7 +421,8 @@
     <MESSAGE value="Update Role + Entered Roles into database" />
     <MESSAGE value="fixed connection errors" />
     <MESSAGE value="fixed GUI not starting" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed GUI not starting" />
+    <MESSAGE value="Added columns in Database and changed some things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added columns in Database and changed some things" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
