@@ -1,9 +1,13 @@
 package chat.chatBot;
 
-public class Chat_bot implements Processor{
+public class Chat_bot implements Processor {
     private String InputMsg;
     private String OutpubMsg;
-    Requester requester = null;
+    private Requester requester;
+
+    public Chat_bot(Requester requester) {
+        this.requester = requester;
+    }
 
     public String getInputMsg() {
         return InputMsg;
@@ -19,9 +23,6 @@ public class Chat_bot implements Processor{
 
     public void setOutpubMsg(String outpubMsg) {
         OutpubMsg = outpubMsg;
-    }
-
-    public Chat_bot() {
     }
 
     @Override

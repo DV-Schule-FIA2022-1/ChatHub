@@ -4,19 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="Added ChatBot View">
+    <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="connected gui with client and server">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Chat_bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Chat_bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Improver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Improver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Requester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Requester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/chatBot/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Translator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/ClientProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/view/ChatMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/view/ChatMainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/view/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/view/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database/ChatDB.accdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/server/ClientProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/server/ClientProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SimpleFileEditor.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TextEditor.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +39,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2g5lGfHuMl3lM1eOlaU5IoVPCUG" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -85,7 +87,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.Chathub [javafx:run]">
+  <component name="RunManager">
     <configuration name="Chathub" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="chat.Chathub" />
       <module name="Netzwerk" />
@@ -211,7 +213,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714995229431</updated>
-      <workItem from="1718734278165" duration="5367000" />
+      <workItem from="1718734278165" duration="8845000" />
+      <workItem from="1718744399547" duration="1070000" />
     </task>
     <task id="LOCAL-00001" summary="Add Lombok + User Class">
       <option name="closed" value="true" />
@@ -380,7 +383,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718736841726</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="connected gui with client and server">
+      <option name="closed" value="true" />
+      <created>1718741028400</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1718741028400</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +463,8 @@
     <MESSAGE value="fixed connection errors" />
     <MESSAGE value="fixed GUI not starting" />
     <MESSAGE value="Added ChatBot View" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ChatBot View" />
+    <MESSAGE value="connected gui with client and server" />
+    <option name="LAST_COMMIT_MESSAGE" value="connected gui with client and server" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

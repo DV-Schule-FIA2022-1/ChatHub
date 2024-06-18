@@ -1,11 +1,19 @@
 package chat.chatBot;
+import chat.*;
+
+import java.io.IOException;
 
 public class Translator implements Processor {
 
     private String InputMsg;
     private String OutpubMsg;
     private String Lang;
-    Requester requester = null;
+    private Requester requester;
+
+    public Translator(String lang, Requester requester) {
+        this.Lang = lang;
+        this.requester = requester;
+    }
 
     public String getInputMsg() {
         return InputMsg;
@@ -22,24 +30,23 @@ public class Translator implements Processor {
     public void setOutpubMsg(String outpubMsg) {
         OutpubMsg = outpubMsg;
     }
+
     public void setLang(String lang) {
         this.Lang = lang;
     }
-    public String getLang(){return Lang;};
-    public Translator(String lang) {
-        Lang = lang;
+
+    public String getLang() {
+        return Lang;
     }
 
     @Override
-    public String process(String inputMsg) {
+    public String process(String inputMsg) throws IOException {
         try {
-            String prompt = "Translate the following text in " + getLang() + ": " + inputMsg + ". Please return only the translated text. ";
+            String prompt = "Translate the following text in " + getLang() + ": " + inputMsg + ". Please return only the translated text.";
             setOutpubMsg(requester.sendRequest(prompt));
         } catch (Exception e) {
             e.printStackTrace();
         }
         return OutpubMsg;
     }
-
-
 }

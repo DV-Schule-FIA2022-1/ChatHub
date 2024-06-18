@@ -158,7 +158,7 @@
                </children></HBox>
             <ScrollPane layoutY="88.0" prefHeight="336.0" prefWidth="494.0" styleClass="transparent-background" stylesheets="@../style.css">
                <content>
-                  <Pane prefHeight="354.0" prefWidth="509.0" style="-fx-background-color: #DADADA;" styleClass="light-gray-background" stylesheets="@../style.css" />
+                  <VBox fx:id="messageContainer" prefHeight="354.0" prefWidth="509.0" style="-fx-background-color: #DADADA;" styleClass="light-gray-background" stylesheets="@../style.css" />
                </content>
             </ScrollPane>
             <HBox alignment="CENTER" layoutY="437.0" prefHeight="57.0" prefWidth="494.0">

@@ -3,7 +3,11 @@ package chat.chatBot;
 public class Improver implements Processor {
     private String InputMsg;
     private String OutpubMsg;
-    Requester requester = null;
+    private Requester requester;
+
+    public Improver(Requester requester) {
+        this.requester = requester;
+    }
 
     public String getInputMsg() {
         return InputMsg;
@@ -21,13 +25,12 @@ public class Improver implements Processor {
         OutpubMsg = outpubMsg;
     }
 
-
     @Override
     public String process(String inputMsg) {
         try {
             String prompt = "Bitte verbessere den folgenden Text grammatikalisch " +
                     "und gib nur den verbesserten Text zurück. " +
-                    "Die Ausgabe soll ausschließlich auf Deutsch sein und ohne anführungszeichen. " +
+                    "Die Ausgabe soll ausschließlich auf Deutsch sein und ohne Anführungszeichen. " +
                     "Text: \"" + inputMsg + "\"";
             setOutpubMsg(requester.sendRequest(prompt));
         } catch (Exception e) {
