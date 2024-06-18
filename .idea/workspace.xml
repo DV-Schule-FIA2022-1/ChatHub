@@ -4,10 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9137efcd-558b-4f02-afd4-c25c30247267" name="Changes" comment="add interface">
+    <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="fixed GUI not starting">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/generators/AESKeyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/generators/AESKeyGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/keys/AesKeyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/keys/AesKeyClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aes_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/main/NewRsaKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/main/NewRsaKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/main/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/main/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/prime/PrimeNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/prime/PrimeNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/keys/rsa_private_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/keys/rsa_public_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Chathub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/Chathub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/Users/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/AuthenticationManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/Chatroom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/MainLogin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/PermissionManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/RoleManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/Session.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/Settings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/SettingsManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/Users/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/Users/UserManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/client/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/client/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/client/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/client/MainClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/generators/AESKeyGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/generators/AESKeyGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/generators/APINumberGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/generators/APINumberGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/generators/RSAKeyGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/generators/RSAKeyGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/keys/AesKeyClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/keys/AesKeyClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/keys/RsaKeyClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/keys/RsaKeyClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/mian/NewRsaKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/mian/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/prime/PrimeNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/prime/PrimeNumber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/test/RecaptchaExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/test/RecaptchaExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/test/SaveKeysToFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/test/SaveKeysToFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/encryption/test/randNumberGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/encryption/test/randNumberGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/message/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/message/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/server/ClientProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/server/ClientProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/server/MainServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chat/server/ServerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/server/ServerController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,28 +60,15 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="KolesnikowNikita &lt;kolesnikownikita@dv-schulen.de&gt;" />
-      </list>
-    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Workspace" />
-        <entry key="$PROJECT_DIR$" value="DB" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="2g5lGfHuMl3lM1eOlaU5IoVPCUG" />
   <component name="ProjectLevelVcsManager">
@@ -54,14 +78,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/KolesnikowNikita/Downloads/musor-main/musor-main/untitled",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/javaProjectChat/ChatHub/src/main/resources/primes&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/Java/Schulprojekt&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="Users" />
@@ -72,6 +105,7 @@
       <recent name="H:\javaProjectChat\ChatHub\src\main\resources\primes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ChatHub\src\main\resources\view" />
       <recent name="H:\javaProjectChat\ChatHub\src\main\java\chat\encryption\prime" />
       <recent name="H:\javaProjectChat\ChatHub\src\main\java\chat\encryption" />
       <recent name="H:\javaProjectChat\ChatHub\src\main\resources\primes" />
@@ -121,20 +155,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="chat.Chathub" />
-      <module name="Chathub" />
-      <option name="PROGRAM_PARAMETERS" value="--module-path &quot;H:\javaProjectChat\ChatHub\javafx-sdk-20.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Chathub [javafx:run]" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
         <option name="myRunnerParameters">
           <MavenRunnerParameters>
+            <option name="cmdOptions" />
             <option name="profiles">
               <set />
             </option>
@@ -143,9 +170,13 @@
                 <option value="javafx:run" />
               </list>
             </option>
+            <option name="multimoduleDir" />
             <option name="pomFileName" value="pom.xml" />
             <option name="profilesMap">
               <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
             </option>
             <option name="resolveToWorkspace" value="false" />
             <option name="workingDirPath" value="$PROJECT_DIR$" />
@@ -166,7 +197,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9137efcd-558b-4f02-afd4-c25c30247267" name="Changes" comment="add interface" />
+      <changelist id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="Try to close open socket, but must look again" />
       <created>1714995229431</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -267,15 +298,63 @@
       <option name="project" value="LOCAL" />
       <updated>1718023685663</updated>
     </task>
-    <task id="LOCAL-00013" summary="add interface">
+    <task id="LOCAL-00013" summary="Fixed User Package">
       <option name="closed" value="true" />
-      <created>1718697499963</created>
+      <created>1718615374451</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1718697499963</updated>
+      <updated>1718615374451</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update Role + Entered Roles into database">
+      <option name="closed" value="true" />
+      <created>1718696963497</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1718696963497</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update Role + Entered Roles into database">
+      <option name="closed" value="true" />
+      <created>1718704125492</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1718704125492</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fixed connection errors">
+      <option name="closed" value="true" />
+      <created>1718704249589</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1718704249589</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fixed connection errors">
+      <option name="closed" value="true" />
+      <created>1718704543394</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1718704543394</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fixed connection errors">
+      <option name="closed" value="true" />
+      <created>1718704559688</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1718704559688</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fixed GUI not starting">
+      <option name="closed" value="true" />
+      <created>1718709562413</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1718709562413</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,8 +417,12 @@
     <MESSAGE value="Add Role and Permission in Database" />
     <MESSAGE value="Add Some methods to Role Class" />
     <MESSAGE value="Updated Main Window" />
-    <MESSAGE value="add interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="add interface" />
+    <MESSAGE value="Fixed User Package" />
+    <MESSAGE value="Clean up + Fixed Errors from merging" />
+    <MESSAGE value="Update Role + Entered Roles into database" />
+    <MESSAGE value="fixed connection errors" />
+    <MESSAGE value="fixed GUI not starting" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed GUI not starting" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -47,9 +47,9 @@ public class NewRsaKey {
         encryptor = new RSAEncryption(eBigInt, nBigInt);
         decryptor = new RSADecryption(dBigInt, nBigInt);
 
-        // Сохранение ключей в файлы
-        saveKeyToFile("H:\\javaProjectChat\\ChatHub\\src\\main\\resources\\keys\\rsa_private_key.pem", encodeKeyToPEM(dBigInt.toByteArray(), "RSA PRIVATE KEY"));
-        saveKeyToFile("H:\\javaProjectChat\\ChatHub\\src\\main\\resources\\keys\\rsa_public_key.pem", encodeKeyToPEM(eBigInt.toByteArray(), "RSA PUBLIC KEY"));
+
+        //saveKeyToFile("H:\\javaProjectChat\\ChatHub\\src\\main\\resources\\keys\\rsa_private_key.pem", encodeKeyToPEM(dBigInt.toByteArray(), "RSA PRIVATE KEY"));
+        //saveKeyToFile("H:\\javaProjectChat\\ChatHub\\src\\main\\resources\\keys\\rsa_public_key.pem", encodeKeyToPEM(eBigInt.toByteArray(), "RSA PUBLIC KEY"));
 
         return new RsaKeyClass(d, n, e, n);
     }
@@ -62,20 +62,5 @@ public class NewRsaKey {
         return decryptor;
     }
 
-    private void saveKeyToFile(String fileName, String keyPEM) {
-        try (FileWriter keyWriter = new FileWriter(fileName)) {
-            keyWriter.write(keyPEM);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
-    private String encodeKeyToPEM(byte[] keyBytes, String keyType) {
-        String encodedKey = Base64.getEncoder().encodeToString(keyBytes);
-        StringBuilder pem = new StringBuilder();
-        pem.append("-----BEGIN ").append(keyType).append("-----\n");
-        pem.append(encodedKey);
-        pem.append("\n-----END ").append(keyType).append("-----\n");
-        return pem.toString();
-    }
 }
