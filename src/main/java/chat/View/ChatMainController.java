@@ -24,7 +24,7 @@ public class ChatMainController {
     }
     public void sendMsgToServer()
     {
-        //bitte Mach diese
+        //bitte Mach diese Patrik Oder Nikita
         LocalDate localDate= LocalDate.now();
         Date today = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
         Message msg = new Message(mainViewController.getClient().getClientController(),"1","1",1,
