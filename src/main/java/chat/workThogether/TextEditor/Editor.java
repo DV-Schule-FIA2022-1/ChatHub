@@ -1,4 +1,4 @@
-package chat.WorkThogether.TextEditor;
+package chat.workThogether.TextEditor;
 
 import chat.server.ServerController;
 import javafx.application.Application;

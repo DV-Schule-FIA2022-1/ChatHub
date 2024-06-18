@@ -1,4 +1,4 @@
-package chat.OpenMeteoApi;
+package chat.openMeteoApi;
 
 public class GeolocationOpenMeteoApi
 {

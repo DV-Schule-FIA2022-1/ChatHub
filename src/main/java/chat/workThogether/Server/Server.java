@@ -1,6 +1,6 @@
-package chat.WorkThogether.Server;
+package chat.workThogether.Server;
 
-import chat.WorkThogether.Nachricht.ChangeMessage;
+import chat.workThogether.Nachricht.ChangeMessage;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.ArrayList;

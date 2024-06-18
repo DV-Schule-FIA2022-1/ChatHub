@@ -1,4 +1,4 @@
-package chat.WorkThogether.TextEditor;
+package chat.workThogether.TextEditor;
 
 import com.jfoenix.controls.JFXTextArea;
 import javafx.application.Application;

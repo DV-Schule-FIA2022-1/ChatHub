@@ -1,17 +1,13 @@
-package chat.WeaterAPI;
+package chat.weaterAPI;
 
-public class Current
+public class Current_Units
 {
-    private String time;
-    private int interval;
-    private float temperature_2m;
-    private float apparent_temperature;
+    private String time; //timeformat
+    private int interval; // sunshine_duration
+    private String temperature_2m;
+    private String apparent_temperature;
     private int is_day;
     private int precipitation;
-
-    public Current()
-    {
-    }
 
     public void setTime(String time)
     {
@@ -23,12 +19,12 @@ public class Current
         this.interval = interval;
     }
 
-    public void setTemperature_2m(float temperature_2m)
+    public void setTemperature_2m(String temperature_2m)
     {
         this.temperature_2m = temperature_2m;
     }
 
-    public void setApparent_temperature(float apparent_temperature)
+    public void setApparent_temperature(String apparent_temperature)
     {
         this.apparent_temperature = apparent_temperature;
     }
@@ -53,12 +49,12 @@ public class Current
         return interval;
     }
 
-    public float getTemperature_2m()
+    public String getTemperature_2m()
     {
         return temperature_2m;
     }
 
-    public float getApparent_temperature()
+    public String getApparent_temperature()
     {
         return apparent_temperature;
     }
@@ -71,5 +67,9 @@ public class Current
     public int getPrecipitation()
     {
         return precipitation;
+    }
+
+    public Current_Units()
+    {
     }
 }

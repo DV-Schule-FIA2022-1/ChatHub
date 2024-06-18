@@ -1,6 +1,6 @@
-package chat.WorkThogether.Client;
+package chat.workThogether.Client;
 
-import chat.WorkThogether.Nachricht.ChangeMessage;
+import chat.workThogether.Nachricht.ChangeMessage;
 import javafx.application.Platform;
 import javax.swing.*;
 import java.io.IOException;

@@ -1,6 +1,6 @@
-package chat.WorkThogether.Server;
+package chat.workThogether.Server;
 
-import chat.WorkThogether.Nachricht.ChangeMessage;
+import chat.workThogether.Nachricht.ChangeMessage;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -35,8 +35,8 @@ public class ClientProxy extends Thread
                 //System.out.println("Empfangen vom Client: " + nachricht);
                 //server.verteileNachricht(nachricht);
                 //EinerWarteschlange hinzufügen, damit nicht 2 gleichzeitig bearbeitet werden
-                server.getChangeRequestsMemoriesList().add(new ChangeRequestsMemory(this, nachricht));
-                server.getChangeRequestsMemoriesList().add(new ChangeRequestsMemory(this, nachricht));
+                //server.getChangeRequestsMemoriesList().add(new ChangeRequestsMemory(this, nachricht));
+                //server.getChangeRequestsMemoriesList().add(new ChangeRequestsMemory(this, nachricht));
                 server.changedText();
             }
         }

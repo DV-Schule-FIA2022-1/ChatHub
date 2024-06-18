@@ -1,4 +1,4 @@
-package chat.WorkThogether.TextEditor;
+package chat.workThogether.TextEditor;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

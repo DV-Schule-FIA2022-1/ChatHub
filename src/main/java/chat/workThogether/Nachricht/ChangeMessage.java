@@ -1,4 +1,4 @@
-package chat.WorkThogether.Nachricht;
+package chat.workThogether.Nachricht;
 
 import java.io.Serializable;
 import java.util.Date;

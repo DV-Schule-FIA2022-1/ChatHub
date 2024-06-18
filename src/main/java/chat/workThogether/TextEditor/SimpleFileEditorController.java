@@ -1,4 +1,4 @@
-package chat.WorkThogether.TextEditor;
+package chat.workThogether.TextEditor;
 import javafx.concurrent.ScheduledService;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;

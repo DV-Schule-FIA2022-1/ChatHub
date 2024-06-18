@@ -1,4 +1,4 @@
-package chat.WeaterAPI;
+package chat.weaterAPI;
 
 public class Hourly
 {

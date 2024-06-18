@@ -1,4 +1,4 @@
-package chat.Notification;
+package chat.notification;
 
 import javafx.fxml.Initializable;
 import java.net.URL;

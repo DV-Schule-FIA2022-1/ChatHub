@@ -1,10 +1,10 @@
-package chat.Location;
+package chat.location;
 
 import java.io.IOException;
 import java.net.URL;
 import chat.IpGeolocationAPIFolder.Geolocation;
-import chat.OpenMeteoApi.GeolocationOpenMeteoApi;
-import chat.WeaterAPI.WeatherClass;
+import chat.openMeteoApi.GeolocationOpenMeteoApi;
+import chat.weaterAPI.WeatherClass;
 import com.google.gson.Gson;
 import  java.lang.System;
 import java.util.ArrayList;

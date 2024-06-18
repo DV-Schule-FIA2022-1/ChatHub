@@ -5,54 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="Try to close open socket, but must look again">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/ChatBot/Chat_bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Chat_bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/ChatBot/Improver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Improver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/ChatBot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/ChatBot/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Processor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/ChatBot/Requester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Requester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/ChatBot/Responser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Responser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/ChatBot/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/chatBot/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Location/LocationMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Location/LocationMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Notification/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Notification/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Notification/NotificationControllerPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Notification/NotificationControllerPopUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Test/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/TextEditor/Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/TextEditor/Editor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/TextEditor/SimpleFileEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/TextEditor/SimpleFileEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/TextEditor/TextEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/TextEditor/TextEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Client/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Client/EditorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/client/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/TestDriver2self.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/TestDriver2self.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/decryption/AESDecryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/decryption/AESDecryption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/encryption/AESEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/encryption/AESEncryption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/encryption/RSAEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/encryption/RSAEncryption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/generators/APINumberGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/generators/APINumberGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/mian/NewRsaKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/mian/NewRsaKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/encryption/prime/PrimeNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/encryption/prime/PrimeNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/mains/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/mains/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/ClientProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/ServerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/server/SocketManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/server/SocketManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/chatroom/Chatroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/chatroom/Chatroom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/chatroom/ChatroomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/chatroom/ChatroomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/enums/ChathubEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/enums/ChathubEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/permission/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/permission/PermissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/role/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/role/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/users/role/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/users/role/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Location/LocationMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/location/LocationMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Location/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/location/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Location/UsernameDistanceClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/location/UsernameDistanceClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Notification/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/notification/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Notification/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/notification/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Notification/NotificationControllerPopUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/notification/NotificationControllerPopUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/OpenMeteoApi/GeolocationOpenMeteoApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/openMeteoApi/GeolocationOpenMeteoApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WeaterAPI/Current.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/weaterAPI/Current.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WeaterAPI/Current_Units.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/weaterAPI/Current_Units.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WeaterAPI/Hourly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/weaterAPI/Hourly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WeaterAPI/Hourly_units.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/weaterAPI/Hourly_units.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WeaterAPI/WeatherClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/weaterAPI/WeatherClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Client/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Client/EditorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Client/SimpleFileEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Client/SimpleFileEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Nachricht/ChangeMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Nachricht/ChangeMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Server/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Server/ClientProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/TextEditor/Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/TextEditor/Editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/TextEditor/SimpleFileEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/TextEditor/SimpleFileEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/TextEditor/SimpleFileEditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/TextEditor/SimpleFileEditorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/WorkThogether/TextEditor/TextEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/workThogether/TextEditor/TextEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GUITestNotification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUITestNotification.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SimpleFileEditor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SimpleFileEditor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TextEditor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TextEditor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/WorkTogether.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/WorkTogether.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +181,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d9fd8351-f2c0-4537-9b5b-080772cabd46" name="Changes" comment="Fixed User Package" />
+      <changelist id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="Try to close open socket, but must look again" />
       <created>1714995229431</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -314,6 +294,11 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="f036b984-9d5e-4092-b711-f94575d416fd" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -324,7 +309,6 @@
         <entry key="f036b984-9d5e-4092-b711-f94575d416fd">
           <value>
             <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -343,14 +327,10 @@
                   </entry>
                 </map>
               </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
             </State>
           </value>
         </entry>
-      </map>
-    </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="f036b984-9d5e-4092-b711-f94575d416fd" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>

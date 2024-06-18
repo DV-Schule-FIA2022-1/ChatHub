@@ -1,6 +1,6 @@
-package chat.WorkThogether.Client;
+package chat.workThogether.Client;
 
-import chat.WorkThogether.Nachricht.ChangeMessage;
+import chat.workThogether.Nachricht.ChangeMessage;
 import com.jfoenix.controls.JFXTextArea;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

@@ -1,4 +1,4 @@
-package chat.Location;
+package chat.location;
 
 public class UsernameDistanceClass
 {
