@@ -11,6 +11,7 @@ public class Client extends Thread
     private Socket socket;
     private ObjectInputStream in;
     private ObjectOutputStream out;
+    @Getter
     private ClientController clientController;
     private String name;
     private Message nachricht;

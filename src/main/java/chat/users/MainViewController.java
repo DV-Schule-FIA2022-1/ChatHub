@@ -45,6 +45,7 @@ public class MainViewController implements Initializable
     @Getter
     @FXML private TextField inputField;
     private ChatMainController chatMainController;
+    @Getter
     private Client client;
 
     public MainViewController(User activeUser)
