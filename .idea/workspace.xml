@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f50b7754-b294-49ea-909e-8105a12b173a" name="Changes" comment="fixed GUI not starting">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/Chathub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/Geolocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/Geolocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/GeolocationCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/GeolocationCurrency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/GeolocationTimezone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/IpGeolocationAPIFolder/GeolocationTimezone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/View/ChatMainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/View/ChatMainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/message/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chat/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chat/client/Client.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,11 +314,6 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="f036b984-9d5e-4092-b711-f94575d416fd" value="TOOL_WINDOW" />
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -329,6 +324,7 @@
         <entry key="f036b984-9d5e-4092-b711-f94575d416fd">
           <value>
             <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -347,10 +343,14 @@
                   </entry>
                 </map>
               </option>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
             </State>
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="f036b984-9d5e-4092-b711-f94575d416fd" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
