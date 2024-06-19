@@ -1,4 +1,4 @@
-package chat.WorkThogether.Server;
+package chat.workThogether.Server;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ public class ServerController
         try(Connection conn = DriverManager.getConnection(ChathubEnum.DatabasePath.getPath()))
         {
             //String sql = "SELECT u.FirstName, u.LastName, u.Password, u.Email, u.Birthday, a.Street, a.City, a.ZipCode, a.Country FROM User u INNER JOIN Address a ON u.AddressNr = a.ID";
-            String sql = "SELECT w.ID, w.Text FROM WorkThogether w";
+            String sql = "SELECT w.ID, w.Text FROM WorkTogether w";
 
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
@@ -53,7 +53,7 @@ public class ServerController
         {
             String text = "";
             //Server server = new Server(id,port, text);
-            String sqladdress = "INSERT INTO WorkThogether (Text) VALUES (?)";
+            String sqladdress = "INSERT INTO WorkTogether (Text) VALUES (?)";
 
             PreparedStatement preparedStatementAdress = connection.prepareStatement(sqladdress);
             preparedStatementAdress.setString(1, text);
@@ -91,7 +91,7 @@ public class ServerController
         {
             try (Connection connection = DriverManager.getConnection(ChathubEnum.DatabasePath.getPath()))
             {
-                String sqlUpdate = "UPDATE WorkThogether SET Text = ? WHERE id = ?";
+                String sqlUpdate = "UPDATE WorkTogether SET Text = ? WHERE id = ?";
 
                 PreparedStatement preparedStatementUpdate = connection.prepareStatement(sqlUpdate);
                 preparedStatementUpdate.setString(1, serverliste.get(i).getText());
