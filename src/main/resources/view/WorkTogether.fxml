@@ -18,19 +18,19 @@
         <MenuBar>
          <Menu mnemonicParsing="false" text="File">
             <items>
-               <MenuItem mnemonicParsing="false" text="Save">
-                   <accelerator>
-                       <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
-                   </accelerator>
-                   <graphic>
-                       <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                           <Image url="@../img/save.png" />
-                       </ImageView>
-                   </graphic>
-               </MenuItem>
+<!--               <MenuItem mnemonicParsing="false" text="Save">-->
+<!--                   <accelerator>-->
+<!--                       <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />-->
+<!--                   </accelerator>-->
+<!--                   <graphic>-->
+<!--                       <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                           <Image url="@../img/save.png" />-->
+<!--                       </ImageView>-->
+<!--                   </graphic>-->
+<!--               </MenuItem>-->
                <MenuItem mnemonicParsing="false" text="Save As" onAction="#saveFile">
                    <accelerator>
-                       <KeyCodeCombination alt="UP" code="F12" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                       <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                    </accelerator>
                    <graphic>
                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">

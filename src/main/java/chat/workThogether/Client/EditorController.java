@@ -42,6 +42,7 @@ public class EditorController
     private Stack undoStack;
     private Stack redoStack;
     private Stage stage;
+    private boolean undoredoTrue = false;
 
     public Stage getStage()
     {
@@ -89,14 +90,17 @@ public class EditorController
         System.out.println("Text '" + text + "' wurde in die Zwischenablage kopiert.");
     }
 
-    public void pasteFromClipboard() {
-        try {
+    public void pasteFromClipboard()
+    {
+        try
+        {
             Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
             String clipboardText = (String) clipboard.getData(DataFlavor.stringFlavor);
             textArea.insertText(textArea.getCaretPosition(), clipboardText);
             System.out.println("Text aus der Zwischenablage: " + clipboardText);
             changeTextUpdate();
-        } catch (Exception e) {
+        } catch (Exception e)
+        {
             System.out.println("Fehler beim Einfügen aus der Zwischenablage: " + e.getMessage());
         }
     }
@@ -107,6 +111,8 @@ public class EditorController
         {
             redoStack.push(textArea.getText());
             textArea.setText((String) undoStack.pop());
+            undoredoTrue = true;
+            changeTextUpdate();
         }
         else
         {
@@ -120,6 +126,8 @@ public class EditorController
         {
             undoStack.push(textArea.getText());
             textArea.setText((String) redoStack.pop());
+            undoredoTrue = true;
+            changeTextUpdate();
         }
         else
         {
@@ -145,6 +153,16 @@ public class EditorController
     {
         if(!textArea.getText().equals(oldText))
         {
+            //Alten text immer im undo stack abspeichern, außer bei undo und redo selbst
+            if(client.getSocket().isConnected() && !undoredoTrue)
+            {
+                undoStack.push(oldText);
+                redoStack.clear();
+            }
+            else
+            {
+                undoredoTrue = false;
+            }
             ChangeMessage update = null;
             int[] index = findDifferenceIndexes(textArea.getText(), oldText);
             //textArea.selectRange(index[0],textArea.getLength() - index[1]);
@@ -262,6 +280,9 @@ public class EditorController
     {
         try
         {
+            //Alten text immer im undo stack abspeichern, außer bei undo und redo selbst
+            undoStack.push(oldText);
+            redoStack.clear();
             if(textArea.getText().substring(0, changeMessage.getStartIndex()).equals(changeMessage.getNewText().substring(0, changeMessage.getStartIndex())) &&
                     textArea.getText().substring(textArea.getText().length() - changeMessage.getEndIndex(), textArea.getText().length()).equals(changeMessage.getNewText().substring(changeMessage.getNewText().length() - changeMessage.getEndIndex(), changeMessage.getNewText().length())))
             {
@@ -278,6 +299,7 @@ public class EditorController
                     textArea.selectRange(curserIndex, curserIndex);
                 }
             }
+            textArea.setText(changeMessage.getNewText());
             oldText = textArea.getText();
             //System.out.println("Difference found between index " + changeMessage.getStartIndex() + " and index " + changeMessage.getEndIndex());
         }

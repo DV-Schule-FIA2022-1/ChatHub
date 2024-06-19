@@ -18,6 +18,10 @@ public class Client extends Thread
     private ChangeMessage nachricht;
     private int fails;
 
+    public Socket getSocket() {
+        return socket;
+    }
+
     public Client(int port, EditorController clientController)
     {
         this.clientController = clientController;
