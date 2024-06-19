@@ -1,26 +1,24 @@
 package chat.view;
 
-import chat.users.User;
 import chat.client.Client;
+import chat.users.User;
 import chat.users.login.LoginController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.shape.Circle;
+import lombok.Getter;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import lombok.Getter;
 
-public class MainViewController implements Initializable
-{
+public class MainViewController implements Initializable {
     private User activeUser;
+
     @FXML private ImageView chatIcon;
     @FXML private ImageView homeIcon;
     @FXML private ImageView groupIcon;
@@ -34,33 +32,27 @@ public class MainViewController implements Initializable
     @FXML private ImageView sendToBot;
     @FXML private TextField searchTextfield;
     @FXML private Label username;
-    @Getter
-    @FXML private TextField inputField;
-    @Getter
-    @FXML private VBox messageContainer;
-    private ChatMainController chatMainController;
-    @Getter
-    private Client client;
+    @Getter @FXML private TextField inputField;
+    @Getter @FXML private VBox messageContainer;
 
-    public MainViewController(User activeUser)
-    {
+    private ChatMainController chatMainController;
+    @Getter private Client client;
+
+    public MainViewController(User activeUser) {
         this.activeUser = activeUser;
     }
 
-    public MainViewController()
-    {
+    public MainViewController() {}
 
-    }
-
-    public void setUser(Client client)
-    {
+    public void setUser(Client client) {
         this.client = client;
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle)
-    {
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         chatMainController = new ChatMainController(this);
+
+        // Load images for icons
         chatIcon.setImage(new Image("file:src/main/resources/img/chatIcon.png"));
         homeIcon.setImage(new Image("file:src/main/resources/img/homeIcon.png"));
         groupIcon.setImage(new Image("file:src/main/resources/img/groupIcon.png"));
@@ -72,37 +64,31 @@ public class MainViewController implements Initializable
         userSettingsIcon.setImage(new Image("file:src/main/resources/img/settingsPointsIcon.png"));
         sendIcon.setImage(new Image("file:src/main/resources/img/sendIcon.png"));
         sendToBot.setImage(new Image("file:src/main/resources/img/sendIcon.png"));
+
         searchTextfield.setPromptText("Search");
         searchTextfield.setFocusTraversable(false);
         searchTextfield.setStyle("-fx-text-fill: white;");
 
+        // Initialize client using LoginController
         this.client = LoginController.getNewClient();
-
-        username.setText(client.getUser().getFirstName());
-        searchTextfield.setPromptText("Search");
-        searchTextfield.setFocusTraversable(false);
-        searchTextfield.setStyle("-fx-text-fill: white;");
+        if (client != null && client.getUser() != null) {
+            username.setText(client.getUser().getFirstName());
+        } else {
+            throw new RuntimeException("Client or User is null.");
+        }
 
         // Attach click handler to sendIcon
-        sendIcon.setOnMouseClicked(event ->
-        {
-            try
-            {
+        sendIcon.setOnMouseClicked(event -> {
+            try {
                 chatMainController.clickSetIcon();
-            }
-            catch (IOException e)
-            {
-                throw new RuntimeException(e);
+            } catch (IOException e) {
+                e.printStackTrace(); // Handle this error more gracefully in production
             }
         });
-        sendToBot.setOnMouseClicked(event ->
-        {
+
+        // Attach click handler to sendToBot
+        sendToBot.setOnMouseClicked(event -> {
             chatMainController.sendToBot();
         });
-
     }
-
-
-
-
 }

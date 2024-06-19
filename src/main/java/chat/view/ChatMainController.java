@@ -60,7 +60,7 @@ public class ChatMainController
         message.setText("bot: " + chatResponse);
         message.setEditable(false);
         message.setWrapText(true);
-        message.prefHeightProperty().bind(message.heightProperty());
+        message.prefHeightProperty().bind(message.heightProperty().add(20));
         mainViewController.getMessageContainer().getChildren().add(message);
     }
 

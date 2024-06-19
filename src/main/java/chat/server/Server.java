@@ -71,8 +71,6 @@ public class Server extends Thread
             catch (IOException e)
             {
                 e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
             }
         }
 
