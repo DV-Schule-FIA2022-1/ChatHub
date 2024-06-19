@@ -115,6 +115,7 @@ public class Server extends Thread
                             //Text wird auf der linken seite eingefügt, da wo der vorhandene Teil endet
                             text = text.substring(0, changeMessage.getStartIndex()) + changeMessage.getNewText().substring(changeMessage.getStartIndex(), changeMessage.getNewText().length() - changeMessage.getEndIndex()) + text.substring(changeMessage.getStartIndex(), text.length());
                             changeMessage = new ChangeMessage(changeMessage.getStartIndex(), text.length() - changeMessage.getStartIndex() - (changeMessage.getNewText().length() - changeMessage.getStartIndex() - changeMessage.getEndIndex()), text);
+                            clientProxy.schreiben(new ChangeMessage(0, 0, text));
                         }
                     }
                     //Rechte Seite ist gleich
@@ -142,8 +143,8 @@ public class Server extends Thread
                         } else
                         {
                             text = text.substring(0, text.length() - changeMessage.getEndIndex()) + changeMessage.getNewText().substring(changeMessage.getStartIndex(), changeMessage.getNewText().length() - changeMessage.getEndIndex()) + text.substring(text.length() - changeMessage.getEndIndex(), text.length());
-                            //clientProxy.schreiben(new ChangeMessage(0, 0, text));
                             changeMessage = new ChangeMessage(text.length() - changeMessage.getEndIndex() - (changeMessage.getNewText().length() - changeMessage.getStartIndex() - changeMessage.getEndIndex()), changeMessage.getEndIndex(), text);
+                            clientProxy.schreiben(new ChangeMessage(0, 0, text));
                         }
                     }
                     //Kein Orientierungspunkt da
