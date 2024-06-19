@@ -291,6 +291,7 @@ public class EditorController
                 int curserIndex = textArea.getCaretPosition();
                 textArea.setText(changeMessage.getNewText());
 
+                textArea.setText(changeMessage.getNewText());
                 if(changeMessage.getStartIndex() < curserIndex)
                 {
                     textArea.selectRange(curserIndex + (textArea.getLength() - changeMessage.getNewText().length()), curserIndex + (textArea.getLength() - changeMessage.getNewText().length()));
@@ -300,7 +301,6 @@ public class EditorController
                     textArea.selectRange(curserIndex, curserIndex);
                 }
             }
-            textArea.setText(changeMessage.getNewText());
             oldText = textArea.getText();
             //System.out.println("Difference found between index " + changeMessage.getStartIndex() + " and index " + changeMessage.getEndIndex());
         }
