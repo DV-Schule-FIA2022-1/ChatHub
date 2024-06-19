@@ -80,6 +80,16 @@
             <artifactId>ucanaccess</artifactId>
             <version>4.0.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>16</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-youtube</artifactId>
+            <version>v3-rev222-1.25.0</version>
+        </dependency>
     </dependencies>
 
     <build>

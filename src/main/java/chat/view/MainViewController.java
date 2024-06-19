@@ -49,7 +49,8 @@ public class MainViewController implements Initializable {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
         chatMainController = new ChatMainController(this);
 
         // Load images for icons
@@ -71,24 +72,29 @@ public class MainViewController implements Initializable {
 
         // Initialize client using LoginController
         this.client = LoginController.getNewClient();
-        if (client != null && client.getUser() != null) {
+        if (client != null && client.getUser() != null)
+        {
             username.setText(client.getUser().getFirstName());
-        } else {
+        }
+        else
+        {
             throw new RuntimeException("Client or User is null.");
         }
 
         // Attach click handler to sendIcon
-        sendIcon.setOnMouseClicked(event -> {
-            try {
+        sendIcon.setOnMouseClicked(event ->
+        {
+            try
+            {
                 chatMainController.clickSetIcon();
-            } catch (IOException e) {
+            }
+            catch (IOException e)
+            {
                 e.printStackTrace(); // Handle this error more gracefully in production
             }
         });
 
         // Attach click handler to sendToBot
-        sendToBot.setOnMouseClicked(event -> {
-            chatMainController.sendToBot();
-        });
+        sendToBot.setOnMouseClicked(event -> chatMainController.sendToBot());
     }
 }
