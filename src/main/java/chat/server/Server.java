@@ -83,8 +83,7 @@ public class Server extends Thread
     {
         for (ClientProxy c : clientList)
         {
-            c.schreiben(nachricht);
-
+            c.write(nachricht);
         }
     }
 }

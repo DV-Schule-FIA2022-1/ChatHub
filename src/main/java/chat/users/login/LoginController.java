@@ -63,7 +63,7 @@ public class LoginController implements Initializable
     private MainViewController mainViewController;
     private ClientController clientController;
     @Getter
-    private Client newClient;
+    private static Client newClient;
     private Chathub chathub;
     @Getter
     private User registeredUser;

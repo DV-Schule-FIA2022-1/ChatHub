@@ -25,15 +25,8 @@ public class ClientController implements Initializable
 
     public void sendMessage()
     {
-        try
-        {
-            nachricht = new Message(this, eingabe.getText());
-            client.schreiben(nachricht);
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
+        nachricht = new Message(this, eingabe.getText());
+        client.write(nachricht);
     }
 
     public TextField getEmpfangen()

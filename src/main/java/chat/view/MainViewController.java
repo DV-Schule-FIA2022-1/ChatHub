@@ -49,11 +49,6 @@ public class MainViewController implements Initializable
 
     public MainViewController() {}
 
-    public void setUser(Client client)
-    {
-        this.client = client;
-    }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
@@ -77,7 +72,7 @@ public class MainViewController implements Initializable
         searchTextfield.setStyle("-fx-text-fill: white;");
 
         // Initialize client using LoginController
-        this.client = loginController.getNewClient();
+        this.client = LoginController.getNewClient();
         if (client != null && client.getUser() != null)
         {
             username.setText(client.getUser().getFirstName());

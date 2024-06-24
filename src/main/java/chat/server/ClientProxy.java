@@ -10,20 +10,30 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
-public class ClientProxy extends Thread {
+public class ClientProxy extends Thread
+{
     private Server server;
     private ObjectInputStream in;
     private ObjectOutputStream out;
     private MainViewController mainViewController;
     private Message nachricht;
+    private TextArea message;
 
-    public ClientProxy(Server server, MainViewController mainViewController, Socket client) throws IOException
+    public ClientProxy(Server server, MainViewController mainViewController, Socket client)
     {
         this.server = server;
         this.mainViewController = mainViewController;
 
-        out = new ObjectOutputStream(client.getOutputStream());
-        in = new ObjectInputStream(client.getInputStream());
+        try
+        {
+            out = new ObjectOutputStream(client.getOutputStream());
+            in = new ObjectInputStream(client.getInputStream());
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
         this.start();
     }
 
@@ -38,7 +48,8 @@ public class ClientProxy extends Thread {
                 server.verteileNachricht(nachricht);
                 Platform.runLater(() ->
                 {
-                    TextArea message = new TextArea();
+                    message = mainViewController.getChatMainController().getMessage();
+                    message = new TextArea();
                     message.setText(mainViewController.getClient().getUser().getFirstName() +
                             ": " + mainViewController.getChatMainController().getMsg().toString());
                     mainViewController.getMessageContainer().getChildren().add(message);
@@ -51,8 +62,16 @@ public class ClientProxy extends Thread {
         }
     }
 
-    public void schreiben(Message nachricht) throws IOException {
-        out.writeObject(nachricht);
-        out.flush();
+    public void write(Message nachricht)
+    {
+        try
+        {
+            out.writeObject(nachricht);
+            out.flush();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 }

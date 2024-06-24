@@ -24,7 +24,6 @@ public class NotificationController implements Initializable
 
 
     @FXML private ListView listboxReceived;
-    @FXML private Button buttonClose;
 
     private ArrayList<String> messagelist;
 

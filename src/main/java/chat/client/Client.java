@@ -57,10 +57,17 @@ public class Client extends Thread
     }
 
 
-    public void schreiben(Message nachricht) throws IOException
+    public void write(Message nachricht)
     {
         this.nachricht = nachricht;
-        out.writeObject(nachricht);
-        out.flush();
+        try
+        {
+            out.writeObject(nachricht);
+            out.flush();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 }

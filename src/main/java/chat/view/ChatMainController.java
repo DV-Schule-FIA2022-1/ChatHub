@@ -2,7 +2,6 @@ package chat.view;
 
 import chat.chatBot.Chat_bot;
 import chat.message.Message;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import lombok.Getter;
 import java.io.IOException;
@@ -16,9 +15,11 @@ public class ChatMainController
     @Getter
     private String inputText;
     @Getter
-    private String  chatResponse;
+    private String chatResponse;
     @Getter
     private Message msg;
+    @Getter
+    private TextArea message;
     public ChatMainController(MainViewController mainViewController)
     {
         this.mainViewController = mainViewController;
@@ -37,14 +38,14 @@ public class ChatMainController
             System.err.println("inputField is not initialized.");
         }
     }
-    public void sendMsgToServer() throws IOException
+    public void sendMsgToServer()
     {
-        LocalDate localDate= LocalDate.now();
+        LocalDate localDate = LocalDate.now();
         Date today = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
         msg = new Message(mainViewController.getClient().getClientController(),1,
                 inputText,today,mainViewController.getClient().getUser().getAttempts(),true);
-        mainViewController.getClient().schreiben(msg);
-        TextArea message = new TextArea();
+        mainViewController.getClient().write(msg);
+        message = new TextArea();
         message.setText(mainViewController.getClient().getUser().getFirstName() +
                 ": " + msg.toString());
         message.setEditable(false);
@@ -58,7 +59,7 @@ public class ChatMainController
         Chat_bot chatBot = new Chat_bot();
         chatResponse = chatBot.process(mainViewController.getInputField().getText());
         mainViewController.getInputField().clear(); // Optionally clear the input field after sending
-        TextArea message = new TextArea();
+        message = new TextArea();
         message.setText("bot: " + chatResponse);
         message.setEditable(false);
         message.setWrapText(true);

@@ -13,9 +13,7 @@ public class Message implements Serializable
     private int inputUserID;
     private boolean status;
     private LocalDateTime sendedAt;
-
     private String name;
-
     private transient ClientController clientController;
 
     public Message(ClientController clientController, int protocoll, String value, Date date, int inputUserID, boolean status)
