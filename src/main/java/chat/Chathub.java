@@ -1,5 +1,6 @@
 package chat;
 
+import chat.chatBot.Main;
 import chat.server.Server;
 import chat.server.ServerController;
 import chat.server.SocketManager;
@@ -7,6 +8,7 @@ import chat.users.login.LoginController;
 import chat.users.permission.Permission;
 import chat.users.role.Role;
 import chat.users.role.RoleController;
+import chat.view.MainViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -26,7 +28,7 @@ public class Chathub extends Application
     private int serverport = 40000;
     @Getter
     private Server server;
-    private ServerController serverController;
+    private MainViewController mainViewController;
     private Thread serverThread;
     @Getter
     private static Stage primaryStage;
@@ -40,18 +42,16 @@ public class Chathub extends Application
     {
         instance = new Chathub();
         loginController = new LoginController();
-        instance.startServer();
         instance.testData();
 
         launch();
     }
 
-    public void startServer()
+    public void startServer(MainViewController mainViewController)
     {
-        serverController = new ServerController();
         socketManager = new SocketManager();
 
-        serverThread = new Thread(() -> server = Server.getInstance(socketManager, serverController, serverport), "Server-Thread");
+        serverThread = new Thread(() -> server = Server.getInstance(socketManager, mainViewController, serverport), "Server-Thread");
         serverThread.start();
 
         System.out.println("Server läuft auf localhost/" + serverport);

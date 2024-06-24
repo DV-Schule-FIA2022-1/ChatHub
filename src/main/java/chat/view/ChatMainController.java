@@ -17,9 +17,11 @@ public class ChatMainController
     private String inputText;
     @Getter
     private String  chatResponse;
+    @Getter
+    private Message msg;
     public ChatMainController(MainViewController mainViewController)
     {
-        this.mainViewController=mainViewController;
+        this.mainViewController = mainViewController;
     }
     public void clickSetIcon() throws IOException
     {
@@ -39,7 +41,7 @@ public class ChatMainController
     {
         LocalDate localDate= LocalDate.now();
         Date today = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        Message msg = new Message(mainViewController.getClient().getClientController(),1,
+        msg = new Message(mainViewController.getClient().getClientController(),1,
                 inputText,today,mainViewController.getClient().getUser().getAttempts(),true);
         mainViewController.getClient().schreiben(msg);
         TextArea message = new TextArea();

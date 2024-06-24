@@ -16,7 +16,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainViewController implements Initializable {
+public class MainViewController implements Initializable
+{
     private User activeUser;
 
     @FXML private ImageView chatIcon;
@@ -34,17 +35,22 @@ public class MainViewController implements Initializable {
     @FXML private Label username;
     @Getter @FXML private TextField inputField;
     @Getter @FXML private VBox messageContainer;
-
+    @Getter
     private ChatMainController chatMainController;
-    @Getter private Client client;
+    private LoginController loginController;
+    @Getter
+    private Client client;
 
-    public MainViewController(User activeUser) {
+    public MainViewController(User activeUser, LoginController loginController)
+    {
         this.activeUser = activeUser;
+        this.loginController = loginController;
     }
 
     public MainViewController() {}
 
-    public void setUser(Client client) {
+    public void setUser(Client client)
+    {
         this.client = client;
     }
 
@@ -71,7 +77,7 @@ public class MainViewController implements Initializable {
         searchTextfield.setStyle("-fx-text-fill: white;");
 
         // Initialize client using LoginController
-        this.client = LoginController.getNewClient();
+        this.client = loginController.getNewClient();
         if (client != null && client.getUser() != null)
         {
             username.setText(client.getUser().getFirstName());

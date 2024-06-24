@@ -63,8 +63,11 @@ public class LoginController implements Initializable
     private MainViewController mainViewController;
     private ClientController clientController;
     @Getter
-    private static Client newClient;
+    private Client newClient;
     private Chathub chathub;
+    @Getter
+    private User registeredUser;
+    private LoginController loginController;
 
     public LoginController()
     {
@@ -103,6 +106,7 @@ public class LoginController implements Initializable
         birthdateTextfield.setVisible(false);
 
         chathub = new Chathub();
+        this.loginController = this;
     }
 
     @FXML
@@ -198,11 +202,13 @@ public class LoginController implements Initializable
 
     public void loginUser(User registeredUser, Chathub chathub)
     {
+        registeredUser.resetAttempts();
+        mainViewController = new MainViewController(registeredUser, loginController);
+        chathub.startServer(mainViewController);
+
         clientController = new ClientController();
         newClient = new Client(registeredUser, chathub.getServerport(), clientController);
 
-        registeredUser.resetAttempts();
-        mainViewController = new MainViewController(registeredUser);
         Chathub.getPrimaryStage().close();
 
         try

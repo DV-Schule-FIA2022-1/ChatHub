@@ -1,6 +1,9 @@
 package chat.server;
 
 import chat.message.Message;
+import chat.view.MainViewController;
+import javafx.application.Platform;
+import javafx.scene.control.TextArea;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -11,12 +14,13 @@ public class ClientProxy extends Thread {
     private Server server;
     private ObjectInputStream in;
     private ObjectOutputStream out;
-    private ServerController serverController;
+    private MainViewController mainViewController;
     private Message nachricht;
 
-    public ClientProxy(Server server, ServerController serverController, Socket client) throws IOException {
+    public ClientProxy(Server server, MainViewController mainViewController, Socket client) throws IOException
+    {
         this.server = server;
-        this.serverController = serverController;
+        this.mainViewController = mainViewController;
 
         out = new ObjectOutputStream(client.getOutputStream());
         in = new ObjectInputStream(client.getInputStream());
@@ -24,14 +28,25 @@ public class ClientProxy extends Thread {
     }
 
     @Override
-    public void run() {
-        try {
-            while ((nachricht = (Message) in.readObject()) != null) {
-                System.out.println("Empfangen vom Client: " + nachricht.toString());
+    public void run()
+    {
+        try
+        {
+            while ((nachricht = (Message) in.readObject()) != null)
+            {
+                System.out.println("Empfangen vom Client: " + nachricht);
                 server.verteileNachricht(nachricht);
-                //Platform.runLater(() -> serverController.getNachrichten().getItems().add(nachricht));
+                Platform.runLater(() ->
+                {
+                    TextArea message = new TextArea();
+                    message.setText(mainViewController.getClient().getUser().getFirstName() +
+                            ": " + mainViewController.getChatMainController().getMsg().toString());
+                    mainViewController.getMessageContainer().getChildren().add(message);
+                });
             }
-        } catch (IOException | ClassNotFoundException e) {
+        }
+        catch (IOException | ClassNotFoundException e)
+        {
             e.printStackTrace();
         }
     }

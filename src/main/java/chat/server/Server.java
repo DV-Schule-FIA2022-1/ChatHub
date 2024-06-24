@@ -1,6 +1,8 @@
 package chat.server;
 
 import chat.message.Message;
+import chat.view.MainViewController;
+
 import java.io.IOException;
 import java.io.InterruptedIOException;
 import java.net.BindException;
@@ -13,28 +15,28 @@ public class Server extends Thread
     private ArrayList<ClientProxy> clientList;
     private ServerSocket socket;
     private int port;
-    private ServerController serverController;
+    private MainViewController mainViewController;
     private Message nachricht;
     private SocketManager socketManager;
 
-    private Server(SocketManager socketManager, ServerController serverController, int port) throws IOException
+    private Server(SocketManager socketManager, MainViewController mainViewController, int port) throws IOException
     {
         System.out.println("Server gestartet!");
         clientList = new ArrayList<>();
         this.port = port;
-        this.serverController = serverController;
+        this.mainViewController = mainViewController;
         this.socketManager = socketManager;
         this.socket = new ServerSocket(port); // Bind the socket during initialization
         this.start();
     }
 
-    public static synchronized Server getInstance(SocketManager socketManager, ServerController serverController, int port)
+    public static synchronized Server getInstance(SocketManager socketManager, MainViewController mainViewController, int port)
     {
         if (instance == null)
         {
             try
             {
-                instance = new Server(socketManager, serverController, port);
+                instance = new Server(socketManager, mainViewController, port);
             }
             catch (BindException e)
             {
@@ -62,7 +64,7 @@ public class Server extends Thread
         {
             try
             {
-                clientList.add(new ClientProxy(this, serverController, socket.accept()));
+                clientList.add(new ClientProxy(this, mainViewController, socket.accept()));
             }
             catch (InterruptedIOException e)
             {

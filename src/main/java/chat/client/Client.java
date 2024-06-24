@@ -59,7 +59,6 @@ public class Client extends Thread
 
     public void schreiben(Message nachricht) throws IOException
     {
-
         this.nachricht = nachricht;
         out.writeObject(nachricht);
         out.flush();
