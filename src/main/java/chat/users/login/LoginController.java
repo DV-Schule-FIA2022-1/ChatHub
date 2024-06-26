@@ -1,8 +1,8 @@
 package chat.users.login;
 
 import chat.Chathub;
-import chat.client.Client;
-import chat.client.ClientController;
+import chat.core.client.Client;
+import chat.core.client.ClientController;
 import chat.users.*;
 import chat.view.MainViewController;
 import javafx.fxml.FXML;
@@ -206,8 +206,7 @@ public class LoginController implements Initializable
         mainViewController = new MainViewController(registeredUser, loginController);
         chathub.startServer(mainViewController);
 
-        clientController = new ClientController();
-        newClient = new Client(registeredUser, chathub.getServerport(), clientController);
+        newClient = new Client(registeredUser, chathub.getServerport(), mainViewController);
 
         Chathub.getPrimaryStage().close();
 

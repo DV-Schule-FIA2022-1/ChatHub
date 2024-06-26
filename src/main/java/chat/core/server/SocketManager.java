@@ -1,4 +1,4 @@
-package chat.server;
+package chat.core.server;
 
 import java.net.ServerSocket;
 import java.util.ArrayList;

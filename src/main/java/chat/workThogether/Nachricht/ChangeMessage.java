@@ -1,7 +1,6 @@
 package chat.workThogether.Nachricht;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class ChangeMessage implements Serializable
 {

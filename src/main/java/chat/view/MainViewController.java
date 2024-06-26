@@ -1,6 +1,6 @@
 package chat.view;
 
-import chat.client.Client;
+import chat.core.client.Client;
 import chat.users.User;
 import chat.users.login.LoginController;
 import javafx.fxml.FXML;
@@ -11,8 +11,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import lombok.Getter;
-
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -83,17 +81,7 @@ public class MainViewController implements Initializable
         }
 
         // Attach click handler to sendIcon
-        sendIcon.setOnMouseClicked(event ->
-        {
-            try
-            {
-                chatMainController.clickSetIcon();
-            }
-            catch (IOException e)
-            {
-                e.printStackTrace(); // Handle this error more gracefully in production
-            }
-        });
+        sendIcon.setOnMouseClicked(event -> chatMainController.clickSetIcon());
 
         // Attach click handler to sendToBot
         sendToBot.setOnMouseClicked(event -> chatMainController.sendToBot());

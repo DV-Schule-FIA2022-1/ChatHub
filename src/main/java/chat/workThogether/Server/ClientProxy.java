@@ -44,7 +44,8 @@ public class ClientProxy extends Thread
             try
             {
                 client.close();
-            } catch (IOException ex)
+            }
+            catch (IOException ex)
             {
                 throw new RuntimeException(ex);
             }

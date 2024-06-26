@@ -1,10 +1,9 @@
 package chat.view;
 
 import chat.chatBot.Chat_bot;
-import chat.message.Message;
+import chat.core.message.Message;
 import javafx.scene.control.TextArea;
 import lombok.Getter;
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
@@ -24,9 +23,9 @@ public class ChatMainController
     {
         this.mainViewController = mainViewController;
     }
-    public void clickSetIcon() throws IOException
+    public void clickSetIcon()
     {
-        if (mainViewController.getInputField() != null)
+        if (!mainViewController.getInputField().getText().isEmpty())
         {
             inputText = mainViewController.getInputField().getText(); // Get text from the input field
             mainViewController.getInputField().clear(); // Optionally clear the input field after sending
@@ -42,7 +41,7 @@ public class ChatMainController
     {
         LocalDate localDate = LocalDate.now();
         Date today = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
-        msg = new Message(mainViewController.getClient().getClientController(),1,
+        msg = new Message(mainViewController,1,
                 inputText,today,mainViewController.getClient().getUser().getAttempts(),true);
         mainViewController.getClient().write(msg);
         message = new TextArea();

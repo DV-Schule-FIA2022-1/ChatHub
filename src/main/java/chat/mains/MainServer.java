@@ -1,6 +1,6 @@
 package chat.mains;
 
-import chat.server.ServerController;
+import chat.core.server.ServerController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

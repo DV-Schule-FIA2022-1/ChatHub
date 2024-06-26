@@ -47,9 +47,7 @@ public class Client extends Thread
             out = new ObjectOutputStream(socket.getOutputStream());
             in = new ObjectInputStream(socket.getInputStream());
             this.fails = 0;
-            Platform.runLater(() -> {
-                clientController.getStage().setTitle("Work Thogether");
-            });
+            Platform.runLater(() -> clientController.getStage().setTitle("Work Thogether"));
         }
         catch (IOException e)
         {
@@ -81,21 +79,13 @@ public class Client extends Thread
                     fails++;
                     try
                     {
-                        Platform.runLater(() -> {
-                            clientController.getStage().setTitle("reconnecting    - current try: " + fails + " of 10");
-                        });
+                        Platform.runLater(() -> clientController.getStage().setTitle("reconnecting    - current try: " + fails + " of 10"));
                         Thread.sleep(500);
-                        Platform.runLater(() -> {
-                            clientController.getStage().setTitle("reconnecting.   - current try: " + fails + " of 10");
-                        });
+                        Platform.runLater(() -> clientController.getStage().setTitle("reconnecting.   - current try: " + fails + " of 10"));
                         Thread.sleep(500);
-                        Platform.runLater(() -> {
-                            clientController.getStage().setTitle("reconnecting..  - current try: " + fails + " of 10");
-                        });
+                        Platform.runLater(() -> clientController.getStage().setTitle("reconnecting..  - current try: " + fails + " of 10"));
                         Thread.sleep(500);
-                        Platform.runLater(() -> {
-                            clientController.getStage().setTitle("reconnecting... - current try: " + fails + " of 10");
-                        });
+                        Platform.runLater(() -> clientController.getStage().setTitle("reconnecting... - current try: " + fails + " of 10"));
                         Thread.sleep(500);
                     }
                     catch (InterruptedException ex)
@@ -109,9 +99,7 @@ public class Client extends Thread
                 {
                     System.out.println("No connection possible!");
                     JOptionPane.showMessageDialog(null, "connection error", "error", JOptionPane.ERROR_MESSAGE);
-                    Platform.runLater(() -> {
-                        disconnectFromServer();
-                    });
+                    Platform.runLater(() -> disconnectFromServer());
                 }
             }
             else

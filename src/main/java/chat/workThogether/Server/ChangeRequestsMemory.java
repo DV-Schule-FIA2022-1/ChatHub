@@ -7,7 +7,8 @@ public class ChangeRequestsMemory
     private ClientProxy clientProxy;
     private ChangeMessage changeMessage;
 
-    public ChangeRequestsMemory(ClientProxy clientProxy, ChangeMessage changeMessage) {
+    public ChangeRequestsMemory(ClientProxy clientProxy, ChangeMessage changeMessage)
+    {
         this.clientProxy = clientProxy;
         this.changeMessage = changeMessage;
     }

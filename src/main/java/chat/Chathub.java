@@ -1,9 +1,7 @@
 package chat;
 
-import chat.chatBot.Main;
-import chat.server.Server;
-import chat.server.ServerController;
-import chat.server.SocketManager;
+import chat.core.server.Server;
+import chat.core.server.SocketManager;
 import chat.users.login.LoginController;
 import chat.users.permission.Permission;
 import chat.users.role.Role;

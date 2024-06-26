@@ -99,7 +99,8 @@ public class EditorController
             textArea.insertText(textArea.getCaretPosition(), clipboardText);
             System.out.println("Text aus der Zwischenablage: " + clipboardText);
             changeTextUpdate();
-        } catch (Exception e)
+        }
+        catch (Exception e)
         {
             System.out.println("Fehler beim Einfügen aus der Zwischenablage: " + e.getMessage());
         }
