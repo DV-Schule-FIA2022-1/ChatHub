@@ -47,7 +47,6 @@ public class Client extends Thread
         {
             while ((message = (Message)in.readObject())!= null)
             {
-                //clientController.getEmpfangen().clear();
                 System.out.println("Empfangen vom Server: " + message);
                 messageArea = new TextArea();
                 messageArea.setText(mainViewController.getClient().getUser().getFirstName() +
@@ -56,7 +55,6 @@ public class Client extends Thread
                 messageArea.setWrapText(true);
                 messageArea.prefHeightProperty().bind(messageArea.heightProperty());
                 mainViewController.getMessageContainer().getChildren().add(messageArea);
-                //clientController.getEmpfangen().setText(nachricht.toString());
             }
         }
         catch (Exception e)

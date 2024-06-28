@@ -33,8 +33,8 @@ public class LoginController implements Initializable
     @FXML private PasswordField passwordLoginField;
     @FXML private TextField firstNameTextfield;
     @FXML private TextField lastNameTextfield;
-    @FXML private TextField passwordTextfield;
-    @FXML private TextField passwordAgainTextfield;
+    @FXML private PasswordField passwordTextfield;
+    @FXML private PasswordField passwordAgainTextfield;
     @FXML private TextField streetTextfield;
     @FXML private TextField cityTextfield;
     @FXML private TextField zipCodeTextfield;
@@ -127,9 +127,13 @@ public class LoginController implements Initializable
                 passwordLoginLabel.setVisible(true);
                 passwordLoginField.setVisible(true);
                 btnLogin.setVisible(true);
+
+                disableRegisterArea();
             }
             else
             {
+                emailTextfield.setText(emailLoginField.getText());
+
                 showRegisterArea();
             }
         }
@@ -137,6 +141,32 @@ public class LoginController implements Initializable
         {
             infoBox("Email must be included @", "Error Message");
         }
+    }
+
+    private void disableRegisterArea()
+    {
+        firstNameTextfield.setVisible(false);
+        lastNameTextfield.setVisible(false);
+        passwordTextfield.setVisible(false);
+        passwordAgainTextfield.setVisible(false);
+        streetTextfield.setVisible(false);
+        cityTextfield.setVisible(false);
+        zipCodeTextfield.setVisible(false);
+        countryTextfield.setVisible(false);
+        emailTextfield.setVisible(false);
+        firstNameLabel.setVisible(false);
+        lastNameLabel.setVisible(false);
+        passwordLabel.setVisible(false);
+        passwordAgainLabel.setVisible(false);
+        streetLabel.setVisible(false);
+        cityLabel.setVisible(false);
+        countryLabel.setVisible(false);
+        zipCodeLabel.setVisible(false);
+        emailLabel.setVisible(false);
+        btnRegistration.setVisible(false);
+        registrationLabel.setVisible(false);
+        birthdateLabel.setVisible(false);
+        birthdateTextfield.setVisible(false);
     }
 
     private void showRegisterArea()

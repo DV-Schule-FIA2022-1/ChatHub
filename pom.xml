@@ -102,6 +102,13 @@
                     <execution>
                         <id>debug</id>
                         <configuration>
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <classpathPrefix>lib/</classpathPrefix>
+                                    <mainClass>chat.Chathub</mainClass>
+                                </manifest>
+                            </archive>
                             <mainClass>chat.Chathub</mainClass>
                             <executable>${config.executable}</executable>
                         </configuration>

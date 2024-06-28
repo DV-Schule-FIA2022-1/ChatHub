@@ -63,7 +63,7 @@ public class MainViewController implements Initializable
         kameraIcon.setImage(new Image("file:src/main/resources/img/kameraIcon.png"));
         userSettingsIcon.setImage(new Image("file:src/main/resources/img/settingsPointsIcon.png"));
         sendIcon.setImage(new Image("file:src/main/resources/img/sendIcon.png"));
-        sendToBot.setImage(new Image("file:src/main/resources/img/sendIcon.png"));
+        sendToBot.setImage(new Image("file:src/main/resources/img/chatbotIcon.png"));
 
         searchTextfield.setPromptText("Search");
         searchTextfield.setFocusTraversable(false);
